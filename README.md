@@ -16,6 +16,7 @@ lw-vs/
   data/figure_source/    per-cell source tables behind the figures and tables
   results/               frozen paper-level experiment archives (JSON)
   scripts/               experiment drivers, exporters, numeric gate
+  scripts/replication/   same-pool independent C replication (exact per-key check)
   paper/                 only main.tex (EN/ZH), used as input by the gate
 实验/
   qcmdpc-study/          Python reference implementation, configs, tests, raw results
@@ -43,6 +44,7 @@ Expected result: **382 checks, PASS**.
 | Frozen configurations / preregistration | `实验/qcmdpc-study/configs/` |
 | Seed derivation | `实验/qcmdpc-study/qcmdpc/generators.py` (master seed `20260901`, SHA-256) |
 | Export / analysis / gate | `lw-vs/scripts/` |
+| Independent same-pool C replication | `lw-vs/scripts/replication/` |
 | C reference decoder | `实验/qcmdpc_decoder_ref/qcmdpc_decoder-master/` |
 | Static-semantics C carrier | `实验/qcmdpc-study/static_build/` |
 

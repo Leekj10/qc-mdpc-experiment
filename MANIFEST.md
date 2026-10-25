@@ -35,6 +35,7 @@ qc-mdpc-experiment/
 | NCW-aware capture | `lw-vs/results/ncw_aware/` → `t1_ncw_aware_p1p.csv`, `t1_ncw_aware_capture.csv` | `check_ncw_aware` |
 | Exact-recovery audit | `实验/qcmdpc-study/results/exact_recovery_audit_20260923/` → `t1_exact_recovery.csv` | `check_formal` |
 | Offset-selection rule (archive only) | `lw-vs/results/offset_rule/` → `t1_offset_rule_profile.csv`, `t1_offset_rule_validation.csv` | `check_offset_rule` (presence-conditional) |
+| Independent C same-pool replication | `lw-vs/scripts/replication/` → `results/per_key_replication.csv` | exact per-key counts for all three formal groups (282/68, 372/68, 141/31) |
 | Figure source tables | `lw-vs/data/figure_source/*.csv` | raw cells behind every table and figure |
 | Seeds | master seed `20260901`, SHA-256 derivation in `实验/qcmdpc-study/qcmdpc/generators.py` | — |
 
