@@ -1,0 +1,3 @@
+{"key_id": "G0-0001", "error_id": 41, "decoder": "BFMAX_PRF", "mode": "other", "iters": 134, "sw_first": 4803, "sw_last": 136}
+{"key_id": "G0-0001", "error_id": 46, "decoder": "BFMAX_PRF", "mode": "other", "iters": 134, "sw_first": 4777, "sw_last": 136}
+{"key_id": "G0-0005", "error_id": 120, "decoder": "BFMAX_PRF", "mode": "other", "iters": 134, "sw_first": 4831, "sw_last": 136}

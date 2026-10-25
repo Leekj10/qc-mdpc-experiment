@@ -1,0 +1,19 @@
+{
+  "run_id": "m1_p1_prescreen",
+  "note": "P1 screening run. Purpose: (1) confirm measurable conditional DFR at scaled parameters; (2) compare G2 severity delta=8 vs 12; (3) per-key heterogeneity first look. Decoder constants calibrated 2026-09-01 on 3 keys x 60 errors (BF fixed-b working band = {28,30}; b=26 diverges, b>=32 under-flips). BGFV uses official (71,134) affine constants as approximation (no tuned constants exist for d=45).",
+  "parameter": {"id": "P1", "r": 4801, "d": 45, "t": 84, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 300,
+  "groups": {
+    "G0": {"type": "random", "n_keys": 8},
+    "G2_d8": {"type": "type1", "n_keys": 6, "delta": 8},
+    "G2_d12": {"type": "type1", "n_keys": 6, "delta": 12},
+    "G3": {"type": "ncw", "n_keys": 8, "kappa": 12, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "BF30": {"algo": "bf_parallel", "threshold": {"type": "fixed", "b": 30}, "max_iter": 20, "fixed_iters": false},
+    "CLASSIC": {"algo": "bf_parallel", "threshold": {"type": "classic"}, "max_iter": 20, "fixed_iters": false},
+    "BGFV": {"algo": "bgf_vasseur", "threshold": {"type": "affine_vasseur", "c0": 13.53, "c1": 0.0069722}, "max_iter": 20, "gray_delta": 3, "fixed_iters": false},
+    "BFMAX": {"algo": "bf_max", "max_iter": 84}
+  }
+}

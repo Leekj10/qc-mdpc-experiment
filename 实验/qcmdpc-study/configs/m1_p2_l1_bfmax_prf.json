@@ -1,0 +1,15 @@
+{
+  "run_id": "m1_p2_l1_bfmax_prf",
+  "note": "Re-measurement of BF-Max at BIKE L1 with PRF tie-break (mandatory after tiebreak probe: 3 of 4 deterministic-mode failures were smallest-index tie-break artifacts). Same frozen seed/key pools/error pools as m1_p2_l1_probe (identical (H,e,s) triples, paired with the earlier run). salt='' => tie-break stream derived from SHA-256(s0), i.e. a reproducible per-ciphertext random tie-break. Single-draw caveat: this estimates DFR under one fixed tie-break realization; multi-salt variance assessment deferred to full M5.",
+  "parameter": {"id": "P2_L1", "r": 12323, "d": 71, "t": 134, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 200,
+  "groups": {
+    "G0": {"type": "random", "n_keys": 6},
+    "G2_d12": {"type": "type1", "n_keys": 4, "delta": 12},
+    "G3": {"type": "ncw", "n_keys": 6, "kappa": 16, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "BFMAX_PRF": {"algo": "bf_max", "max_iter": 134, "tie_break": "prf"}
+  }
+}

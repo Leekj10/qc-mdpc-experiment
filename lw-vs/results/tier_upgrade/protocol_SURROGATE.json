@@ -1,0 +1,81 @@
+{
+ "phase": "SURROGATE",
+ "frozen_before": "first S1 decode (see file mtime)",
+ "purpose": "G1: a quantitative, out-of-sample-validated predictor of the first-round offset effect, computed from round-1 statistics only (no decoder run for the counterfactual arm).",
+ "feature_recipe": {
+  "alpha": "key.upc_fast(s0) on the INITIAL syndrome",
+  "tau1": "classic(0,|s0|)",
+  "F_delta": "{ i : alpha_i >= clip(tau1+delta, lo, hi) }",
+  "n_false": "|F \\ supp(e)|",
+  "n_true": "|F INTER supp(e)|",
+  "w1": "|s0 XOR (XOR of H-columns at F)|  (post-round-1 syndrome weight)",
+  "status": "verified bit-exact against the frozen carrier by check_surrogate_features.py (525/525 exact)"
+ },
+ "data": {
+  "pool": "main G0 keys 8..99 (headline pool)",
+  "instances": "error ids 0..2999 at t=92, five arms C0/+1/+2/+3/-1 on identical (H,e,s)"
+ },
+ "key_split": {
+  "fit": "pool keys 8..53 (46 keys)",
+  "test": "pool keys 54..99 (46 keys)",
+  "rule": "no key contributes to both sides"
+ },
+ "model_candidates": {
+  "M1": [
+   "n_false"
+  ],
+  "M2": [
+   "n_false",
+   "n_true"
+  ],
+  "M3": [
+   "n_false",
+   "n_true",
+   "w1"
+  ]
+ },
+ "selection_rule": "lowest held-out C0 log-loss on the test keys; the risk ratio is NOT used for selection",
+ "primary_validation": "for each delta, predicted RR (ratio of predicted DFRs over the SAME held-out instances) against measured RR with key-clustered CI95",
+ "secondary_validation": [
+  "cross-t: same fitted model applied at t=94 and t=96, same pool",
+  "cross-code: applied at (6007,56,100)",
+  "cross-code: applied at the L1-scale calibrated point (12323,71,t*) when available",
+  "sensitivity: model refit on pooled C0+FRO-2 instances"
+ ],
+ "falsification": "a predicted RR outside the measured CI95 on a validation axis falsifies the sufficiency claim for that axis; reported as measured either way",
+ "privileged_information": "features require supp(e); this is a diagnostic/mechanistic model, explicitly not a deployable detector.",
+ "written_by": "Claude (session 2026-10-07) before any S1 decode",
+ "amendments": [
+  {
+   "id": "amendment-1 (grading)",
+   "written_at": "2026-10-07T16:33:28",
+   "written_before": "phase S4 (the fit and validation) has run; S1 raw data collection was in flight and no model output had been inspected",
+   "reason": "Pre-commit the grading of the out-of-sample validation so that the verdict on G1 cannot be rationalised after seeing S4.",
+   "validation_cells": [
+    "delta in {+1,+3,-1} at t=92 (same config, arm transfer)",
+    "t in {93,94,96} (same pool, error-weight transfer)",
+    "(6007,56,100) (code-parameter transfer)",
+    "(12323,71,t*) (production code parameters, if P1PP lands)"
+   ],
+   "grading": {
+    "SUCCESS": "measured RR inside the measured CI95 in a majority of cells AND |log(predicted/measured)| <= log(1.5) in at least 3/4 of cells",
+    "PARTIAL": "sign correct in every cell AND within a factor of 2 in at least half of the cells",
+    "FAILURE": "a predicted RR outside the measured CI95 in a majority of cells, OR a sign error in any cell"
+   },
+   "consequence_if_not_success": "G1 is reported as NOT closed by this route: the counterfactual predictor would then be described as ordering offsets but not transferring magnitudes, and the report must say the paper cannot claim a validated out-of-sample model.",
+   "note_on_rho_baseline": "rho is the trivially cheap competitor model (two aggregate numbers). The per-instance model must BEAT it on the same cells to be worth reporting as an improvement; if the per-instance model performs no better than rho, that is reported too."
+  },
+  {
+   "id": "amendment-2 (post-hoc disclosure of unexecuted cells)",
+   "written_at": "2026-10-07T20:12:27",
+   "disclosure": "The secondary_validation cells listed above (cross-t t=93/94/96; cross-code (6007,56,100) and (12323,71,t*); the pooled refit; the prospective S5 freeze) were NOT executed: the model already failed on the delta axis (S4) and then on the arm-holdout axis (S7), so the remaining cells could not change the verdict. They are recorded here as unexecuted rather than silently dropped. The FAILURE verdict rests on S4 and S7 alone.",
+   "source": "independent audit 2026-10-07 (agent audit:claims / audit:protocol)"
+  },
+  {
+   "id": "amendment-3 (partial closure of amendment-2)",
+   "written_at": "2026-10-07T22:14:32",
+   "note": "The cross-code cell of the secondary validation was run after all (phase S6, feature-only, no decoding): the S4-selected model predicts 0.213 / 0.266 / 0.334 at t=94, t=96 and (6007,56,100) against archived measurements 2.819 / 1.871 / 2.407, outside the measured interval in every case. The negative result therefore now spans three further configurations. Still unexecuted: the S5 prospective freeze and the pooled refit; the amendment-2 disclosure is unchanged for those.",
+   "source": "user-requested strengthening, 2026-10-07 evening"
+  }
+ ]
+}

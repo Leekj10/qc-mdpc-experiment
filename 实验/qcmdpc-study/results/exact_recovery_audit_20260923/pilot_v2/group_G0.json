@@ -1,0 +1,79 @@
+{
+  "gid": "G0",
+  "parameter": {
+    "id": "P1prime",
+    "r": 4801,
+    "d": 45,
+    "t": 92,
+    "n0": 2
+  },
+  "seed": 20260901,
+  "fresh_index_range": [
+    8,
+    9
+  ],
+  "n_keys": 1,
+  "errors_per_key": 2,
+  "processed": 2,
+  "seconds": 0.027,
+  "arms": {
+    "C0_base": {
+      "decoder": "C0_base",
+      "n_keys": 1,
+      "errors_per_key": 2,
+      "processed": 2,
+      "trials": 2,
+      "zero_syndrome": 2,
+      "nonzero_syndrome": 0,
+      "zero_syndrome_rate": 1.0,
+      "zero_syndrome_miscorrections": 0,
+      "exact_recovery": 2,
+      "exact_recovery_failures": 0,
+      "exact_recovery_rate": 1.0,
+      "miscorrection_rate_among_zero_syndrome": 0.0,
+      "zero_syndrome_upper95_if_zero": 1.0,
+      "seconds": 0.012,
+      "ms_per_decode": 5.880050000087067,
+      "count_identity": "processed = zero_syndrome + nonzero_syndrome; exact_recovery_failures = nonzero_syndrome + zero_syndrome_miscorrections"
+    },
+    "FRO-2": {
+      "decoder": "FRO-2",
+      "n_keys": 1,
+      "errors_per_key": 2,
+      "processed": 2,
+      "trials": 2,
+      "zero_syndrome": 2,
+      "nonzero_syndrome": 0,
+      "zero_syndrome_rate": 1.0,
+      "zero_syndrome_miscorrections": 0,
+      "exact_recovery": 2,
+      "exact_recovery_failures": 0,
+      "exact_recovery_rate": 1.0,
+      "miscorrection_rate_among_zero_syndrome": 0.0,
+      "zero_syndrome_upper95_if_zero": 1.0,
+      "seconds": 0.011,
+      "ms_per_decode": 5.47640000058891,
+      "count_identity": "processed = zero_syndrome + nonzero_syndrome; exact_recovery_failures = nonzero_syndrome + zero_syndrome_miscorrections"
+    }
+  },
+  "per_key": {
+    "C0_base": [
+      {
+        "key_index": 8,
+        "zero_syndrome": 2,
+        "nonzero_syndrome": 0,
+        "zero_syndrome_miscorrection": 0,
+        "exact_recovery": 2
+      }
+    ],
+    "FRO-2": [
+      {
+        "key_index": 8,
+        "zero_syndrome": 2,
+        "nonzero_syndrome": 0,
+        "zero_syndrome_miscorrection": 0,
+        "exact_recovery": 2
+      }
+    ]
+  }
+}

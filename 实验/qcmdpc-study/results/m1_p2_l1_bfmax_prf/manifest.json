@@ -1,0 +1,36 @@
+{
+ "config_sha256": "4389f2a6e0e82877d7c2dd894d05ef76bfb8df972c444c32d852d22e784faec5",
+ "config_path": "configs\\m1_p2_l1_bfmax_prf.json",
+ "parameter": {
+  "id": "P2_L1",
+  "r": 12323,
+  "d": 71,
+  "t": 134,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 200,
+ "start_utc": "2026-09-02T13:06:53.221713+00:00",
+ "groups": {
+  "G0": {
+   "n_keys": 6,
+   "decoders": [
+    "BFMAX_PRF"
+   ]
+  },
+  "G2_d12": {
+   "n_keys": 4,
+   "decoders": [
+    "BFMAX_PRF"
+   ]
+  },
+  "G3": {
+   "n_keys": 6,
+   "decoders": [
+    "BFMAX_PRF"
+   ]
+  }
+ },
+ "end_utc": "2026-09-02T13:41:00.524268+00:00",
+ "wall_seconds_total": 2047.3
+}

@@ -1,0 +1,39 @@
+{
+ "config_sha256": "35787ab97ee5a6db14d4652c6958299f54d955cb457b1efcd484ba5b8612f6b7",
+ "config_path": "configs\\m2b_p1_cps_asym.json",
+ "parameter": {
+  "id": "P1",
+  "r": 4801,
+  "d": 45,
+  "t": 84,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 300,
+ "start_utc": "2026-09-02T07:23:21.300097+00:00",
+ "groups": {
+  "G0": {
+   "n_keys": 8,
+   "decoders": [
+    "CPS_BF30_ASYM",
+    "CPS_CLASSIC_ASYM"
+   ]
+  },
+  "G2_d12": {
+   "n_keys": 6,
+   "decoders": [
+    "CPS_BF30_ASYM",
+    "CPS_CLASSIC_ASYM"
+   ]
+  },
+  "G3": {
+   "n_keys": 8,
+   "decoders": [
+    "CPS_BF30_ASYM",
+    "CPS_CLASSIC_ASYM"
+   ]
+  }
+ },
+ "end_utc": "2026-09-02T07:33:32.508257+00:00",
+ "wall_seconds_total": 612.5
+}

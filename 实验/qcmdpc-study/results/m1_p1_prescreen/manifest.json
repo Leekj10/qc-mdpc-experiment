@@ -1,0 +1,54 @@
+{
+ "config_sha256": "e2d86fa5d10bcefb928c19020ca6ec33cc63f3dcf8d04869bce0f97aa8714155",
+ "config_path": "configs\\m1_p1_prescreen.json",
+ "parameter": {
+  "id": "P1",
+  "r": 4801,
+  "d": 45,
+  "t": 84,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 300,
+ "start_utc": "2026-09-01T15:59:28.093344+00:00",
+ "groups": {
+  "G0": {
+   "n_keys": 8,
+   "decoders": [
+    "BF30",
+    "CLASSIC",
+    "BGFV",
+    "BFMAX"
+   ]
+  },
+  "G2_d8": {
+   "n_keys": 6,
+   "decoders": [
+    "BF30",
+    "CLASSIC",
+    "BGFV",
+    "BFMAX"
+   ]
+  },
+  "G2_d12": {
+   "n_keys": 6,
+   "decoders": [
+    "BF30",
+    "CLASSIC",
+    "BGFV",
+    "BFMAX"
+   ]
+  },
+  "G3": {
+   "n_keys": 8,
+   "decoders": [
+    "BF30",
+    "CLASSIC",
+    "BGFV",
+    "BFMAX"
+   ]
+  }
+ },
+ "end_utc": "2026-09-01T16:15:02.013374+00:00",
+ "wall_seconds_total": 933.9
+}

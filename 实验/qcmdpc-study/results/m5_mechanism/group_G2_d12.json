@@ -1,0 +1,43 @@
+{
+ "gid": "G2_d12",
+ "n_keys": 94,
+ "E_per_key": 3000,
+ "n_samples": 282000,
+ "fails": {
+  "C0_base": 372,
+  "C4_first_p2": 68
+ },
+ "failure_modes": {
+  "C0_base": {
+   "divergence": 0,
+   "period2": 0,
+   "stagnation": 257,
+   "early_misflip": 103,
+   "other": 12
+  },
+  "C4_first_p2": {
+   "divergence": 0,
+   "period2": 0,
+   "stagnation": 36,
+   "early_misflip": 24,
+   "other": 8
+  }
+ },
+ "transitions": {
+  "both_fail": 13,
+  "c0_only_rescued": 359,
+  "c4_only_new": 55,
+  "concordant_ok": 281573,
+  "rescued_by_c0_mode": {
+   "stagnation": 250,
+   "early_misflip": 98,
+   "other": 11
+  },
+  "new_by_c4_mode": {
+   "stagnation": 29,
+   "other": 5,
+   "early_misflip": 21
+  }
+ },
+ "seconds": 4270.1
+}

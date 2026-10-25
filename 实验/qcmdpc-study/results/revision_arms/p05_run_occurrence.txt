@@ -1,0 +1,9 @@
+P0-5: natural occurrence probability of delta-runs in uniform weight-d keys (union bound over both blocks)
+method: E[cyclic delta-runs per block] = r * C(r-delta, d-delta) / C(r, d); P(key has such a run) <= 2*E
+P1prime r=4801  d=45 delta=8 : <= 2.974e-13
+P1prime r=4801  d=45 delta=12: <= 8.943e-22
+BIKE-L1 r=12323 d=71 delta=8 : <= 1.993e-14
+BIKE-L1 r=12323 d=71 delta=12: <= 1.239e-23
+conclusion: WEAK-12 is an adversarial worst-case probe, NOT a naturally occurring key class;
+paper must reframe accordingly (review_round1.md P0-5, DA-MAJOR-1).
+computed 2026-09-03 with Python math.comb (exact integer binomials).

@@ -1,0 +1,17 @@
+{
+  "run_id": "pilot_p1prime_bfmax",
+  "note": "Pilot only: BF-Max vs C0 vs FRO-2 on identical (H,e,s) at P1'=(4801,45,92), 10 keys x 200 errors per condition. BF-Max uses its design budget max_iter=t and PRF tie-break. Not part of the formal pool; used only to decide whether a full fair comparison is worth running.",
+  "parameter": {"id": "P1p", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 200,
+  "groups": {
+    "G0": {"type": "random", "n_keys": 10},
+    "G2_d12": {"type": "type1", "n_keys": 10, "delta": 12},
+    "G3": {"type": "ncw", "n_keys": 10, "kappa": 12, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "C0": {"algo": "bf_parallel", "threshold": {"type": "classic"}, "max_iter": 20, "fixed_iters": false},
+    "FRO-2": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [2, 0]}, "max_iter": 20, "fixed_iters": false},
+    "BFMAX": {"algo": "bf_max", "max_iter": 92, "tie_break": "prf"}
+  }
+}

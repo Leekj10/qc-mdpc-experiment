@@ -1,0 +1,38 @@
+{
+ "name": "prespecified_first_round_offset_rule",
+ "frozen_before_run": true,
+ "point": {
+  "r": 3607,
+  "d": 39,
+  "t": 76,
+  "id": "P4",
+  "note": "new (r,d); project has used 4801/45, 3001/37, 4001/41, 12323/71"
+ },
+ "rule": {
+  "definition": "delta* = argmax_{delta in {1,2,3,4}} rho(delta), rho = incorrect flips avoided per correct flip deferred",
+  "A_c": "A_c(delta) = q_c(tau1+delta)/q_c(tau1), q_c = tail mass of first-round UPC in class c",
+  "free_parameters": "none",
+  "rho": "rho(delta) = [(n-t)*(q0(tau1)-q0(tau1+delta))] / [t*(q1(tau1)-q1(tau1+delta))]",
+  "tie_break": "smaller delta"
+ },
+ "development_sample": {
+  "keys": 12,
+  "errors_per_key": 200,
+  "seed_context": "dev"
+ },
+ "validation_sample": {
+  "keys": 48,
+  "errors_per_key": 1000,
+  "seed_context": "val",
+  "fresh_keys": true
+ },
+ "inference": {
+  "cluster_bootstrap": {
+   "B": 10000,
+   "seed": 20260905,
+   "unit": "key"
+  },
+  "sign_test": "exact two-sided, paired per-key"
+ },
+ "master_seed": 20260901
+}

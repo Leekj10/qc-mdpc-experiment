@@ -1,0 +1,23 @@
+
+[phase 2] t-sensitivity at P1' (r,d)=(4801,45), 30 keys x 1000 errors per t
+  t=88 (t/r=0.0183): C0    0/30000 DFR=0.000e+00  FRO-2    0/30000  RR=undefined (zero failures in one arm)
+  t=90 (t/r=0.0187): C0    1/30000 DFR=3.333e-05  FRO-2    0/30000  RR=undefined (zero failures in one arm)
+  t=92 (t/r=0.0192): C0   42/30000 DFR=1.400e-03  FRO-2    6/30000  RR=7.000 [3.636, 23.500]
+  t=94 (t/r=0.0196): C0  234/30000 DFR=7.800e-03  FRO-2   83/30000  RR=2.819 [2.275, 3.603]
+  t=96 (t/r=0.0200): C0 1033/30000 DFR=3.443e-02  FRO-2  552/30000  RR=1.871 [1.721, 2.039]
+
+[phase 3] parameter sweep, 30 keys x 1000 errors per cell
+  Q1 (r=4801,d=45) t= 80 (t/r=0.0167): C0    0/30000 DFR=0.000e+00  FRO-2    0/30000  RR=undefined (zero failures)
+  Q1 (r=4801,d=45) t= 84 (t/r=0.0175): C0    0/30000 DFR=0.000e+00  FRO-2    0/30000  RR=undefined (zero failures)
+  Q1 (r=4801,d=45) t= 88 (t/r=0.0183): C0    0/30000 DFR=0.000e+00  FRO-2    1/30000  RR=0.000
+  Q2 (r=4801,d=45) t= 98 (t/r=0.0204): C0 3882/30000 DFR=1.294e-01  FRO-2 2191/30000  RR=1.772
+  Q2 (r=4801,d=45) t=102 (t/r=0.0212): C0 16340/30000 DFR=5.447e-01  FRO-2 15075/30000  RR=1.084
+  Q2 (r=4801,d=45) t=106 (t/r=0.0221): C0 28695/30000 DFR=9.565e-01  FRO-2 28347/30000  RR=1.012
+  Q3 (r=4801,d=59) t= 86 (t/r=0.0179): C0 28678/30000 DFR=9.559e-01  FRO-2 28561/30000  RR=1.004
+  Q3 (r=4801,d=59) t= 92 (t/r=0.0192): C0 30000/30000 DFR=1.000e+00  FRO-2 30000/30000  RR=1.000
+  Q3 (r=4801,d=59) t= 98 (t/r=0.0204): C0 30000/30000 DFR=1.000e+00  FRO-2 30000/30000  RR=1.000
+  Q4 (r=4801,d=31) t= 74 (t/r=0.0154): C0    0/30000 DFR=0.000e+00  FRO-2    0/30000  RR=undefined (zero failures)
+  Q4 (r=4801,d=31) t= 80 (t/r=0.0167): C0    0/30000 DFR=0.000e+00  FRO-2    0/30000  RR=undefined (zero failures)
+  Q4 (r=4801,d=31) t= 86 (t/r=0.0179): C0    0/30000 DFR=0.000e+00  FRO-2    0/30000  RR=undefined (zero failures)
+
+[done] D:\×ÀÃæ\TOUGAO - c\lw-vs\results\round_controls  (2612 s)

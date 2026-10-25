@@ -1,0 +1,2 @@
+{"key_id": "G0-0003", "error_id": 18, "decoder": "C0", "mode": "early_misflip", "iters": 20, "sw_first": 1776, "sw_last": 1388}
+{"key_id": "G0-0005", "error_id": 130, "decoder": "C0", "mode": "stagnation", "iters": 20, "sw_first": 1680, "sw_last": 1444}

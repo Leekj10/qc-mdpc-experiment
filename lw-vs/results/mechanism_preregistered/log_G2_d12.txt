@@ -1,0 +1,15 @@
+[G2_d12] starting (22:27:01)
+  [G2_d12] 8/94 keys, 665s, C0 fails=28 C4 fails=8
+  [G2_d12] 16/94 keys, 1491s, C0 fails=55 C4 fails=11
+  [G2_d12] 24/94 keys, 2290s, C0 fails=81 C4 fails=12
+  [G2_d12] 32/94 keys, 2697s, C0 fails=108 C4 fails=19
+  [G2_d12] 40/94 keys, 3089s, C0 fails=148 C4 fails=24
+  [G2_d12] 48/94 keys, 3474s, C0 fails=182 C4 fails=27
+  [G2_d12] 56/94 keys, 3853s, C0 fails=207 C4 fails=32
+  [G2_d12] 64/94 keys, 4235s, C0 fails=245 C4 fails=38
+  [G2_d12] 72/94 keys, 4618s, C0 fails=283 C4 fails=44
+  [G2_d12] 80/94 keys, 5005s, C0 fails=312 C4 fails=53
+  [G2_d12] 88/94 keys, 5382s, C0 fails=343 C4 fails=61
+  [G2_d12] 94/94 keys, 5639s, C0 fails=372 C4 fails=68
+[G2_d12] done: C0 fails=372 modes={'divergence': 0, 'period2': 0, 'stagnation': 257, 'early_misflip': 103, 'other': 12} | C4 fails=68 modes={'divergence': 0, 'period2': 0, 'stagnation': 36, 'early_misflip': 24, 'other': 8} | rescued=359 (by C0 mode {'stagnation': 250, 'early_misflip': 98, 'other': 11}) new=55 both=13 (5639.0s)
+saved -> d:/×ÀÃæ/TOUGAO - c/lw-vs/results/mechanism_preregistered\report.json

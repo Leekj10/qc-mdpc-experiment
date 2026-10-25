@@ -1,0 +1,66 @@
+\subsection{Stress constructions and production-scale evidence}\label{sec:boundary}
+
+Stress instances overlap a near codeword in exactly $\kappa$ positions. At overlaps below the block row weight the offset still helps: RR 3.54 [2.41, 6.00] against uniform constructions, and 4.75 [2.00, 19.0] at $\kappa=12$. At $\kappa=46$ the baseline collapses: C0 fails on 85.31\% of samples and FRO-2 on 86.50\%, RR 0.986 [0.981, 0.991], on the harmful side. At $\kappa=60$ neither variant decodes any of the 40{,}000 samples. These rates are conditional on the key pool that admits the construction, and the label capture-prone describes the construction, not a demonstrated capture event. Figure~\ref{fig:scope}(b,c) summarizes the boundary.
+
+A near-codeword-aware step dissociates the label from the outcome. At $\kappa=46$ it fires on 74.2\% of samples and cuts residual failure to 11.07\% against 85.31\%; at $\kappa=60$ the signal vanishes (0.76\%). At $P_1'$ the monitor is inert: zero triggers, with failure counts 282 / 372 / 141 and mean iterations 4.312 / 4.511 / 4.206 unchanged. The stress family therefore changes character past the block row weight; the shallow condition is not a capture guarantee.
+
+At the production block $(r,d)=(12323,71)$ the plain rate is out of reach. At weight 134, both variants record zero failures in 32{,}000 decodes, a rule-of-three bound of $9.4\times10^{-5}$ that is a measurement floor for this sample, not a worst-case guarantee. Only a decision margin and a convergence cost remain. The $+2$ offset cuts false flips from 13.8 to 2.3 while deferring 25.5 true flips, and mean convergence is 2.446 against 2.054.\label{sec:production}
+
+Raising the weight to $t^\ast=172$, 28\% above production, opens a steep band: $1.67\times10^{-4}$ at 170, $2.17\times10^{-3}$ at 172, $1.5\times10^{-2}$ at 175 and $1.39\times10^{-1}$ at 180. At this weight the window reproduces on 32 keys with 1{,}500 paired errors (Table~\ref{tab:added}): FRO-2 gives RR 4.48 [2.97, 7.25] and FRONEG 0.162 [0.119, 0.209].
+
+At native Level 1 $(12323,71,134)$ the dynamic-distance hold-out records zero failures at offsets 0, 2 and 4 for both variants; the only measurable signal is convergence cost. At these offsets, two-round convergence is 96.0\%, 68.4\% and 2.2\% under RAND, 91.7\%, 60.2\% and 1.5\% under TYPE-I, and 93.6\%, 62.3\% and 2.0\% under NCW, with 1{,}000{,}000 trials per cell.
+
+The CPA-128 preset $(10163,71)$ is the closest approach to production. The band opens between $t=138$ and $t=142$; at weight 140, about 4\% above production, C0's DFR is $8.38\times10^{-4}$; over 160{,}000 paired trials, FRO-2 gives RR 4.96 [3.68, 7.19] and FRONEG 0.177 [0.148, 0.210] (Table~\ref{tab:added}). This point is a proximity check: it asks whether the window persists near production, not whether it yields a CCA margin.
+
+The offset's price in the paired dynamic-distance C reference at the primary point $(4801,45,92)$, over 500{,}000 decodes per variant and a 20-round budget, is small: C0 runs at 7{,}134.4 decodes per second with 4.191 mean iterations, and FRO-2 at 6{,}563.2 with 4.471 (iteration ratio 1.067, throughput ratio 1.087), a 7--9\% wall-time cost at this point (8.7\% by throughput). GRAY\_BGF, whose published Level-1 constants are not matched to this point, spends 13.2 iterations per decode and exhausts its budget on 47.9\% of runs. These are best-of-run timings on one platform. At the tested high-overlap stress the benefit disappears or reverses; at the production weight the current sample cannot resolve a DFR benefit. At production block size the window returns once the weight is raised.
+
+\begin{table*}[!t]
+\centering
+\small
+\caption{Production-scale checks. RR is C0 over the variant with 95\% intervals; each row gives failures over decodes per arm. At the production weight, zero events in 32{,}000 decodes give a $9.4\times10^{-5}$ bound per arm, not a security guarantee.}
+\label{tab:added}
+\begin{tabular}{llrrr}
+\toprule
+Setting & Variant & Failures & Decodes & RR [95\% CI] \\
+\midrule
+\multirow{3}{*}{raised weight $(12323,71,172)$} & C0 & 94 & 48{,}000 & -- \\
+ & FRO-2 & 21 & 48{,}000 & 4.48 [2.97, 7.25] \\
+ & FRONEG & 582 & 48{,}000 & 0.162 [0.119, 0.209] \\
+\midrule
+\multirow{2}{*}{production weight $(12323,71,134)$} & C0 & 0 & 32{,}000 & -- \\
+ & FRO-2 & 0 & 32{,}000 & -- \\
+\midrule
+\multirow{3}{*}{CPA-128 $(10163,71,140)$} & C0 & 134 & 160{,}000 & -- \\
+ & FRO-2 & 27 & 160{,}000 & 4.96 [3.68, 7.19] \\
+ & FRONEG & 756 & 160{,}000 & 0.177 [0.148, 0.210] \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Positioning against modern decoders}\label{sec:modern}
+
+Table~\ref{tab:modern} compares the window with stronger decoders. In matched conditions the failure counts are 282 / 68 / 83 / 287 under RAND, 372 / 68 / 94 / 391 under TYPE-I and 141 / 31 / 58 / 84 under NCW-shallow, for C0, FRO-2, BIKE-Flip and BGF-C3.
+
+BIKE-Flip uses the specification's own threshold formula and A.2.4 constants; its DFRs lie between C0 and FRO-2 in each condition (Table~\ref{tab:modern}). Against FRO-2 the RAND comparison is unresolved (exact McNemar $p=0.23$); TYPE-I and NCW-shallow give nominal separations at $0.0292$ and $0.00244$ in FRO-2's favour. One asymmetry favours the comparator: BIKE-Flip runs under our 20-round budget while the specification stops at seven.
+
+At the raised weight the two BIKE-Flip configurations fail 28 and 13 times against FRO-2's 21 ($p=0.32$ and $0.18$), and tangent-fit BGF fails 63 times against C0's 94 ($p=0.0125$). Published affine constants do not carry to this weight (94.6\% failures), and at seven iterations the configurations degrade to $1.10\times10^{-2}$ and $1.84\times10^{-2}$, six and nine times C0.
+
+BGF-C3 gives RR 0.983 [0.836, 1.156], 0.951 [0.837, 1.086] and 1.679 [1.362, 2.111] against C0, so RAND and TYPE-I are indistinguishable from C0 and only NCW-shallow shows a nominal separation in BGF-C3's favour. It uses 5.28, 5.46 and 5.16 iterations against 4.31, 4.51 and 4.21 for C0, a 22\% iteration cost. With published Level-1 constants instead of constants at $d=45$, BGF fails on 38--60\% of decodes, a constant-mismatch boundary. Backflip remains stronger than any schedule tested here. FRO-2 is in a similar performance range under the tested conditions, not dominant over the strongest decoders. These McNemar tests treat instances as independent; they are marginal, not key-clustered or multiplicity-adjusted. We read them as nominal separations, not confirmed advantages.
+
+\begin{table*}[!t]
+\centering
+\small
+\caption{Modern-decoder comparison at $P_1'=(4801,45,92)$; entries are DFR. $p$ compares BIKE-Flip with FRO-2 (exact McNemar); RR is C0 over BGF-C3 with a 95\% archived interval. All comparators share paired static instances; BIKE-Flip uses the 20-round budget while the specification stops at seven. Tests are nominal and instance-level, not key-clustered or multiplicity-adjusted.}
+\label{tab:modern}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{4}{c}{DFR} & \multicolumn{2}{c}{Comparisons} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-7}
+condition & C0 & FRO-2 & BIKE-Flip & BGF-C3 & $p$ & RR [95\% CI] \\
+\midrule
+RAND & $1.022\times10^{-3}$ & $2.464\times10^{-4}$ & $3.007\times10^{-4}$ & $1.040\times10^{-3}$ & $0.228$ & 0.983 [0.836, 1.156] \\
+TYPE-I & $1.319\times10^{-3}$ & $2.411\times10^{-4}$ & $3.333\times10^{-4}$ & $1.387\times10^{-3}$ & $0.0292$ & 0.951 [0.837, 1.086] \\
+NCW-shallow & $5.109\times10^{-4}$ & $1.123\times10^{-4}$ & $2.101\times10^{-4}$ & $3.043\times10^{-4}$ & $0.00244$ & 1.679 [1.362, 2.111] \\
+\bottomrule
+\end{tabular}
+\end{table*}

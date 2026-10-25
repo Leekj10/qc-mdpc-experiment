@@ -1,0 +1,15 @@
+[G3] starting (22:27:01)
+  [G3] 8/92 keys, 727s, C0 fails=16 C4 fails=1
+  [G3] 16/92 keys, 1568s, C0 fails=33 C4 fails=4
+  [G3] 24/92 keys, 2347s, C0 fails=45 C4 fails=5
+  [G3] 32/92 keys, 2763s, C0 fails=57 C4 fails=8
+  [G3] 40/92 keys, 3164s, C0 fails=70 C4 fails=11
+  [G3] 48/92 keys, 3560s, C0 fails=81 C4 fails=15
+  [G3] 56/92 keys, 3952s, C0 fails=89 C4 fails=18
+  [G3] 64/92 keys, 4348s, C0 fails=101 C4 fails=20
+  [G3] 72/92 keys, 4741s, C0 fails=112 C4 fails=23
+  [G3] 80/92 keys, 5141s, C0 fails=127 C4 fails=24
+  [G3] 88/92 keys, 5517s, C0 fails=137 C4 fails=28
+  [G3] 92/92 keys, 5688s, C0 fails=141 C4 fails=31
+[G3] done: C0 fails=141 modes={'divergence': 0, 'period2': 0, 'stagnation': 101, 'early_misflip': 31, 'other': 9} | C4 fails=31 modes={'divergence': 0, 'period2': 0, 'stagnation': 17, 'early_misflip': 7, 'other': 7} | rescued=139 (by C0 mode {'stagnation': 100, 'other': 9, 'early_misflip': 30}) new=29 both=2 (5688.4s)
+saved -> d:/×ÀÃæ/TOUGAO - c/lw-vs/results/mechanism_preregistered\report.json

@@ -1,0 +1,26 @@
+P1' = 4801,45,92   E/key = 3000   workers = 10
+arms: ['C0', 'FRO-2', 'BGF-C3']
+
+  [RAND        ] C0      282 (archive  282) OK
+  [RAND        ] FRO-2    68 (archive   68) OK
+    C0      282/276000  DFR=1.022e-03  iters=4.312
+    FRO-2    68/276000  DFR=2.464e-04  iters=4.586  RR=4.147 [3.289, 5.382] excl1=True
+    BGF-C3  287/276000  DFR=1.040e-03  iters=5.283  RR=0.983 [0.836, 1.156] excl1=False
+  [TYPE-I      ] C0      372 (archive  372) OK
+  [TYPE-I      ] FRO-2    68 (archive   68) OK
+    C0      372/282000  DFR=1.319e-03  iters=4.511
+    FRO-2    68/282000  DFR=2.411e-04  iters=4.763  RR=5.471 [4.253, 7.281] excl1=True
+    BGF-C3  391/282000  DFR=1.387e-03  iters=5.459  RR=0.951 [0.837, 1.086] excl1=False
+  [NCW-shallow ] C0      141 (archive  141) OK
+  [NCW-shallow ] FRO-2    31 (archive   31) OK
+    C0      141/276000  DFR=5.109e-04  iters=4.206
+    FRO-2    31/276000  DFR=1.123e-04  iters=4.480  RR=4.548 [3.211, 6.818] excl1=True
+    BGF-C3   84/276000  DFR=3.043e-04  iters=5.159  RR=1.679 [1.362, 2.111] excl1=True
+
+[boundary] spec-exact BGF with published BIKE Level-1 affine constants
+  [RAND        ] BGFV-affine   5727/12000 DFR=4.773e-01  iters=12.69
+  [TYPE-I      ] BGFV-affine   7256/12000 DFR=6.047e-01  iters=14.63
+  [NCW-shallow ] BGFV-affine   4579/12000 DFR=3.816e-01  iters=11.26
+
+reproducibility gate: PASS
+[done] D:\×ÀÃæ\TOUGAO - c\lw-vs\results\bgf_baseline\report.json  (5296 s)

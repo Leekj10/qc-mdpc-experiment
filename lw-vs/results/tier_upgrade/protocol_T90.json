@@ -1,0 +1,71 @@
+{
+ "phase": "T90",
+ "purpose": "G3: extend the measured DFR band one order of magnitude below the headline point, on the SAME 92-key formal pool.",
+ "frozen_before": "first decode of this phase (see file mtime)",
+ "hypothesis": "RR(FRO-2 vs C0) at t=90 is larger than the t=92 value 4.15 and its 95% key-clustered CI excludes 1.",
+ "design": {
+  "pool": "KeyPool(20260901, P1prime, 'G0', {random,100}) keys 8..99, identical to exp_round_controls.phase1 G0 (the headline pool)",
+  "error_generator": "make_error_generator(20260901,'G0',key_id,param{t=90},'G0'-spec,key,None), error ids 0..E-1, same error ids for every arm",
+  "arms": {
+   "C0": [
+    0
+   ],
+   "FRO-2": [
+    2,
+    0
+   ]
+  },
+  "decoder": "bf_parallel, classic threshold, max_iter=20 (identical carrier to the headline result)",
+  "chunking": "4000 errors/key per chunk; state checkpointed after each chunk; arms added per chunk on identical instances, so pairing is exact"
+ },
+ "stopping_rule": {
+  "target": "stop when C0 failures >= 120",
+  "cap": "or errors/key = 100000, whichever comes first",
+  "note": "sample-size stopping rule, NOT significance-based: the decision rule is fixed in advance and never looks at RR.",
+  "after_cap": "if the cap is reached below target, report the achieved CI as-is; do not extend the sample."
+ },
+ "analysis": {
+  "primary": "cluster_bootstrap_paired(per_key C0, per_key FRO-2, errors_per_key, B=10000, seed=20260905)",
+  "secondary": [
+   "sign_test_paired",
+   "wilson_upper(C0)"
+  ],
+  "reported": [
+   "C0 DFR + upper95",
+   "FRO-2 DFR",
+   "RR + CI95",
+   "sign test"
+  ]
+ },
+ "falsification": "CI includes 1, or RR <= 4.15, falsifies the 'strengthens toward lower DFR' hypothesis; either way the result is reported as measured.",
+ "prior_expectation": "t=90 saw 1/30000 C0 failures on a different 30-key pool; target 120 failures at 92 keys implies ~40k errors/key if DFR ~3.3e-5.",
+ "written_by": "Claude (session 2026-10-07) before any t=90 decode",
+ "amendments": [
+  {
+   "id": "amendment-1",
+   "written_at": "2026-10-07T15:41:16",
+   "written_before": "the first real (non-smoke) chunk of phase T90",
+   "reason": "A 20-errors/key smoke run produced 1 C0 failure in 1840 trials, hinting the main pool t=90 DFR may be ~5e-4 rather than the ~3.3e-5 seen on the phase2 t-sweep pool (different keys). The stopping rule below is unchanged.",
+   "contingency": "If the completed T90 run yields C0 DFR > 1.5e-4, run one further point at t=88 on the SAME pool with the identical design and stopping rule, so the scaling family reaches at least one clearly-lower C0 DFR. No other adaptation will be made.",
+   "disclosure": "smoke used error ids 0..19 on all 92 keys at t=90; it is part of the final T90 sample (chunk 1 reuses ids 0..3999 in full)."
+  },
+  {
+   "id": "amendment-2",
+   "written_at": "2026-10-07T16:04:29",
+   "written_before": "chunks 2..N of phase T90 (after chunk 1 only)",
+   "observed_after_chunk_1": {
+    "errors_per_key": 4000,
+    "c0_failures": 22,
+    "c0_dfr": 5.978e-05,
+    "fro2_failures": 7,
+    "rr": 3.143,
+    "rr_ci95": [
+     1.625,
+     8.667
+    ]
+   },
+   "note": "The main pool DFR at t=90 is 5.98e-5 (17x below t=92), not far from the tsweep-pool hint. The pre-registered stopping rule (target 120 C0 failures, cap 100k errors/key) is UNCHANGED; at this DFR it implies about 5-6 chunks total (~22 min each).",
+   "disclosure": "Same-pool RR at t=90 (3.14, wide CI) is LOWER than the t=92 headline RR 4.15, whereas the cross-pool t-sweep suggested RR grows as DFR falls (7.00 at t=92 on the tsweep pool). The extra sampling will discriminate between a real trend and a pool artefact; both outcomes will be reported as measured."
+  }
+ ]
+}

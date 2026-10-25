@@ -1,0 +1,28 @@
+path,value
+protocol,native BIKE Level-1 holdout reused from preregistered C transfer and spec-exact validation
+parameter/r,12323
+parameter/d,71
+parameter/t,134
+parameter/source,experimental l1_c4_transfer/run_log.txt
+status,independent holdout operating point; no threshold tuning performed
+trials_per_cell,1000000
+observed_failures/offset_0/RAND,0
+observed_failures/offset_0/TYPE-I,0
+observed_failures/offset_0/NCW,0
+observed_failures/offset_2/RAND,0
+observed_failures/offset_2/TYPE-I,0
+observed_failures/offset_2/NCW,0
+observed_failures/offset_4/RAND,0
+observed_failures/offset_4/TYPE-I,0
+observed_failures/offset_4/NCW,0
+rule_of_three_upper_bound,3e-06
+two_round_convergence_percent/offset_0/RAND,95.9985
+two_round_convergence_percent/offset_0/TYPE-I,91.7059
+two_round_convergence_percent/offset_0/NCW,93.5933
+two_round_convergence_percent/offset_2/RAND,68.356
+two_round_convergence_percent/offset_2/TYPE-I,60.236
+two_round_convergence_percent/offset_2/NCW,62.316
+two_round_convergence_percent/offset_4/RAND,2.1516
+two_round_convergence_percent/offset_4/TYPE-I,1.5422
+two_round_convergence_percent/offset_4/NCW,2.0152
+interpretation,no degradation resolved at 1e6 trials per cell; no production DFR improvement established

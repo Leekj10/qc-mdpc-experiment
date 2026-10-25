@@ -1,0 +1,5 @@
+tier,source,phase,construction,kappa,trials,c0_failures,c0_dfr,c0_exact_recovery_failures,ncw_zero_syndrome,ncw_zero_syndrome_dfr,ncw_exact_recovery_failures,ncw_exact_recovery_dfr,ncw_triggered,ncw_trigger_rate
+1,lw-vs/results/ncw_aware,capture,rand,0,40000,46,0.00115,46,39954,0.99885,46,0.00115,0,0.0
+1,lw-vs/results/ncw_aware,capture,k12,12,40000,19,0.000475,19,39981,0.999525,19,0.000475,0,0.0
+1,lw-vs/results/ncw_aware,capture,k46,46,40000,34125,0.853125,34125,35574,0.88935,4426,0.11065,29699,0.742475
+1,lw-vs/results/ncw_aware,capture,k60,60,40000,40000,1.0,40000,303,0.007575,39697,0.992425,303,0.007575

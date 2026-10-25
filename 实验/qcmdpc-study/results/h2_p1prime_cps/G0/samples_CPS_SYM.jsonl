@@ -1,0 +1,7 @@
+{"key_id": "G0-0000", "error_id": 106, "decoder": "CPS_SYM", "mode": "early_misflip", "iters": 20, "sw_first": 1836, "sw_last": 1380}
+{"key_id": "G0-0003", "error_id": 18, "decoder": "CPS_SYM", "mode": "early_misflip", "iters": 20, "sw_first": 1776, "sw_last": 1388}
+{"key_id": "G0-0004", "error_id": 2, "decoder": "CPS_SYM", "mode": "early_misflip", "iters": 20, "sw_first": 1780, "sw_last": 1438}
+{"key_id": "G0-0004", "error_id": 123, "decoder": "CPS_SYM", "mode": "stagnation", "iters": 20, "sw_first": 1724, "sw_last": 1534}
+{"key_id": "G0-0005", "error_id": 130, "decoder": "CPS_SYM", "mode": "stagnation", "iters": 20, "sw_first": 1680, "sw_last": 1444}
+{"key_id": "G0-0007", "error_id": 30, "decoder": "CPS_SYM", "mode": "stagnation", "iters": 20, "sw_first": 1738, "sw_last": 1630}
+{"key_id": "G0-0007", "error_id": 230, "decoder": "CPS_SYM", "mode": "early_misflip", "iters": 20, "sw_first": 1814, "sw_last": 1446}

@@ -1,0 +1,41 @@
+\section{背景与相关工作}\label{sec:background}
+
+本节固定码、译码器、我们所对照的已有工作，以及首轮窗口的一阶模型。
+
+\subsection{QC-MDPC 码与 BF 译码器}
+
+准循环中密度奇偶校验（QC-MDPC）码是校验矩阵块循环的二进制线性码~\cite{misoczki2013mdpc}。$r$ 为块长，$n=2r$ 为码长。校验矩阵为 $H=[H_0\mid H_1]$，每个循环块的行重为 $d$；完整矩阵的行重为 $2d$，列重为 $d$。$t$ 为一次译码尝试注入的错误数。主工作点为 $(r,d,t)=(4801,45,92)$（第~\ref{sec:method} 节）。对校验矩阵 $H$ 与错误向量 $e$，综合征为 $s=He^{\top}$。最终综合征为零则译码成功，否则失败。
+
+BF 译码迭代地纠正错误。一个位置的决策变量是它的未满足校验计数（UPC），即涉及它的未满足方程数。每一轮译码器翻转所有 UPC 达到阈值的位置，重算综合征，如此重复，直到综合征消失或迭代预算用尽。算法~\ref{alg:bf} 给出该过程。
+
+\begin{algorithm}[t]
+\caption{普通 BF 译码}
+\label{alg:bf}
+\begin{algorithmic}[1]
+\Require $H$、输入综合征 $s_{\mathrm{in}}=He^{\top}$、预算 $I$
+\Ensure 错误估计 $\hat e$，或失败
+\State $\hat e \gets \mathbf{0}$；$s_{\mathrm{res}} \gets s_{\mathrm{in}}$
+\For{$i=1,\ldots,I$}
+  \State 对每个位置 $j$ 计算 $U_j=\mathrm{UPC}(H,s_{\mathrm{res}},\hat e,j)$
+  \State 由当前综合征重量 $|s_{\mathrm{res}}|$ 计算 $\tau_i$
+  \State 翻转所有满足 $U_j\ge\tau_i$ 的 $j$
+  \State 更新 $\hat e$，并令 $s_{\mathrm{res}}\gets s_{\mathrm{in}}\oplus H\hat e^{\top}$
+  \If{$s_{\mathrm{res}}=\mathbf{0}$}
+    \State \textbf{return} $\hat e$
+  \EndIf
+\EndFor
+\State \textbf{return} 失败
+\end{algorithmic}
+\end{algorithm}
+
+基线是 Vasseur 参考实现中的 CLASSIC BF 译码器~\cite{vasseur2021thesis}，记作 C0。其阈值由 \path{compute_threshold} 的二项模型给出，向上取整并裁剪到 $[(d+1)/2,d]$，每轮根据当前综合征重量重算。主实验使用 20 轮预算与静态距离语义。静态运行使用固定的初始 $t$；偏移加到裁剪后的基础阈值上，再裁剪回同一区间。随代码归档的 \path{reference/FROZEN_REFERENCE_SEMANTICS.md} 给出精确公式与来源身份。零综合征或用尽预算时停止。另有一套单独编写的动态距离参考实现，它使用当前到真实错误的距离（部署者不知道这一信息），只作为仿真特权的方向性核对。它有名字的后继修改调度或携带额外状态：Black-Gray-Flip（BGF）、Backflip，以及规范中的译码器，我们称之为 BIKE-Flip~\cite{drucker2020shades,vasseur2021thesis,bike2024spec}。我们把它们当作彼此不同的译码器。BIKE-Flip 在每一轮都施加下限保护，$T=\max(f_t(S),T_i(S_0))$~\cite{bike2024spec}，其中 $S$ 为当前综合征重量，$f_t(S)$ 为其仿射函数，$T_i(S_0)$ 为由初始综合征重量 $S_0$ 计算的第 $i$ 轮下限。每个下限等于未加裕度的水平加上裕度 $\Delta$，因此裕度持续存在于每一轮，而不只出现在首轮。Level-1 规范取 $\Delta=3$，预算为七次迭代。附录 A.2.4 以平均综合征重量处理论阈值的切线推导仿射常数；我们用规范为 Level 1、3、5 印出的常数核对了实现。已发表的机理解释把残余失败放在第 2、3 轮：综合征重量已经下降，阈值跌破少数正确位置的计数，译码器便把正确位置当作错误翻转~\cite{sendrier2024seminar,wang2023weak}。FRO-2 走的是另一条路线：它只在首轮把阈值加 $+2$ 一次，后续轮保持普通阈值。
+
+\subsection{失败以密钥与调度为条件}
+
+失败不仅以信道为条件，也以密钥为条件。Guo 等表明触发失败的错误图样与秘密矩阵相关，因此观测到的失败泄露密钥信息~\cite{guo2016key}；Wang 等把同一相关性变成弱密钥构造~\cite{wang2023weak}；Eaton 等把计时观测转成密钥恢复攻击~\cite{eaton2018timing}；Gellersen 等扩展了侧信道路线~\cite{gellersen2025}。失败率偏高的弱密钥类也已被构造、枚举和筛选~\cite{vasseur2021thesis,nosouhi2023weakkey,matthews2025combinatorial}。调度是第二个条件变量，因为一轮翻转的位置集合塑造进入下一轮的状态。我们的设计因此扰动调度，并把密钥作为推断单元：所有变体译码相同的 $(H,e,s)$ 实例，不确定度来自重抽密钥而非错误（第~\ref{sec:method} 节）。
+
+\subsection{相关工作}
+
+失败建模沿两条路线展开。第一条从译码器状态解释失败。Kim 与 Park 拟合逐实例逻辑预测器~\cite{kim2021logistic}；Paiva 与 Terada 用首轮残余错误作为代理~\cite{paiva2022pickyfix}；Santini 等与 Annechini 等分析正则码的计数分布~\cite{santini2019conservative,annechini2024estimation}。第二条估计仿真无法触及的失败率。Sendrier 与 Vasseur 把 BF 建模为马尔可夫链~\cite{sendrier2019dfr,sendrier2020lowdfr}；Tillich 给出失败概率界~\cite{tillich2018dfp}；Vasseur 加入带置信区间的外推~\cite{vasseur2021thesis}；Arpin 等预测密钥相关错误平层~\cite{arpin2025errorfloor}；Annechini 等给出闭式估计，并明确警告基于代理的外推是危险的~\cite{annechini2025closedform}。
+
+第三条路线直接调阈值。Kichna 等在我们这一块长上用粒子群搜索，报告推荐错误重量下平均迭代从 5.36 降到 3.01，但没有失败率测量~\cite{kichna2025pso}。近期工作改变译码器本身：BF-Max~\cite{baldelli2025bfmax}、原地随机翻转~\cite{baldi2021inplace}、近码字感知 BF~\cite{baldelli2026ncw}，以及后续改进~\cite{santini2026flip}。这些译码器是量级与代价的参照，不是我们声称支配的对象。这些路线共同引出本文的问题：首轮调度的微小改变会改变条件失败吗？效应是否依赖施加轮次与持续方式？我们在配对实例上检验这一问题；第~\ref{sec:counterfactual} 节再给出一个次级诊断，检验同一批首轮统计量能否预测另一套调度。

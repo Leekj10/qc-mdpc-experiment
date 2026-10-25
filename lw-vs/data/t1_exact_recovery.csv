@@ -1,0 +1,7 @@
+tier,source,group,condition,arm,trials,zero_syndrome,nonzero_syndrome,zero_syndrome_rate,zero_syndrome_miscorrections,exact_recovery,exact_recovery_failures
+1,results/exact_recovery_audit_20260923/formal_current,G0,RAND,C0,276000,275718,282,0.9989782608695652,0,275718,282
+1,results/exact_recovery_audit_20260923/formal_current,G0,RAND,FRO-2,276000,275932,68,0.9997536231884058,0,275932,68
+1,results/exact_recovery_audit_20260923/formal_current,G2_d12,TYPE-I,C0,282000,281628,372,0.9986808510638298,0,281628,372
+1,results/exact_recovery_audit_20260923/formal_current,G2_d12,TYPE-I,FRO-2,282000,281932,68,0.999758865248227,0,281932,68
+1,results/exact_recovery_audit_20260923/formal_current,G3,NCW-shallow,C0,276000,275859,141,0.9994891304347826,0,275859,141
+1,results/exact_recovery_audit_20260923/formal_current,G3,NCW-shallow,FRO-2,276000,275969,31,0.9998876811594203,0,275969,31

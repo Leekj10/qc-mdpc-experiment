@@ -1,0 +1,51 @@
+{
+  "protocol": "stlr_recovery_v2",
+  "description": "Generic stagnation-triggered local recovery; no near-codeword support is used.",
+  "seed": 20260913,
+  "keys_per_condition": 30,
+  "errors_per_key": 500,
+  "beam_width": 4,
+  "max_recoveries": 1,
+  "trigger": "no flips or post-round syndrome weight not below the preceding round's weight (including the initial weight for round 1)",
+  "candidate_rule": "Recompute UPC after the normal round and rank the four highest positions; count this UPC pass and all four probes.",
+  "parameters": {
+    "P2": {
+      "id": "P2_stlr_v2",
+      "r": 3001,
+      "d": 37,
+      "t": 66,
+      "n0": 2
+    },
+    "P3": {
+      "id": "P3_stlr_v2",
+      "r": 4001,
+      "d": 41,
+      "t": 82,
+      "n0": 2
+    }
+  },
+  "groups": {
+    "G0": {
+      "type": "random",
+      "n_keys": 30
+    },
+    "G2_d12": {
+      "type": "type1",
+      "n_keys": 30,
+      "delta": 12
+    },
+    "G3": {
+      "type": "ncw",
+      "n_keys": 30,
+      "kappa": 12,
+      "max_syn_weight": null,
+      "require_better_than_canonical": true
+    }
+  },
+  "decoders": [
+    "C0",
+    "FRO-2",
+    "STLR"
+  ],
+  "script_sha256": "5018d3fdcc0dd69d8b6f0d393a51932e66b20272156edd960a09c9b88fd8cba6"
+}

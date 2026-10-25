@@ -1,0 +1,135 @@
+{
+ "parameter": {
+  "r": 4801,
+  "d": 45
+ },
+ "n_keys": 4,
+ "n_err": 400,
+ "sweep": [
+  {
+   "t": 86,
+   "CLASSIC": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0147
+   },
+   "BF30": {
+    "dfr": 0.133125,
+    "upper95": 0.14771558476589464,
+    "per_key_failures": [
+     55,
+     52,
+     50,
+     56
+    ],
+    "sec_per_decode": 0.0267
+   }
+  },
+  {
+   "t": 88,
+   "CLASSIC": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0152
+   },
+   "BF30": {
+    "dfr": 0.3075,
+    "upper95": 0.32678750586073546,
+    "per_key_failures": [
+     122,
+     120,
+     119,
+     131
+    ],
+    "sec_per_decode": 0.0346
+   }
+  },
+  {
+   "t": 90,
+   "CLASSIC": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0146
+   },
+   "BF30": {
+    "dfr": 0.531875,
+    "upper95": 0.5523227836268688,
+    "per_key_failures": [
+     214,
+     209,
+     208,
+     220
+    ],
+    "sec_per_decode": 0.0432
+   }
+  },
+  {
+   "t": 92,
+   "CLASSIC": {
+    "dfr": 0.003125,
+    "upper95": 0.006405584399600473,
+    "per_key_failures": [
+     0,
+     0,
+     4,
+     1
+    ],
+    "sec_per_decode": 0.0183
+   },
+   "BF30": {
+    "dfr": 0.768125,
+    "upper95": 0.7850180506891301,
+    "per_key_failures": [
+     305,
+     301,
+     319,
+     304
+    ],
+    "sec_per_decode": 0.0456
+   }
+  },
+  {
+   "t": 95,
+   "CLASSIC": {
+    "dfr": 0.011875,
+    "upper95": 0.017225292909039496,
+    "per_key_failures": [
+     8,
+     5,
+     4,
+     2
+    ],
+    "sec_per_decode": 0.0187
+   },
+   "BF30": {
+    "dfr": 0.94625,
+    "upper95": 0.954793258359215,
+    "per_key_failures": [
+     386,
+     379,
+     374,
+     375
+    ],
+    "sec_per_decode": 0.0498
+   }
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "what": "T90 checkpoint lines as printed by the run (chunked, pre-registered stopping rule).",
+ "provenance": "Copied from the run's stdout log (the background task output for `exp_tier_upgrade.py --phase T90`, 2026-10-07). state_T90.json keeps only the final cumulative per-key vectors, so these intermediate rows are NOT recomputable from it; they are recorded here for traceability after the audit flagged them as untraceable. Counts are cumulative and monotone; each row's RR equals C0_count/FRO-2_count.",
+ "checkpoints": [
+  {
+   "errors_per_key": 4000,
+   "trials": 368000,
+   "c0_failures": 22,
+   "c0_dfr": 5.978e-05,
+   "fro2_failures": 7,
+   "rr": 3.143,
+   "rr_ci95": [
+    1.625,
+    8.667
+   ],
+   "chunk_seconds": 1336
+  },
+  {
+   "errors_per_key": 8000,
+   "trials": 736000,
+   "c0_failures": 51,
+   "c0_dfr": 6.929e-05,
+   "fro2_failures": 16,
+   "rr": 3.187,
+   "rr_ci95": [
+    1.812,
+    7.222
+   ],
+   "chunk_seconds": 1361
+  },
+  {
+   "errors_per_key": 12000,
+   "trials": 1104000,
+   "c0_failures": 68,
+   "c0_dfr": 6.159e-05,
+   "fro2_failures": 24,
+   "rr": 2.833,
+   "rr_ci95": [
+    1.828,
+    5.0
+   ],
+   "chunk_seconds": 1298
+  },
+  {
+   "errors_per_key": 16000,
+   "trials": 1472000,
+   "c0_failures": 98,
+   "c0_dfr": 6.658e-05,
+   "fro2_failures": 31,
+   "rr": 3.161,
+   "rr_ci95": [
+    2.216,
+    5.0
+   ],
+   "chunk_seconds": 1206
+  },
+  {
+   "errors_per_key": 20000,
+   "trials": 1840000,
+   "c0_failures": 130,
+   "c0_dfr": 7.0652e-05,
+   "fro2_failures": 35,
+   "rr": 3.714286,
+   "rr_ci95": [
+    2.6875,
+    5.5652
+   ],
+   "sign_test": {
+    "improved": 60,
+    "worse": 6,
+    "tied": 26,
+    "p_two_sided": 2.7258e-12
+   },
+   "note": "final; stopping rule triggered at 130 >= 120 C0 failures",
+   "chunk_seconds": 1277
+  }
+ ]
+}

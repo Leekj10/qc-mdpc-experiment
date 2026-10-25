@@ -1,0 +1,174 @@
+{
+ "point": {
+  "r": 12323,
+  "d": 71,
+  "t": 172
+ },
+ "protocol": {
+  "instances": "results/tier_upgrade/p1pp_main.json (identical)",
+  "budget": "study common 20; BIKE-Flip spec budget 7 reported separately",
+  "success": "zero residual syndrome",
+  "bf_constants_source": "spec v5.2 p.14 (official) / A.2.4 tangent at t*=172 (derived)",
+  "delta_note": "delta=3 is the L1 official value; the spec defines no delta rule outside its table",
+  "bgf_constants_source": "FROZEN_REFERENCE_SEMANTICS.md sec 4b (BGF literature fit at L1; no BGF derivation rule exists)"
+ },
+ "pipeline_gate": {
+  "C0": {
+   "got": 0,
+   "expected": null,
+   "ok": null
+  },
+  "FRO-2": {
+   "got": 0,
+   "expected": null,
+   "ok": null
+  },
+  "FRONEG": {
+   "got": 0,
+   "expected": null,
+   "ok": null
+  }
+ },
+ "arms": {
+  "C0": {
+   "failures": 0,
+   "trials": 80,
+   "dfr": 0.0,
+   "upper95": 0.0375,
+   "mean_iters": 4.725,
+   "per_key_failures": [
+    0,
+    0
+   ],
+   "iters_hist_success": {
+    "5": 40,
+    "4": 34,
+    "6": 3,
+    "7": 1,
+    "8": 1,
+    "9": 1
+   }
+  },
+  "FRO-2": {
+   "failures": 0,
+   "trials": 80,
+   "dfr": 0.0,
+   "upper95": 0.0375,
+   "mean_iters": 4.9875,
+   "per_key_failures": [
+    0,
+    0
+   ],
+   "iters_hist_success": {
+    "5": 52,
+    "4": 16,
+    "6": 10,
+    "7": 1,
+    "8": 1
+   }
+  },
+  "FRONEG": {
+   "failures": 0,
+   "trials": 80,
+   "dfr": 0.0,
+   "upper95": 0.0375,
+   "mean_iters": 5.0875,
+   "per_key_failures": [
+    0,
+    0
+   ],
+   "iters_hist_success": {
+    "6": 10,
+    "4": 28,
+    "5": 36,
+    "7": 3,
+    "8": 2,
+    "18": 1
+   }
+  },
+  "BGF-official": {
+   "failures": 75,
+   "trials": 80,
+   "dfr": 0.9375,
+   "upper95": 0.9692489763552429,
+   "mean_iters": 5.775,
+   "per_key_failures": [
+    38,
+    37
+   ],
+   "iters_hist_success": {
+    "17": 2,
+    "13": 1,
+    "9": 1,
+    "12": 1
+   }
+  },
+  "BF-official-7": {
+   "failures": 0,
+   "trials": 80,
+   "dfr": 0.0,
+   "upper95": 0.0375,
+   "mean_iters": 7.0,
+   "per_key_failures": [
+    0,
+    0
+   ],
+   "iters_hist_success": {
+    "5": 49,
+    "6": 28,
+    "7": 3
+   }
+  },
+  "BF-official-20": {
+   "failures": 0,
+   "trials": 80,
+   "dfr": 0.0,
+   "upper95": 0.0375,
+   "mean_iters": 20.0,
+   "per_key_failures": [
+    0,
+    0
+   ],
+   "iters_hist_success": {
+    "5": 49,
+    "6": 28,
+    "7": 3
+   }
+  },
+  "BF-derived-7": {
+   "failures": 0,
+   "trials": 80,
+   "dfr": 0.0,
+   "upper95": 0.0375,
+   "mean_iters": 7.0,
+   "per_key_failures": [
+    0,
+    0
+   ],
+   "iters_hist_success": {
+    "6": 35,
+    "5": 43,
+    "7": 2
+   }
+  },
+  "BF-derived-20": {
+   "failures": 0,
+   "trials": 80,
+   "dfr": 0.0,
+   "upper95": 0.0375,
+   "mean_iters": 20.0,
+   "per_key_failures": [
+    0,
+    0
+   ],
+   "iters_hist_success": {
+    "6": 35,
+    "5": 43,
+    "7": 2
+   }
+  }
+ },
+ "wall_seconds": 13.4,
+ "smoke": true,
+ "pipeline_gate_passed": true
+}

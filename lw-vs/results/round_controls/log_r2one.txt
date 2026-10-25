@@ -1,0 +1,16 @@
+[phase 1] round controls at P1' formal pool (3000 errors/key, arms: ['C0', 'FRO-2', 'R2plus', 'R2one', 'FRONEG'])
+  [RAND        ] C0 282 (archive 282) FRO-2 68 (archive 68) OK
+     R2plus  16785/276000  DFR=6.0815e-02  RR=0.017 [0.015, 0.019] excl1=False
+     R2one     234/276000  DFR=8.4783e-04  RR=1.205 [1.067, 1.363] excl1=True
+     FRONEG   2235/276000  DFR=8.0978e-03  RR=0.126 [0.111, 0.141] excl1=False
+  [TYPE-I      ] C0 372 (archive 372) FRO-2 68 (archive 68) OK
+     R2plus  17729/282000  DFR=6.2869e-02  RR=0.021 [0.019, 0.023] excl1=False
+     R2one     257/282000  DFR=9.1135e-04  RR=1.447 [1.296, 1.624] excl1=True
+     FRONEG   3403/282000  DFR=1.2067e-02  RR=0.109 [0.099, 0.120] excl1=False
+  [NCW-shallow ] C0 141 (archive 141) FRO-2 31 (archive 31) OK
+     R2plus  11964/276000  DFR=4.3348e-02  RR=0.012 [0.010, 0.014] excl1=False
+     R2one     105/276000  DFR=3.8043e-04  RR=1.343 [1.119, 1.636] excl1=True
+     FRONEG   1390/276000  DFR=5.0362e-03  RR=0.101 [0.085, 0.119] excl1=False
+  gate: PASS
+
+[done] D:\×ÀÃæ\TOUGAO - c\lw-vs\results\round_controls  (6786 s)

@@ -1,0 +1,431 @@
+{
+  "protocol": {
+    "protocol": "stlr_recovery_v2",
+    "description": "Generic stagnation-triggered local recovery; no near-codeword support is used.",
+    "seed": 20260913,
+    "keys_per_condition": 30,
+    "errors_per_key": 500,
+    "beam_width": 4,
+    "max_recoveries": 1,
+    "trigger": "no flips or post-round syndrome weight not below the preceding round's weight (including the initial weight for round 1)",
+    "candidate_rule": "Recompute UPC after the normal round and rank the four highest positions; count this UPC pass and all four probes.",
+    "parameters": {
+      "P2": {
+        "id": "P2_stlr_v2",
+        "r": 3001,
+        "d": 37,
+        "t": 66,
+        "n0": 2
+      },
+      "P3": {
+        "id": "P3_stlr_v2",
+        "r": 4001,
+        "d": 41,
+        "t": 82,
+        "n0": 2
+      }
+    },
+    "groups": {
+      "G0": {
+        "type": "random",
+        "n_keys": 30
+      },
+      "G2_d12": {
+        "type": "type1",
+        "n_keys": 30,
+        "delta": 12
+      },
+      "G3": {
+        "type": "ncw",
+        "n_keys": 30,
+        "kappa": 12,
+        "max_syn_weight": null,
+        "require_better_than_canonical": true
+      }
+    },
+    "decoders": [
+      "C0",
+      "FRO-2",
+      "STLR"
+    ],
+    "script_sha256": "5018d3fdcc0dd69d8b6f0d393a51932e66b20272156edd960a09c9b88fd8cba6"
+  },
+  "cells": {
+    "P2_stlr_v2": {
+      "G0": {
+        "C0": {
+          "failures": 30,
+          "trials": 15000,
+          "dfr": 0.002,
+          "upper95": 0.0026964528583122613,
+          "avg_iters": 4.2876666666666665,
+          "avg_upc_calls": 4.2876666666666665,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": null,
+          "rr_vs_fro2": null
+        },
+        "FRO-2": {
+          "failures": 9,
+          "trials": 15000,
+          "dfr": 0.0006,
+          "upper95": 0.0010310121614220654,
+          "avg_iters": 4.636133333333333,
+          "avg_upc_calls": 4.636133333333333,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": {
+            "point_rr": 3.3333333333333335,
+            "ci95": [
+              1.5833333333333333,
+              10.0
+            ],
+            "finite_bootstrap": 9996
+          },
+          "rr_vs_fro2": null
+        },
+        "STLR": {
+          "failures": 5,
+          "trials": 15000,
+          "dfr": 0.0003333333333333333,
+          "upper95": 0.0006846156903222953,
+          "avg_iters": 4.6344,
+          "avg_upc_calls": 4.638866666666667,
+          "avg_probes": 0.017866666666666666,
+          "recoveries_total": 67,
+          "recovery_accepts_total": 67,
+          "rr_vs_c0": {
+            "point_rr": 6.0,
+            "ci95": [
+              2.625,
+              29.0
+            ],
+            "finite_bootstrap": 9878
+          },
+          "rr_vs_fro2": {
+            "point_rr": 1.8,
+            "ci95": [
+              1.0,
+              5.0
+            ],
+            "finite_bootstrap": 9875
+          }
+        }
+      },
+      "G2_d12": {
+        "C0": {
+          "failures": 35,
+          "trials": 15000,
+          "dfr": 0.0023333333333333335,
+          "upper95": 0.003077190565370869,
+          "avg_iters": 4.6928,
+          "avg_upc_calls": 4.6928,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": null,
+          "rr_vs_fro2": null
+        },
+        "FRO-2": {
+          "failures": 13,
+          "trials": 15000,
+          "dfr": 0.0008666666666666666,
+          "upper95": 0.0013619674884196363,
+          "avg_iters": 4.9894,
+          "avg_upc_calls": 4.9894,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": {
+            "point_rr": 2.6923076923076925,
+            "ci95": [
+              1.6875,
+              5.285714285714286
+            ],
+            "finite_bootstrap": 10000
+          },
+          "rr_vs_fro2": null
+        },
+        "STLR": {
+          "failures": 11,
+          "trials": 15000,
+          "dfr": 0.0007333333333333333,
+          "upper95": 0.0011978782274405274,
+          "avg_iters": 4.988466666666667,
+          "avg_upc_calls": 4.9922,
+          "avg_probes": 0.014933333333333333,
+          "recoveries_total": 56,
+          "recovery_accepts_total": 56,
+          "rr_vs_c0": {
+            "point_rr": 3.1818181818181817,
+            "ci95": [
+              1.9411764705882353,
+              6.333333333333333
+            ],
+            "finite_bootstrap": 10000
+          },
+          "rr_vs_fro2": {
+            "point_rr": 1.1818181818181819,
+            "ci95": [
+              1.0,
+              1.5714285714285714
+            ],
+            "finite_bootstrap": 10000
+          }
+        }
+      },
+      "G3": {
+        "C0": {
+          "failures": 17,
+          "trials": 15000,
+          "dfr": 0.0011333333333333334,
+          "upper95": 0.0016839968154562486,
+          "avg_iters": 4.134066666666667,
+          "avg_upc_calls": 4.134066666666667,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": null,
+          "rr_vs_fro2": null
+        },
+        "FRO-2": {
+          "failures": 5,
+          "trials": 15000,
+          "dfr": 0.0003333333333333333,
+          "upper95": 0.0006846156903222953,
+          "avg_iters": 4.488066666666667,
+          "avg_upc_calls": 4.488066666666667,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": {
+            "point_rr": 3.4,
+            "ci95": [
+              1.4285714285714286,
+              11.0
+            ],
+            "finite_bootstrap": 9960
+          },
+          "rr_vs_fro2": null
+        },
+        "STLR": {
+          "failures": 5,
+          "trials": 15000,
+          "dfr": 0.0003333333333333333,
+          "upper95": 0.0006846156903222953,
+          "avg_iters": 4.4884,
+          "avg_upc_calls": 4.490666666666667,
+          "avg_probes": 0.009066666666666667,
+          "recoveries_total": 34,
+          "recovery_accepts_total": 34,
+          "rr_vs_c0": {
+            "point_rr": 3.4,
+            "ci95": [
+              1.5,
+              10.5
+            ],
+            "finite_bootstrap": 9954
+          },
+          "rr_vs_fro2": {
+            "point_rr": 1.0,
+            "ci95": [
+              0.5,
+              2.0
+            ],
+            "finite_bootstrap": 9969
+          }
+        }
+      }
+    },
+    "P3_stlr_v2": {
+      "G0": {
+        "C0": {
+          "failures": 21,
+          "trials": 15000,
+          "dfr": 0.0014,
+          "upper95": 0.002000017296639341,
+          "avg_iters": 4.337933333333333,
+          "avg_upc_calls": 4.337933333333333,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": null,
+          "rr_vs_fro2": null
+        },
+        "FRO-2": {
+          "failures": 5,
+          "trials": 15000,
+          "dfr": 0.0003333333333333333,
+          "upper95": 0.0006846156903222953,
+          "avg_iters": 4.6134,
+          "avg_upc_calls": 4.6134,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": {
+            "point_rr": 4.2,
+            "ci95": [
+              1.5555555555555556,
+              17.0
+            ],
+            "finite_bootstrap": 9959
+          },
+          "rr_vs_fro2": null
+        },
+        "STLR": {
+          "failures": 3,
+          "trials": 15000,
+          "dfr": 0.0002,
+          "upper95": 0.000500332480362982,
+          "avg_iters": 4.6124,
+          "avg_upc_calls": 4.613466666666667,
+          "avg_probes": 0.004266666666666667,
+          "recoveries_total": 16,
+          "recovery_accepts_total": 16,
+          "rr_vs_c0": {
+            "point_rr": 7.0,
+            "ci95": [
+              2.3333333333333335,
+              27.0
+            ],
+            "finite_bootstrap": 9598
+          },
+          "rr_vs_fro2": {
+            "point_rr": 1.6666666666666667,
+            "ci95": [
+              1.0,
+              5.0
+            ],
+            "finite_bootstrap": 9595
+          }
+        }
+      },
+      "G2_d12": {
+        "C0": {
+          "failures": 26,
+          "trials": 15000,
+          "dfr": 0.0017333333333333333,
+          "upper95": 0.0023889776309872083,
+          "avg_iters": 4.608133333333333,
+          "avg_upc_calls": 4.608133333333333,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": null,
+          "rr_vs_fro2": null
+        },
+        "FRO-2": {
+          "failures": 5,
+          "trials": 15000,
+          "dfr": 0.0003333333333333333,
+          "upper95": 0.0006846156903222953,
+          "avg_iters": 4.8496,
+          "avg_upc_calls": 4.8496,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": {
+            "point_rr": 5.2,
+            "ci95": [
+              2.5,
+              20.0
+            ],
+            "finite_bootstrap": 9957
+          },
+          "rr_vs_fro2": null
+        },
+        "STLR": {
+          "failures": 4,
+          "trials": 15000,
+          "dfr": 0.0002666666666666667,
+          "upper95": 0.0005938498376229284,
+          "avg_iters": 4.8486,
+          "avg_upc_calls": 4.8492,
+          "avg_probes": 0.0024,
+          "recoveries_total": 9,
+          "recovery_accepts_total": 9,
+          "rr_vs_c0": {
+            "point_rr": 6.5,
+            "ci95": [
+              2.8,
+              28.0
+            ],
+            "finite_bootstrap": 9864
+          },
+          "rr_vs_fro2": {
+            "point_rr": 1.25,
+            "ci95": [
+              1.0,
+              2.5
+            ],
+            "finite_bootstrap": 9856
+          }
+        }
+      },
+      "G3": {
+        "C0": {
+          "failures": 15,
+          "trials": 15000,
+          "dfr": 0.001,
+          "upper95": 0.0015238713128374983,
+          "avg_iters": 4.207333333333334,
+          "avg_upc_calls": 4.207333333333334,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": null,
+          "rr_vs_fro2": null
+        },
+        "FRO-2": {
+          "failures": 5,
+          "trials": 15000,
+          "dfr": 0.0003333333333333333,
+          "upper95": 0.0006846156903222953,
+          "avg_iters": 4.517333333333333,
+          "avg_upc_calls": 4.517333333333333,
+          "avg_probes": 0.0,
+          "recoveries_total": 0,
+          "recovery_accepts_total": 0,
+          "rr_vs_c0": {
+            "point_rr": 3.0,
+            "ci95": [
+              0.8888888888888888,
+              16.0
+            ],
+            "finite_bootstrap": 9596
+          },
+          "rr_vs_fro2": null
+        },
+        "STLR": {
+          "failures": 4,
+          "trials": 15000,
+          "dfr": 0.0002666666666666667,
+          "upper95": 0.0005938498376229284,
+          "avg_iters": 4.516666666666667,
+          "avg_upc_calls": 4.5174,
+          "avg_probes": 0.0029333333333333334,
+          "recoveries_total": 11,
+          "recovery_accepts_total": 11,
+          "rr_vs_c0": {
+            "point_rr": 3.75,
+            "ci95": [
+              1.0,
+              11.0
+            ],
+            "finite_bootstrap": 8785
+          },
+          "rr_vs_fro2": {
+            "point_rr": 1.25,
+            "ci95": [
+              1.0,
+              2.5
+            ],
+            "finite_bootstrap": 8627
+          }
+        }
+      }
+    }
+  }
+}

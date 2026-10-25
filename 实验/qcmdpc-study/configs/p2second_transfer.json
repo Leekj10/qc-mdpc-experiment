@@ -1,0 +1,17 @@
+{
+  "run_id": "p2second_transfer",
+  "note": "Second measurable scaled operating point TRANSFER check (review round-3, B1). FRO-2 (+2 first-round offset) is FROZEN from P1' and NOT re-tuned; ONLY t is calibrated for measurability by calib_p2second.py. parameter.t=66 is the FROZEN calibrated value from results/calib_p2second/sweep.json (C0 DFR=2.5e-3 at t=66; t<=64 zero-failure, t=68 too high). All keys are fresh test keys at this new (r,d) point (never used for tuning), so fresh_from=0. Groups mirror P1' (RAND / WEAK-12 / NCW-intersecting shallow control). Writes per-key failure counts so the cluster bootstrap (analyze_cluster_stats-style) can be reused. Success criteria are a TRANSFER check, not a re-tuned gate: (a) direction consistent (FRO-2 < C0 in all groups); (b) RAND per-key sign test significant; (c) RAND or worst-group cluster-bootstrap RR 95% CI excludes 1. Report honestly even if weaker.",
+  "parameter": {"id": "P2second", "r": 3001, "d": 37, "t": 66, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 3000,
+  "keys_per_group": 30,
+  "groups": {
+    "G0": {"type": "random"},
+    "G2_d12": {"type": "type1", "delta": 12},
+    "G3": {"type": "ncw", "kappa": 12, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "C0_base": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [0]}, "max_iter": 20, "fixed_iters": false},
+    "C4_first_p2": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [2, 0]}, "max_iter": 20, "fixed_iters": false}
+  }
+}

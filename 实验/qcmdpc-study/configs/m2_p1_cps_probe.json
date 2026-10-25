@@ -1,0 +1,18 @@
+{
+  "run_id": "m2_p1_cps_probe",
+  "note": "M2 first probe: CPS (coin-driven jitter, jitters=[-1,0,1]) vs its deterministic base on P1. Base schedules: BF30 (measurable-failure carrier, calibrated band {28,30}) and CLASSIC (strong parameter-free baseline). Pre-registered semantics: coin = SHA256(syndrome)[0] mod 3; thr = clip(base + jitter, (d+1)//2, d). This run checks machinery + first signal; the formal search (successive halving on train keys) comes in M4.",
+  "parameter": {"id": "P1", "r": 4801, "d": 45, "t": 84, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 300,
+  "groups": {
+    "G0": {"type": "random", "n_keys": 8},
+    "G2_d12": {"type": "type1", "n_keys": 6, "delta": 12},
+    "G3": {"type": "ncw", "n_keys": 8, "kappa": 12, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "BF30": {"algo": "bf_parallel", "threshold": {"type": "fixed", "b": 30}, "max_iter": 20, "fixed_iters": false},
+    "CPS_BF30": {"algo": "cps", "base_threshold": {"type": "fixed", "b": 30}, "jitters": [-1, 0, 1], "max_iter": 20, "fixed_iters": false},
+    "CLASSIC": {"algo": "bf_parallel", "threshold": {"type": "classic"}, "max_iter": 20, "fixed_iters": false},
+    "CPS_CLASSIC": {"algo": "cps", "base_threshold": {"type": "classic"}, "jitters": [-1, 0, 1], "max_iter": 20, "fixed_iters": false}
+  }
+}

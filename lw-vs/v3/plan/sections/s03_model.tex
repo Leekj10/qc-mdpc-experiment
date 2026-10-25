@@ -1,0 +1,30 @@
+\subsection{A first-order model of the first-round window}\label{sec:model}
+
+The model is deliberately minimal. It describes how a small raise of the round-one threshold reshapes the flips of that round; later rounds are outside its scope.
+
+Fix an instance, that is a key $H$ with an error $e$ and its syndrome $s$. In round one each position $j$ carries a counter $U_j$, its UPC. The decoder flips the positions whose counter reaches the round-one threshold $\tau_1$, and nothing else.
+
+Error positions and clean positions look different to the decoder. A position in the error support contributes its own error to every incident check, so most of its checks are unsatisfied; a clean position's checks are unsatisfied only through other errors. Under the independence approximation used for first-iteration UPC distributions~\cite{annechini2024estimation}, the two populations follow separate binomial laws with per-check probabilities $p_1>p_0$:
+\begin{equation}\label{eq:upc-tails}
+\begin{aligned}
+U_{i,j} &\sim \operatorname{Bin}(d,p_i), \qquad i\in\{1,0\},\; p_1>p_0,\\
+q_i(\tau) &= \Pr[U_{i,j}\ge\tau]
+= \textstyle\sum_{u=\tau}^{d}\binom{d}{u}p_i^{u}(1-p_i)^{d-u}.
+\end{aligned}
+\end{equation}
+Here $i=1$ marks an error position and $i=0$ a clean one. The tail mass $q_i(\tau)$ is the probability that a class-$i$ position flips at threshold $\tau$, so $q_1$ governs true flips and $q_0$ false flips. The probabilities are model parameters, not fitted quantities; the multipliers below are computed from the archived first-round census, so the model is used qualitatively.
+
+The perturbation is a one-shot raise $\tau_1\to\tau_1+2$. A raise acts on each population through the fraction of flips that survives it:
+\begin{equation}\label{eq:multipliers}
+A_1=\frac{q_1(\tau_1+2)}{q_1(\tau_1)},\qquad
+A_0=\frac{q_0(\tau_1+2)}{q_0(\tau_1)} .
+\end{equation}
+The model predicts $A_0\ll A_1$: the clean tail at $\tau_1$ is the thinner, outer tail, so two extra counts cut into it disproportionately. At the held-out point $P_4=(3607,39,76)$ the archived profile gives $A_1 = 0.355$ and $A_0 = 0.0892$. Both lie below one, so the raise thins both populations, and the far smaller $A_0$ places the thinning mainly on false flips, the favourable direction. The deferred true flips remain the price.
+
+Three testable consequences organise the empirical programme.
+\begin{enumerate}[label=(\roman*),leftmargin=*,itemsep=1pt,topsep=2pt]
+\item The round-one census should show the asymmetry directly, with false flips falling by a much larger relative factor than true flips (Section~\ref{sec:mechanism}).
+\item The net failure change has no locally fixed sign, because deferred true flips are a countervailing cost; the paired window must settle it (Section~\ref{sec:results}).
+\item The model constrains one round only, so a sustained offset is a distinct experiment (Section~\ref{sec:temporal}).
+\end{enumerate}
+The model is silent on the sign of the net failure change and on rounds after the first. Consequences (ii) and (iii) are therefore experiments rather than corollaries.

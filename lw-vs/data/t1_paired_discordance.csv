@@ -1,0 +1,4 @@
+tier,source,group,condition,both_succeed_or_both_fail,c0_fails_fro2_succeeds,c0_succeeds_fro2_fails,mcnemar_exact_p
+1,results/m5_formal,G0,RAND,10,272,58,2.836377478478656e-34
+1,results/m5_formal,G2_d12,TYPE-I,13,359,55,8.84338956927804e-56
+1,results/m5_formal,G3,NCW-shallow,2,139,29,1.997715174343611e-18

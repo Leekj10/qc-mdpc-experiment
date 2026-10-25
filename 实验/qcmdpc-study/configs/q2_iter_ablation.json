@@ -1,0 +1,18 @@
+{
+  "run_id": "q2_iter_ablation",
+  "note": "Q2-B iteration-budget ablation (review round-3, Q2 priority-4). Keys/errors/thresholds FIXED; only max_iter varies (7/10/20). Shows the C0-vs-FRO-2 contrast is not a budget artifact and quantifies the >7-iteration failure tail. Small paired pool = P1' formal-pool prefix on RAND + WEAK-12.",
+  "parameter": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "seed": 20260901,
+  "keys_per_group": 15,
+  "errors_per_key": 1000,
+  "budgets": [7, 10, 20],
+  "fresh_from": {"G0": 8, "G2_d12": 6},
+  "groups": {
+    "G0": {"type": "random"},
+    "G2_d12": {"type": "type1", "delta": 12}
+  },
+  "decoders": {
+    "C0_base": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [0]}, "max_iter": 20, "fixed_iters": false},
+    "C4_first_p2": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [2, 0]}, "max_iter": 20, "fixed_iters": false}
+  }
+}

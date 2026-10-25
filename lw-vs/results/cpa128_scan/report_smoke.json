@@ -1,0 +1,45 @@
+{
+ "point": {
+  "r": 10163,
+  "d": 71
+ },
+ "preset": "CPA-128 (param.h PRESET_CPA)",
+ "hypothesis": "the static-C0 band [1e-4,1e-2] follows the density t/r; at r=10163 it should sit near t~140-144",
+ "l1_reference": {
+  "edge_lo": {
+   "t": 168,
+   "t_over_r": 0.013633043901647325
+  },
+  "band_dfr_1e4": {
+   "t": 170,
+   "t_over_r": 0.013795342043333604
+  },
+  "band_dfr_1e2": {
+   "t": 175,
+   "t_over_r": 0.014201087397549298
+  }
+ },
+ "cells": {
+  "134": {
+   "t": 134,
+   "t_over_r": 0.013185083144740727,
+   "trials": 60,
+   "c0_failures": 0,
+   "c0_dfr": 0.0,
+   "upper95": 0.05,
+   "mean_iters": 3.6333333333333333,
+   "seconds": 1.9
+  },
+  "144": {
+   "t": 144,
+   "t_over_r": 0.014169044573452722,
+   "trials": 60,
+   "c0_failures": 1,
+   "c0_dfr": 0.016666666666666666,
+   "upper95": 0.07131487713805203,
+   "mean_iters": 6.133333333333334,
+   "seconds": 2.0
+  }
+ },
+ "wall_seconds": 3.9
+}

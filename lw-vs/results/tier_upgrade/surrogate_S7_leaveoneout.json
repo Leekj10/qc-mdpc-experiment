@@ -1,0 +1,66 @@
+{
+ "selected": "P2",
+ "features": [
+  "n_false",
+  "n_true",
+  "w1"
+ ],
+ "folds": {
+  "C0": {
+   "predicted_rr_vs_C0": 1.0,
+   "measured_rr": 1.0,
+   "measured_rr_ci95": [
+    1.0,
+    1.0
+   ],
+   "inside_ci": true,
+   "factor": 1.0
+  },
+  "FROp1": {
+   "predicted_rr_vs_C0": 2.176986205182516,
+   "measured_rr": 3.461538461538462,
+   "measured_rr_ci95": [
+    2.4782608695652177,
+    5.0344827586206895
+   ],
+   "inside_ci": false,
+   "factor": 0.6289071259416157
+  },
+  "FRO-2": {
+   "predicted_rr_vs_C0": 1.8636521592671893,
+   "measured_rr": 3.857142857142857,
+   "measured_rr_ci95": [
+    2.8292682926829267,
+    5.555555555555555
+   ],
+   "inside_ci": false,
+   "factor": 0.48316907832853057
+  },
+  "FROp3": {
+   "predicted_rr_vs_C0": 0.8261370065501574,
+   "measured_rr": 3.970588235294118,
+   "measured_rr_ci95": [
+    2.842075358851675,
+    6.038461538461539
+   ],
+   "inside_ci": false,
+   "factor": 0.20806413498300258
+  },
+  "FRONEG": {
+   "predicted_rr_vs_C0": 0.0313766885163143,
+   "measured_rr": 0.12699905926622768,
+   "measured_rr_ci95": [
+    0.10507246376811594,
+    0.14990512333965844
+   ],
+   "inside_ci": false,
+   "factor": 0.2470623695766081
+  }
+ },
+ "grading": {
+  "n_folds": 5,
+  "inside_ci": 1,
+  "within_1.5x": 1,
+  "verdict": "FAILURE"
+ }
+}

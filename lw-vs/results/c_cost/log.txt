@@ -1,0 +1,11 @@
+C reference cost run: 500,000 decodes x 3 reps, -T 1, -i 20
+binaries: D:\×ÀÃæ\TOUGAO - c\lw-vs\results\c_cost
+
+  C0         6903 dec/s  mean_iters=4.191  p99=6  over-budget=375/500000 (0.075%)
+  FRO-2      6312 dec/s  mean_iters=4.471  p99=6  over-budget=208/500000 (0.042%)
+  BGF        1932 dec/s  mean_iters=13.196  p99=21  over-budget=239421/500000 (47.884%)
+
+  FRO-2 / C0: iterations x1.067  wall x1.094  throughput x1.094
+  (same dynamic-distance semantics for both builds; relative cost only)
+
+[done] D:\×ÀÃæ\TOUGAO - c\lw-vs\results\c_cost\c_cost_report.json

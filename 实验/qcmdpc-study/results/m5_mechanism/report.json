@@ -1,0 +1,146 @@
+{
+ "param": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "E_per_key": 3000,
+ "keys_per_group": 100,
+ "arms": [
+  "C0_base",
+  "C4_first_p2"
+ ],
+ "groups": {
+  "G0": {
+   "gid": "G0",
+   "n_keys": 92,
+   "E_per_key": 3000,
+   "n_samples": 276000,
+   "fails": {
+    "C0_base": 282,
+    "C4_first_p2": 68
+   },
+   "failure_modes": {
+    "C0_base": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 198,
+     "early_misflip": 56,
+     "other": 28
+    },
+    "C4_first_p2": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 42,
+     "early_misflip": 18,
+     "other": 8
+    }
+   },
+   "transitions": {
+    "both_fail": 10,
+    "c0_only_rescued": 272,
+    "c4_only_new": 58,
+    "concordant_ok": 275660,
+    "rescued_by_c0_mode": {
+     "early_misflip": 53,
+     "stagnation": 191,
+     "other": 28
+    },
+    "new_by_c4_mode": {
+     "other": 7,
+     "early_misflip": 13,
+     "stagnation": 38
+    }
+   },
+   "seconds": 3988.6
+  },
+  "G2_d12": {
+   "gid": "G2_d12",
+   "n_keys": 94,
+   "E_per_key": 3000,
+   "n_samples": 282000,
+   "fails": {
+    "C0_base": 372,
+    "C4_first_p2": 68
+   },
+   "failure_modes": {
+    "C0_base": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 257,
+     "early_misflip": 103,
+     "other": 12
+    },
+    "C4_first_p2": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 36,
+     "early_misflip": 24,
+     "other": 8
+    }
+   },
+   "transitions": {
+    "both_fail": 13,
+    "c0_only_rescued": 359,
+    "c4_only_new": 55,
+    "concordant_ok": 281573,
+    "rescued_by_c0_mode": {
+     "stagnation": 250,
+     "early_misflip": 98,
+     "other": 11
+    },
+    "new_by_c4_mode": {
+     "stagnation": 29,
+     "other": 5,
+     "early_misflip": 21
+    }
+   },
+   "seconds": 4270.1
+  },
+  "G3": {
+   "gid": "G3",
+   "n_keys": 92,
+   "E_per_key": 3000,
+   "n_samples": 276000,
+   "fails": {
+    "C0_base": 141,
+    "C4_first_p2": 31
+   },
+   "failure_modes": {
+    "C0_base": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 101,
+     "early_misflip": 31,
+     "other": 9
+    },
+    "C4_first_p2": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 17,
+     "early_misflip": 7,
+     "other": 7
+    }
+   },
+   "transitions": {
+    "both_fail": 2,
+    "c0_only_rescued": 139,
+    "c4_only_new": 29,
+    "concordant_ok": 275830,
+    "rescued_by_c0_mode": {
+     "stagnation": 100,
+     "other": 9,
+     "early_misflip": 30
+    },
+    "new_by_c4_mode": {
+     "stagnation": 16,
+     "early_misflip": 6,
+     "other": 7
+    }
+   },
+   "seconds": 4228.4
+  }
+ }
+}

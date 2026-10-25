@@ -1,0 +1,4 @@
+tier,source,group,condition,c0_fails,fro2_fails,rescued_by_fro2,new_failures_by_fro2,both_fail,both_ok
+1,lw-vs/results/mechanism_preregistered,G0,RAND,282,68,272,58,10,275660
+1,lw-vs/results/mechanism_preregistered,G2_d12,TYPE-I,372,68,359,55,13,281573
+1,lw-vs/results/mechanism_preregistered,G3,NCW-shallow,141,31,139,29,2,275830

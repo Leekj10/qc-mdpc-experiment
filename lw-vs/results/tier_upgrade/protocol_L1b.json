@@ -1,0 +1,34 @@
+{
+ "phase": "L1b",
+ "frozen_before": "first L1b decode (see file mtime)",
+ "purpose": "G2: at true BIKE L1 t=134 the DFR is unmeasurable; the measurable production signals are the convergence-iteration distribution and the never-tested negative direction (FRONEG, offsets [-1,0]).",
+ "design": {
+  "pool": "same archived L1 RAND pool, 32 keys (16 archived + 16 new)",
+  "errors": "error ids 0..999, uniform weight 134, paired across arms",
+  "arms": {
+   "C0": [
+    0
+   ],
+   "FRO-2": [
+    2,
+    0
+   ],
+   "FRONEG": [
+    -1,
+    0
+   ]
+  },
+  "carrier": "bf_parallel + classic threshold, max_iter=20 (the study carrier)"
+ },
+ "analysis": [
+  "failures + rule-of-three bound per arm",
+  "mean iterations, two-round and three-round convergence fractions",
+  "per-key vectors"
+ ],
+ "interpretation_rules": [
+  "zero failures in an arm is reported as a bound, never as DFR=0",
+  "a FRONEG effect is only claimed if failures are observed; a null result is reported as 'no measurable harm at this sample size'",
+  "iteration-cost differences are the primary measurable production signal; they are reported with per-key spread, not only means"
+ ],
+ "written_by": "Claude (session 2026-10-07) before this phase ran"
+}

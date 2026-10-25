@@ -1,0 +1,90 @@
+{
+ "protocol": {
+  "rounds_per_rep": 500000,
+  "repetitions": 3,
+  "threads": 1,
+  "max_iter": 20,
+  "timing": "minimum wall time over repetitions",
+  "semantics": "C reference dynamic-distance (simulation-privileged); DFR not comparable to the static main experiment",
+  "build": {
+   "target": "x86_64-windows-gnu",
+   "opt": "-O2",
+   "compiler": "zig cc (ziglang)",
+   "avx": "disabled"
+  },
+  "parameter": {
+   "r": 4801,
+   "d": 45,
+   "t": 92,
+   "index": 2
+  }
+ },
+ "builds": {
+  "C0": {
+   "note": "CLASSIC, dynamic-distance semantics, no offset",
+   "decodes": 500000,
+   "mean_iters": 4.19088,
+   "p50_iters": 4,
+   "p95_iters": 5,
+   "p99_iters": 6,
+   "p99_is_at_least_budget": false,
+   "mean_iters_capped_at_budget": 4.19088,
+   "over_max_iter": 375,
+   "dfr_dynamic_semantics": 0.00075,
+   "best_wall_seconds": 70.083,
+   "decodes_per_second": 7134.4,
+   "wall_seconds_per_rep": [
+    70.49,
+    70.28,
+    70.08
+   ],
+   "max_iter_reached_fraction": 0.00075
+  },
+  "FRO-2": {
+   "note": "CLASSIC + FIRST_ROUND_OFFSET=2 (round 1 only), dynamic semantics",
+   "decodes": 500000,
+   "mean_iters": 4.471368,
+   "p50_iters": 4,
+   "p95_iters": 5,
+   "p99_iters": 6,
+   "p99_is_at_least_budget": false,
+   "mean_iters_capped_at_budget": 4.471368,
+   "over_max_iter": 208,
+   "dfr_dynamic_semantics": 0.000416,
+   "best_wall_seconds": 76.183,
+   "decodes_per_second": 6563.2,
+   "wall_seconds_per_rep": [
+    76.35,
+    76.47,
+    76.18
+   ],
+   "max_iter_reached_fraction": 0.000416
+  },
+  "BGF": {
+   "note": "GRAY_BGF with published affine constants (c0=13.53, c1=0.0069722); these are BIKE Level-1 values and are mis-scaled for (4801,45) -- cost only, not a quality comparison",
+   "decodes": 500000,
+   "mean_iters": 13.195694,
+   "p50_iters": 9,
+   "p95_iters": 21,
+   "p99_iters": 21,
+   "p99_is_at_least_budget": true,
+   "mean_iters_capped_at_budget": 13.195694,
+   "over_max_iter": 239421,
+   "dfr_dynamic_semantics": 0.478842,
+   "best_wall_seconds": 239.721,
+   "decodes_per_second": 2085.8,
+   "wall_seconds_per_rep": [
+    242.05,
+    239.72,
+    240.02
+   ],
+   "max_iter_reached_fraction": 0.478842
+  }
+ },
+ "relative_cost_FRO2_over_C0": {
+  "iteration_cost_ratio": 1.0669281869201694,
+  "wall_cost_ratio": 1.0870396529828918,
+  "throughput_ratio": 1.0870307167235496,
+  "p99_iteration_delta": 0
+ }
+}

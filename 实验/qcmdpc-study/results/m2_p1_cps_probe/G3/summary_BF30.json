@@ -1,0 +1,17 @@
+{
+ "n_keys": 8,
+ "keys_zero_failures": 0,
+ "total_trials": 2400,
+ "total_failures": 86,
+ "overall_dfr": 0.035833333333333335,
+ "log10_dfr_mean_nonzero": -1.4713597185467524,
+ "log10_dfr_std_nonzero": 0.1652378395443934,
+ "decoder": "BF30",
+ "avg_iters_run": 7.024583333333333,
+ "failure_modes": {
+  "stagnation": 85,
+  "other": 1
+ },
+ "wall_seconds": 129.7,
+ "ms_per_decode": 54.05
+}

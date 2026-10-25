@@ -1,0 +1,1234 @@
+{
+  "candidate_numeric_checks": 171,
+  "candidate_failures": [],
+  "original_manuscript_discrepancies": [
+    {
+      "label": "Original Table IV/tangent BGF p",
+      "printed": "0.013",
+      "expected": 0.012456898341172438,
+      "rounding_tolerance": 0.0005,
+      "pass": false
+    },
+    {
+      "label": "Original Table II/NCW negative-one CI upper",
+      "printed": "0.120",
+      "expected": 0.11947897665911908,
+      "rounding_tolerance": 0.0005,
+      "pass": false
+    }
+  ],
+  "checks": [
+    {
+      "label": "Table I/RAND/n_keys",
+      "printed": "92",
+      "expected": 92.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/c0_failures",
+      "printed": "282",
+      "expected": 282.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/c0_dfr",
+      "printed": "1.02e-3",
+      "expected": 0.0010217391304347826,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/fro2_failures",
+      "printed": "68",
+      "expected": 68.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/fro2_dfr",
+      "printed": "2.46e-4",
+      "expected": 0.0002463768115942029,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/holm_sign_p",
+      "printed": "4.88e-17",
+      "expected": 4.883284403572318e-17,
+      "rounding_tolerance": 5e-20,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/RR",
+      "printed": "4.15",
+      "expected": 4.147058823529411,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/low",
+      "printed": "3.29",
+      "expected": 3.2891194916652915,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/RAND/high",
+      "printed": "5.38",
+      "expected": 5.381888111888111,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/n_keys",
+      "printed": "94",
+      "expected": 94.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/c0_failures",
+      "printed": "372",
+      "expected": 372.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/c0_dfr",
+      "printed": "1.32e-3",
+      "expected": 0.0013191489361702128,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/fro2_failures",
+      "printed": "68",
+      "expected": 68.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/fro2_dfr",
+      "printed": "2.41e-4",
+      "expected": 0.00024113475177304965,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/holm_sign_p",
+      "printed": "3.05e-22",
+      "expected": 3.045510994358323e-22,
+      "rounding_tolerance": 5e-25,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/RR",
+      "printed": "5.47",
+      "expected": 5.470588235294118,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/low",
+      "printed": "4.25",
+      "expected": 4.252678571428572,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/TYPE-I/high",
+      "printed": "7.28",
+      "expected": 7.280759682224427,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/n_keys",
+      "printed": "92",
+      "expected": 92.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/c0_failures",
+      "printed": "141",
+      "expected": 141.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/c0_dfr",
+      "printed": "5.11e-4",
+      "expected": 0.0005108695652173913,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/fro2_failures",
+      "printed": "31",
+      "expected": 31.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/fro2_dfr",
+      "printed": "1.12e-4",
+      "expected": 0.00011231884057971014,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/holm_sign_p",
+      "printed": "7.66e-12",
+      "expected": 7.658840702050266e-12,
+      "rounding_tolerance": 5e-15,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/RR",
+      "printed": "4.55",
+      "expected": 4.548387096774193,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/low",
+      "printed": "3.21",
+      "expected": 3.2105263157894735,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table I/NCW-shallow/high",
+      "printed": "6.82",
+      "expected": 6.818181818181818,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/RAND/RR",
+      "printed": "3.40",
+      "expected": 3.3975903614457827,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/RAND/low",
+      "printed": "2.74",
+      "expected": 2.739572010869565,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/RAND/high",
+      "printed": "4.28",
+      "expected": 4.281790744466799,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/TYPE-I/RR",
+      "printed": "3.88",
+      "expected": 3.875,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/TYPE-I/low",
+      "printed": "3.11",
+      "expected": 3.110169491525424,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/TYPE-I/high",
+      "printed": "5.00",
+      "expected": 5.0,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/NCW-shallow/RR",
+      "printed": "2.27",
+      "expected": 2.2741935483870965,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/NCW-shallow/low",
+      "printed": "1.68",
+      "expected": 1.6805555555555558,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-1/NCW-shallow/high",
+      "printed": "3.18",
+      "expected": 3.183732795443758,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/RAND/RR",
+      "printed": "4.15",
+      "expected": 4.147058823529411,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/RAND/low",
+      "printed": "3.29",
+      "expected": 3.2891194916652915,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/RAND/high",
+      "printed": "5.38",
+      "expected": 5.381888111888111,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/TYPE-I/RR",
+      "printed": "5.47",
+      "expected": 5.470588235294118,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/TYPE-I/low",
+      "printed": "4.25",
+      "expected": 4.252678571428572,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/TYPE-I/high",
+      "printed": "7.28",
+      "expected": 7.280759682224427,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/NCW-shallow/RR",
+      "printed": "4.55",
+      "expected": 4.548387096774193,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/NCW-shallow/low",
+      "printed": "3.21",
+      "expected": 3.2105263157894735,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-2/NCW-shallow/high",
+      "printed": "6.82",
+      "expected": 6.818181818181818,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/RAND/RR",
+      "printed": "3.86",
+      "expected": 3.863013698630137,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/RAND/low",
+      "printed": "3.05",
+      "expected": 3.0470451436388513,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/RAND/high",
+      "printed": "5.07",
+      "expected": 5.066694915254237,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/TYPE-I/RR",
+      "printed": "3.38",
+      "expected": 3.381818181818182,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/TYPE-I/low",
+      "printed": "2.80",
+      "expected": 2.801585786986551,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/TYPE-I/high",
+      "printed": "4.15",
+      "expected": 4.153865979381442,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/NCW-shallow/RR",
+      "printed": "4.27",
+      "expected": 4.2727272727272725,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/NCW-shallow/low",
+      "printed": "3.12",
+      "expected": 3.1162790697674416,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRO-3/NCW-shallow/high",
+      "printed": "6.35",
+      "expected": 6.350249999999997,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/RAND/RR",
+      "printed": "0.126",
+      "expected": 0.12617449664429528,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/RAND/low",
+      "printed": "0.111",
+      "expected": 0.11116171078681122,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/RAND/high",
+      "printed": "0.141",
+      "expected": 0.14149681323633556,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/TYPE-I/RR",
+      "printed": "0.109",
+      "expected": 0.10931531002057009,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/TYPE-I/low",
+      "printed": "0.099",
+      "expected": 0.09938908271496184,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/TYPE-I/high",
+      "printed": "0.120",
+      "expected": 0.11967328222230501,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/NCW-shallow/RR",
+      "printed": "0.101",
+      "expected": 0.1014388489208633,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/NCW-shallow/low",
+      "printed": "0.085",
+      "expected": 0.08479296823448114,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG/NCW-shallow/high",
+      "printed": "0.119",
+      "expected": 0.11947897665911908,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/RAND/RR",
+      "printed": "0.00274",
+      "expected": 0.0027383958050106816,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/RAND/low",
+      "printed": "0.00242",
+      "expected": 0.002421176582543842,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/RAND/high",
+      "printed": "0.00306",
+      "expected": 0.003060976788189318,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/TYPE-I/RR",
+      "printed": "0.00301",
+      "expected": 0.0030104150650233467,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/TYPE-I/low",
+      "printed": "0.00276",
+      "expected": 0.0027566299680556357,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/TYPE-I/high",
+      "printed": "0.00328",
+      "expected": 0.0032755676734951456,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/NCW-shallow/RR",
+      "printed": "0.00139",
+      "expected": 0.001389723927892055,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/NCW-shallow/low",
+      "printed": "0.00117",
+      "expected": 0.0011743225010334033,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table II/FRONEG2/NCW-shallow/high",
+      "printed": "0.00161",
+      "expected": 0.0016131114923597424,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/C0/P2/RAND",
+      "printed": "2.56e-3",
+      "expected": 0.00256,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/C0/P2/TYPE-I",
+      "printed": "3.14e-3",
+      "expected": 0.00314,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/C0/P2/NCW-shallow",
+      "printed": "1.20e-3",
+      "expected": 0.0012,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/C0/P3/RAND",
+      "printed": "1.10e-3",
+      "expected": 0.0011,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/C0/P3/TYPE-I",
+      "printed": "1.70e-3",
+      "expected": 0.0017,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/C0/P3/NCW-shallow",
+      "printed": "7.40e-4",
+      "expected": 0.00074,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-1/P2/RAND",
+      "printed": "2.56",
+      "expected": 2.56,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-1/P2/TYPE-I",
+      "printed": "2.31",
+      "expected": 2.3088235294117645,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-1/P2/NCW-shallow",
+      "printed": "1.76",
+      "expected": 1.7647058823529411,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-1/P3/RAND",
+      "printed": "2.29",
+      "expected": 2.2916666666666665,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-1/P3/TYPE-I",
+      "printed": "3.27",
+      "expected": 3.269230769230769,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-1/P3/NCW-shallow",
+      "printed": "3.70",
+      "expected": 3.7,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-2/P2/RAND",
+      "printed": "2.37",
+      "expected": 2.3703703703703702,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-2/P2/TYPE-I",
+      "printed": "2.85",
+      "expected": 2.8545454545454545,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-2/P2/NCW-shallow",
+      "printed": "3.00",
+      "expected": 3.0,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-2/P3/RAND",
+      "printed": "2.62",
+      "expected": 2.619047619047619,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-2/P3/TYPE-I",
+      "printed": "3.27",
+      "expected": 3.269230769230769,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-2/P3/NCW-shallow",
+      "printed": "4.62",
+      "expected": 4.625,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-3/P2/RAND",
+      "printed": "1.91",
+      "expected": 1.9104477611940298,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-3/P2/TYPE-I",
+      "printed": "2.15",
+      "expected": 2.1506849315068495,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-3/P2/NCW-shallow",
+      "printed": "2.50",
+      "expected": 2.5,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-3/P3/RAND",
+      "printed": "2.62",
+      "expected": 2.619047619047619,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-3/P3/TYPE-I",
+      "printed": "2.18",
+      "expected": 2.1794871794871793,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/FRO-3/P3/NCW-shallow",
+      "printed": "3.08",
+      "expected": 3.0833333333333335,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/R2-2/P2/RAND",
+      "printed": "1.13",
+      "expected": 1.1327433628318584,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/R2-2/P2/TYPE-I",
+      "printed": "1.29",
+      "expected": 1.2868852459016393,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/R2-2/P2/NCW-shallow",
+      "printed": "1.36",
+      "expected": 1.3636363636363635,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/R2-2/P3/RAND",
+      "printed": "1.34",
+      "expected": 1.3414634146341464,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/R2-2/P3/TYPE-I",
+      "printed": "1.31",
+      "expected": 1.3076923076923077,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/R2-2/P3/NCW-shallow",
+      "printed": "1.54",
+      "expected": 1.5416666666666667,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table III/UNIFORM-2/P2/RAND",
+      "printed": "0.0135",
+      "expected": 0.01347510264238341,
+      "rounding_tolerance": 5e-05,
+      "pass": true
+    },
+    {
+      "label": "Table III/UNIFORM-2/P2/TYPE-I",
+      "printed": "0.0188",
+      "expected": 0.01883623275344931,
+      "rounding_tolerance": 5e-05,
+      "pass": true
+    },
+    {
+      "label": "Table III/UNIFORM-2/P2/NCW-shallow",
+      "printed": "0.00949",
+      "expected": 0.00949367088607595,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/UNIFORM-2/P3/RAND",
+      "printed": "0.00951",
+      "expected": 0.009510634618710012,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table III/UNIFORM-2/P3/TYPE-I",
+      "printed": "0.0165",
+      "expected": 0.016479255525397443,
+      "rounding_tolerance": 5e-05,
+      "pass": true
+    },
+    {
+      "label": "Table III/UNIFORM-2/P3/NCW-shallow",
+      "printed": "0.00925",
+      "expected": 0.009254627313656828,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/c0_dfr",
+      "printed": "1.022e-3",
+      "expected": 0.0010217391304347826,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/fro2_dfr",
+      "printed": "2.464e-4",
+      "expected": 0.0002463768115942029,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/bikeflip_dfr",
+      "printed": "3.007e-4",
+      "expected": 0.00030072463768115944,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/bf_vs_fro2_mcnemar_p",
+      "printed": "0.228",
+      "expected": 0.22810347806601292,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/bgf_dfr",
+      "printed": "1.040e-3",
+      "expected": 0.0010398550724637682,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/bgf_RR/RR",
+      "printed": "0.983",
+      "expected": 0.9825783972125435,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/bgf_RR/low",
+      "printed": "0.836",
+      "expected": 0.8360655737704918,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/RAND/bgf_RR/high",
+      "printed": "1.156",
+      "expected": 1.1558021739130433,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/c0_dfr",
+      "printed": "1.319e-3",
+      "expected": 0.0013191489361702128,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/fro2_dfr",
+      "printed": "2.411e-4",
+      "expected": 0.00024113475177304965,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/bikeflip_dfr",
+      "printed": "3.333e-4",
+      "expected": 0.0003333333333333333,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/bf_vs_fro2_mcnemar_p",
+      "printed": "0.0292",
+      "expected": 0.029171626999401616,
+      "rounding_tolerance": 5e-05,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/bgf_dfr",
+      "printed": "1.387e-3",
+      "expected": 0.0013865248226950354,
+      "rounding_tolerance": 5e-07,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/bgf_RR/RR",
+      "printed": "0.951",
+      "expected": 0.9514066496163683,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/bgf_RR/low",
+      "printed": "0.837",
+      "expected": 0.8373730738398504,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/TYPE-I/bgf_RR/high",
+      "printed": "1.086",
+      "expected": 1.0863535838424057,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/c0_dfr",
+      "printed": "5.109e-4",
+      "expected": 0.0005108695652173913,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/fro2_dfr",
+      "printed": "1.123e-4",
+      "expected": 0.00011231884057971014,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/bikeflip_dfr",
+      "printed": "2.101e-4",
+      "expected": 0.00021014492753623187,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/bf_vs_fro2_mcnemar_p",
+      "printed": "0.00244",
+      "expected": 0.0024442284992149664,
+      "rounding_tolerance": 5e-06,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/bgf_dfr",
+      "printed": "3.043e-4",
+      "expected": 0.0003043478260869565,
+      "rounding_tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/bgf_RR/RR",
+      "printed": "1.679",
+      "expected": 1.6785714285714286,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/bgf_RR/low",
+      "printed": "1.362",
+      "expected": 1.3624800531914896,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table V/NCW-shallow/bgf_RR/high",
+      "printed": "2.111",
+      "expected": 2.111111111111111,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/C0/failures",
+      "printed": "94",
+      "expected": 94.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/C0/trials",
+      "printed": "48,000",
+      "expected": 48000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRO-2/failures",
+      "printed": "21",
+      "expected": 21.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRO-2/trials",
+      "printed": "48,000",
+      "expected": 48000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRO-2/RR",
+      "printed": "4.48",
+      "expected": 4.476190476190475,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRO-2/low",
+      "printed": "2.97",
+      "expected": 2.966666666666667,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRO-2/high",
+      "printed": "7.25",
+      "expected": 7.25,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRONEG/failures",
+      "printed": "582",
+      "expected": 582.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRONEG/trials",
+      "printed": "48,000",
+      "expected": 48000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRONEG/RR",
+      "printed": "0.162",
+      "expected": 0.16151202749140892,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRONEG/low",
+      "printed": "0.119",
+      "expected": 0.11864336972607714,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/raised/FRONEG/high",
+      "printed": "0.209",
+      "expected": 0.20930232558139536,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BF-official-20/failures",
+      "printed": "28",
+      "expected": 28.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BF-official-20/trials",
+      "printed": "48,000",
+      "expected": 48000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BF-official-20/p",
+      "printed": "0.32",
+      "expected": 0.3240086000878364,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BF-derived-20/failures",
+      "printed": "13",
+      "expected": 13.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BF-derived-20/trials",
+      "printed": "48,000",
+      "expected": 48000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BF-derived-20/p",
+      "printed": "0.18",
+      "expected": 0.1849333420395851,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BGF-tangent/failures",
+      "printed": "63",
+      "expected": 63.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BGF-tangent/trials",
+      "printed": "48,000",
+      "expected": 48000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/BGF-tangent/p",
+      "printed": "0.0125",
+      "expected": 0.012456898341172438,
+      "rounding_tolerance": 5e-05,
+      "pass": true
+    },
+    {
+      "label": "Table IV/native/C0/failures",
+      "printed": "0",
+      "expected": 0.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/native/C0/trials",
+      "printed": "32,000",
+      "expected": 32000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/native/FRO-2/failures",
+      "printed": "0",
+      "expected": 0.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/native/FRO-2/trials",
+      "printed": "32,000",
+      "expected": 32000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/C0/failures",
+      "printed": "134",
+      "expected": 134.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/C0/trials",
+      "printed": "160,000",
+      "expected": 160000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRO-2/failures",
+      "printed": "27",
+      "expected": 27.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRO-2/trials",
+      "printed": "160,000",
+      "expected": 160000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRO-2/RR",
+      "printed": "4.96",
+      "expected": 4.962962962962963,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRO-2/low",
+      "printed": "3.68",
+      "expected": 3.676450715421304,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRO-2/high",
+      "printed": "7.19",
+      "expected": 7.190714285714283,
+      "rounding_tolerance": 0.005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRONEG/failures",
+      "printed": "756",
+      "expected": 756.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRONEG/trials",
+      "printed": "160,000",
+      "expected": 160000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRONEG/RR",
+      "printed": "0.177",
+      "expected": 0.17724867724867727,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRONEG/low",
+      "printed": "0.148",
+      "expected": 0.14819427148194272,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/CPA/FRONEG/high",
+      "printed": "0.210",
+      "expected": 0.2103124604821097,
+      "rounding_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "label": "Table IV/holdout/failures",
+      "printed": "0",
+      "expected": 0.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Table IV/holdout/trials",
+      "printed": "9,000,000",
+      "expected": 9000000.0,
+      "rounding_tolerance": 0,
+      "pass": true
+    },
+    {
+      "label": "Original Table IV/tangent BGF p",
+      "printed": "0.013",
+      "expected": 0.012456898341172438,
+      "rounding_tolerance": 0.0005,
+      "pass": false
+    },
+    {
+      "label": "Original Table II/NCW negative-one CI upper",
+      "printed": "0.120",
+      "expected": 0.11947897665911908,
+      "rounding_tolerance": 0.0005,
+      "pass": false
+    }
+  ],
+  "limits": "Checks numeric cells and archived provenance, not a decoding rerun, fresh bootstrap, or proof of cross-offset optimality."
+}

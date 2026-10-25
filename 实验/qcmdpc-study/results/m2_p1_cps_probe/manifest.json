@@ -1,0 +1,45 @@
+{
+ "config_sha256": "31b94a584e001e6e9327d06a202fb406aa353bf4c55bc350fd07af24032fff17",
+ "config_path": "configs\\m2_p1_cps_probe.json",
+ "parameter": {
+  "id": "P1",
+  "r": 4801,
+  "d": 45,
+  "t": 84,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 300,
+ "start_utc": "2026-09-02T06:58:40.806176+00:00",
+ "groups": {
+  "G0": {
+   "n_keys": 8,
+   "decoders": [
+    "BF30",
+    "CPS_BF30",
+    "CLASSIC",
+    "CPS_CLASSIC"
+   ]
+  },
+  "G2_d12": {
+   "n_keys": 6,
+   "decoders": [
+    "BF30",
+    "CPS_BF30",
+    "CLASSIC",
+    "CPS_CLASSIC"
+   ]
+  },
+  "G3": {
+   "n_keys": 8,
+   "decoders": [
+    "BF30",
+    "CPS_BF30",
+    "CLASSIC",
+    "CPS_CLASSIC"
+   ]
+  }
+ },
+ "end_utc": "2026-09-02T07:18:01.702942+00:00",
+ "wall_seconds_total": 1160.9
+}

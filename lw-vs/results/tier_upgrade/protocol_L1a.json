@@ -1,0 +1,35 @@
+{
+ "phase": "L1a",
+ "kind": "descriptive measurement (no hypothesis test, no decision rule)",
+ "frozen_before": "the 32-key full run, AFTER a 2-key x 300-error smoke",
+ "disclosure": "This protocol file was written while the 32-key run was in flight. A 2-key x 300-error smoke had already run; its numbers are recorded below as prior information so the reader can judge them against the full run. The smoke output file was deleted and is NOT part of the reported result.",
+ "smoke_2keys_300errors": {
+  "delta_+1": {
+   "deferred_true_per_instance": 12.683,
+   "avoided_false_per_instance": 7.847,
+   "rho": 0.619
+  },
+  "delta_+2": {
+   "deferred_true_per_instance": 25.785,
+   "avoided_false_per_instance": 11.408,
+   "rho": 0.442
+  },
+  "delta_+3": {
+   "deferred_true_per_instance": 38.272,
+   "avoided_false_per_instance": 12.888,
+   "rho": 0.337
+  },
+  "delta_-1": {
+   "rho": null,
+   "note": "sign flips: -1 flips MORE of both kinds"
+  }
+ },
+ "design": {
+  "pool": "KeyPool(20260901, id=L1 r=12323 d=71 t=134, group RAND, n_keys=32) -- prefix-stable, so the first 16 keys coincide with the archived cmp_bf_l1 comparison",
+  "errors": "make_error_generator error ids 0..299, uniform weight 134",
+  "statistics": "alpha = upc_fast(s0); tau1 = classic(0,|s0|); per delta in {0,+1,+2,+3,-1}: |F|, split true/false against supp(e); marginal tail counts P(UPC >= tau1+k), k=-3..+3, split true/false; rho = avoided_false / deferred_true per instance",
+  "cost": "no decoder is constructed"
+ },
+ "purpose": "G2: does the first-round exchange structure (the mechanism behind the P1' window) exist quantitatively at production parameters?",
+ "written_by": "Claude (session 2026-10-07); see disclosure"
+}

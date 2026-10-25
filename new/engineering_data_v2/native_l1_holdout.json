@@ -1,0 +1,10 @@
+{
+  "protocol": "native BIKE Level-1 holdout reused from preregistered C transfer and spec-exact validation",
+  "parameter": {"r": 12323, "d": 71, "t": 134, "source": "experimental l1_c4_transfer/run_log.txt"},
+  "status": "independent holdout operating point; no threshold tuning performed",
+  "trials_per_cell": 1000000,
+  "observed_failures": {"offset_0": {"RAND": 0, "TYPE-I": 0, "NCW": 0}, "offset_2": {"RAND": 0, "TYPE-I": 0, "NCW": 0}, "offset_4": {"RAND": 0, "TYPE-I": 0, "NCW": 0}},
+  "rule_of_three_upper_bound": 3e-6,
+  "two_round_convergence_percent": {"offset_0": {"RAND": 95.9985, "TYPE-I": 91.7059, "NCW": 93.5933}, "offset_2": {"RAND": 68.356, "TYPE-I": 60.236, "NCW": 62.316}, "offset_4": {"RAND": 2.1516, "TYPE-I": 1.5422, "NCW": 2.0152}},
+  "interpretation": "no degradation resolved at 1e6 trials per cell; no production DFR improvement established"
+}

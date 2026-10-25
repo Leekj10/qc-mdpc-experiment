@@ -1,0 +1,57 @@
+{
+ "phase": 4,
+ "r": 6007,
+ "d": 56,
+ "seed": 20260901,
+ "note": "larger r at matched density d/r = 0.0093 (P1' is 0.0094), so the point isolates the code-size axis rather than also changing density",
+ "calibration": [
+  {
+   "t": 88,
+   "t_over_r": 0.014649575495255536,
+   "trials": 1800,
+   "c0_failures": 0,
+   "c0_dfr": 0.0
+  },
+  {
+   "t": 92,
+   "t_over_r": 0.015315465290494424,
+   "trials": 1800,
+   "c0_failures": 0,
+   "c0_dfr": 0.0
+  },
+  {
+   "t": 96,
+   "t_over_r": 0.015981355085733312,
+   "trials": 1800,
+   "c0_failures": 0,
+   "c0_dfr": 0.0
+  },
+  {
+   "t": 100,
+   "t_over_r": 0.0166472448809722,
+   "trials": 1800,
+   "c0_failures": 13,
+   "c0_dfr": 0.007222222222222222
+  }
+ ],
+ "cells": {
+  "100": {
+   "t": 100,
+   "t_over_r": 0.0166472448809722,
+   "n_keys": 40,
+   "trials": 40000,
+   "c0_failures": 325,
+   "c0_dfr": 0.008125,
+   "fro2_failures": 135,
+   "fro2_dfr": 0.003375,
+   "rr": 2.4074074074074074,
+   "rr_ci95": [
+    2.0921985815602837,
+    2.817393029675638
+   ],
+   "rr_excludes_1": true,
+   "c0_upper95": 0.00889729939258819
+  }
+ },
+ "chosen_t": 100
+}

@@ -1,0 +1,34 @@
+[
+ {
+  "r": 12323,
+  "d": 71,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 142,
+  "key_id": "G2_d12-0000"
+ },
+ {
+  "r": 12323,
+  "d": 71,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 142,
+  "key_id": "G2_d12-0001"
+ },
+ {
+  "r": 12323,
+  "d": 71,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 142,
+  "key_id": "G2_d12-0002"
+ },
+ {
+  "r": 12323,
+  "d": 71,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 140,
+  "key_id": "G2_d12-0003"
+ }
+]

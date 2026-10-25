@@ -1,0 +1,17 @@
+{
+  "run_id": "h2_p1prime_cps",
+  "note": "First valid H2 contrast. P1' frozen by calib_p1prime sweep (t=92: CLASSIC DFR=3.1e-3 in target band [1e-4,1e-2]; selection procedure and sweep recorded in results/calib_p1prime/sweep.json). Carrier = CLASSIC (strong parameter-free schedule with measurable failures at t=92). CPS variants: symmetric {-1,0,+1} and asymmetric {0,+1}. BF-Max excluded pending prf tie-break re-measurement (see tiebreak probe: 3/4 L1 failures were deterministic tie-break artifacts). Groups identical to P1 probe; BF30 retired as carrier at this t (DFR>70%).",
+  "parameter": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 300,
+  "groups": {
+    "G0": {"type": "random", "n_keys": 8},
+    "G2_d12": {"type": "type1", "n_keys": 6, "delta": 12},
+    "G3": {"type": "ncw", "n_keys": 8, "kappa": 12, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "CLASSIC": {"algo": "bf_parallel", "threshold": {"type": "classic"}, "max_iter": 20, "fixed_iters": false},
+    "CPS_SYM": {"algo": "cps", "base_threshold": {"type": "classic"}, "jitters": [-1, 0, 1], "max_iter": 20, "fixed_iters": false},
+    "CPS_ASYM": {"algo": "cps", "base_threshold": {"type": "classic"}, "jitters": [0, 1], "max_iter": 20, "fixed_iters": false}
+  }
+}

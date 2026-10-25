@@ -1,0 +1,74 @@
+{
+ "budget": 134,
+ "n_draws": 12,
+ "failures": [
+  {
+   "group": "G0",
+   "key_id": "G0-0001",
+   "error_id": 41,
+   "deterministic_failure_reproduced": true,
+   "prf_successes": 7,
+   "prf_draws": 12,
+   "seconds": 16.6
+  },
+  {
+   "group": "G0",
+   "key_id": "G0-0005",
+   "error_id": 120,
+   "deterministic_failure_reproduced": true,
+   "prf_successes": 0,
+   "prf_draws": 12,
+   "seconds": 17.0
+  },
+  {
+   "group": "G2_d12",
+   "key_id": "G2_d12-0000",
+   "error_id": 95,
+   "deterministic_failure_reproduced": true,
+   "prf_successes": 10,
+   "prf_draws": 12,
+   "seconds": 17.4
+  },
+  {
+   "group": "G3",
+   "key_id": "G3-0003",
+   "error_id": 3,
+   "deterministic_failure_reproduced": true,
+   "prf_successes": 7,
+   "prf_draws": 12,
+   "seconds": 16.4
+  }
+ ],
+ "controls": [
+  {
+   "error_id": 0,
+   "prf_successes": 4,
+   "prf_draws": 4
+  },
+  {
+   "error_id": 1,
+   "prf_successes": 4,
+   "prf_draws": 4
+  },
+  {
+   "error_id": 2,
+   "prf_successes": 4,
+   "prf_draws": 4
+  },
+  {
+   "error_id": 3,
+   "prf_successes": 4,
+   "prf_draws": 4
+  },
+  {
+   "error_id": 4,
+   "prf_successes": 4,
+   "prf_draws": 4
+  },
+  {
+   "error_id": 5,
+   "prf_successes": 4,
+   "prf_draws": 4
+  }
+ ]
+}

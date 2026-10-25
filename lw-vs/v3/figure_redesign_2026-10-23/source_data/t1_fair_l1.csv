@@ -1,0 +1,23 @@
+﻿tier,label,value,sig,source,note
+1,fair-L1 C0 failures,94,4,fair_l1/report.json,pipeline gate arm
+1,fair-L1 FRO-2 failures,21,4,fair_l1/report.json,pipeline gate arm
+1,fair-L1 BF-official-20 failures,28,4,fair_l1/report.json,
+1,fair-L1 BF-derived-20 failures,13,4,fair_l1/report.json,
+1,fair-L1 BGF-tangent failures,63,4,fair_l1/report.json,
+1,fair-L1 BGF-official failure percent,94.58125,3,fair_l1/report.json,quoted as a percentage in the text
+1,fair-L1 BF-official-7 DFR,0.011020833333333334,3,fair_l1/report.json,
+1,fair-L1 BF-derived-7 DFR,0.018416666666666668,3,fair_l1/report.json,
+1,fair-L1 BF-official-20 vs FRO-2 McNemar p,0.3240086000878364,2,fair_l1/report.json,
+1,fair-L1 BF-derived-20 vs FRO-2 McNemar p,0.1849333420395851,2,fair_l1/report.json,
+1,fair-L1 BGF-tangent vs C0 McNemar p,0.012456898341172438,2,fair_l1/report.json,
+1,fair-L1 trials per arm,48000,4,fair_l1/report.json,
+1,fair-L1 BF-official-20 mean iterations,20.0,3,fair_l1/report.json,fixed-loop accounting; convergence cost is ~5.5 (see iters_hist_success)
+1,fair-L1 BF-derived-20 mean iterations,20.0,3,fair_l1/report.json,fixed-loop accounting; convergence cost is ~5.6 (see iters_hist_success)
+1,nb20 pilot keys,16,4,cmp_bf_p1_nb20/report.json,P1' pilot
+1,nb20 pilot errors per key,2000,4,cmp_bf_p1_nb20/report.json,P1' pilot
+1,nb20 pilot RAND BIKE-Flip failures,6,4,cmp_bf_p1_nb20/report.json,
+1,nb20 pilot RAND FRO-2 failures,8,4,cmp_bf_p1_nb20/report.json,
+1,nb20 pilot TYPE-I BIKE-Flip failures,9,4,cmp_bf_p1_nb20/report.json,
+1,nb20 pilot TYPE-I FRO-2 failures,9,4,cmp_bf_p1_nb20/report.json,
+1,nb20 pilot NCW BIKE-Flip failures,8,4,cmp_bf_p1_nb20/report.json,
+1,nb20 pilot NCW FRO-2 failures,3,4,cmp_bf_p1_nb20/report.json,

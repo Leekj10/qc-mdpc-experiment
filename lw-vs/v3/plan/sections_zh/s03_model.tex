@@ -1,0 +1,30 @@
+\subsection{首轮窗口的一阶模型}\label{sec:model}
+
+模型刻意保持最小。它描述首轮阈值的轻微抬高如何重塑该轮的翻转；后续轮不在其范围内。
+
+固定一个实例，即一把密钥 $H$、一个错误 $e$ 及其综合征 $s$。首轮中每个位置 $j$ 携带计数 $U_j$，即它的 UPC。译码器翻转计数达到首轮阈值 $\tau_1$ 的位置，其余不翻。
+
+错误位置与干净位置在译码器眼中并不相同。错误支持集内的位置把自身错误带入每个关联校验，因此多数校验不满足；干净位置的校验只因其它错误而不满足。在首轮 UPC 分布所用的独立性近似下~\cite{annechini2024estimation}，两个总体服从不同的二项分布，每校验概率为 $p_1>p_0$：
+\begin{equation}\label{eq:upc-tails}
+\begin{aligned}
+U_{i,j} &\sim \operatorname{Bin}(d,p_i), \qquad i\in\{1,0\},\; p_1>p_0,\\
+q_i(\tau) &= \Pr[U_{i,j}\ge\tau]
+= \textstyle\sum_{u=\tau}^{d}\binom{d}{u}p_i^{u}(1-p_i)^{d-u}.
+\end{aligned}
+\end{equation}
+其中 $i=1$ 标记错误位置，$i=0$ 标记干净位置。尾质量 $q_i(\tau)$ 是第 $i$ 类位置在阈值 $\tau$ 处翻转的概率，因此 $q_1$ 支配正确翻转，$q_0$ 支配假翻转。这些概率是模型参数而非拟合量；下面的乘子由归档的首轮普查计算，模型只作定性使用。
+
+扰动是一次性抬高 $\tau_1\to\tau_1+2$。抬高通过幸存翻转比例作用于每个总体：
+\begin{equation}\label{eq:multipliers}
+A_1=\frac{q_1(\tau_1+2)}{q_1(\tau_1)},\qquad
+A_0=\frac{q_0(\tau_1+2)}{q_0(\tau_1)} .
+\end{equation}
+模型预测 $A_0\ll A_1$：$\tau_1$ 处的干净尾是更薄的外尾，两个额外计数因此不成比例地切进它。在留出点 $P_4=(3607,39,76)$，归档剖面给出 $A_1 = 0.355$、$A_0 = 0.0892$。两者都小于一，所以抬高同时削薄两个总体；远小的 $A_0$ 把削薄主要放在假翻转上，即有利方向。被推迟的正确翻转仍是代价。
+
+模型给出三个可检验推论，组织后续实验。
+\begin{enumerate}[label=(\roman*),leftmargin=*,itemsep=1pt,topsep=2pt]
+\item 首轮普查应直接显示不对称：假翻转的相对下降应远大于正确翻转（第~\ref{sec:mechanism} 节）。
+\item 净失败变化没有局部固定的符号，因为被推迟的正确翻转是反向代价；必须由配对窗口裁决（第~\ref{sec:results} 节）。
+\item 模型只约束一轮，因此持续偏移是另一项实验（第~\ref{sec:temporal} 节）。
+\end{enumerate}
+模型对净失败变化的符号和首轮之后的轮次保持沉默。推论 (ii) 与 (iii) 因此是实验而非推论。

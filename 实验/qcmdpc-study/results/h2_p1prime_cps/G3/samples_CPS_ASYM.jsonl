@@ -1,0 +1,8 @@
+{"key_id": "G3-0000", "error_id": 90, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1809, "sw_last": 1520}
+{"key_id": "G3-0000", "error_id": 168, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1759, "sw_last": 1665}
+{"key_id": "G3-0000", "error_id": 226, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1768, "sw_last": 1633}
+{"key_id": "G3-0001", "error_id": 172, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1734, "sw_last": 1523}
+{"key_id": "G3-0004", "error_id": 294, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1714, "sw_last": 1637}
+{"key_id": "G3-0006", "error_id": 0, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1730, "sw_last": 1515}
+{"key_id": "G3-0007", "error_id": 26, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1841, "sw_last": 1763}
+{"key_id": "G3-0007", "error_id": 101, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1662, "sw_last": 1533}

@@ -1,0 +1,30 @@
+{
+ "phase": "S7",
+ "written_before": "the S7 fit (no decoding involved)",
+ "motivation": "S4's C0-only counterfactual model failed: its features are post-treatment, so P(fail|counts) does not transfer across arms. S7 conditions on the arm instead.",
+ "design": {
+  "data": "S1 npz: 92 keys x 3000 errors, arms {0,+1,+2,+3,-1}, features (n_false, n_true, w1) per arm",
+  "fit": "keys 8..53 x the four NON-held-out arms",
+  "validate": "keys 54..99 x the held-out arm",
+  "prediction": "held-out arm's DFR = mean of predicted probabilities over held-out keys, using the held-out arm's own features (no decoding)",
+  "candidate_sets": {
+   "P1": [
+    "n_false",
+    "n_true"
+   ],
+   "P2": [
+    "n_false",
+    "n_true",
+    "w1"
+   ],
+   "P3": [
+    "n_false",
+    "n_true",
+    "w1",
+    "nflip"
+   ]
+  },
+  "selection": "held-out-C0 log-loss is NOT applicable here (C0 is itself an arm); select by mean held-out log-loss across the four leave-one-out folds, then report the risk ratios for ALL arms as measured -- the selection never sees an arm's RR"
+ },
+ "grading": "same scale as the SURROGATE protocol amendment-1: SUCCESS if the measured RR lies inside the measured CI95 AND the prediction is within a factor of 1.5 in >=3/4 of the folds"
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "firstround_mech",
+  "note": "First-round flip MECHANISM measurement (review round-3, B2). Directly quantifies whether FRO-2's benefit comes from first-round stabilization: per identical (H,e,s), record round-1 total flips, correct flips (in the true error support), incorrect flips, residual error weight after round 1 (= t + total - 2*correct), and final iteration count, for C0 vs FRO-2. Uses build_decoder(record_flips=True) and only ADDS logging; decode semantics are unchanged. This is a simulation-privileged (uses e_true) MECHANISM analysis, not a deployable decoder; label it as such in the paper. Keys reuse the P1' formal pool PREFIX (n_keys = fresh_from + keys_per_group, indices [fresh_from, fresh_from+keys_per_group)) so the sample ties to the main table's key lineage. Success: FRO-2 shows fewer round-1 incorrect flips and a left-shifted residual-after-round-1 distribution vs C0, consistent with the rescued samples; if reversed/insignificant, report honestly and keep the 'broad first-round stabilization' wording (no over-attribution).",
+  "parameter": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 1000,
+  "keys_per_group": 20,
+  "fresh_from": {"G0": 8, "G2_d12": 6, "G3": 8},
+  "groups": {
+    "G0": {"type": "random"},
+    "G2_d12": {"type": "type1", "delta": 12},
+    "G3": {"type": "ncw", "kappa": 12, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "C0_base": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [0]}, "max_iter": 20, "fixed_iters": false},
+    "C4_first_p2": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [2, 0]}, "max_iter": 20, "fixed_iters": false}
+  }
+}

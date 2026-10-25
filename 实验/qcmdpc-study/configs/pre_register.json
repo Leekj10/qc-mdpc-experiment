@@ -1,0 +1,40 @@
+{
+  "frozen_at": "2026-09-01",
+  "note": "Pre-registered constants. Any change after M0 requires a new version file, never silent edits.",
+  "master_seed": 20260901,
+  "master_seed_rule": "SHA-256(master_seed|context|index), contexts: key|<group>, err|<group>|<key_id>",
+  "integer_threshold_semantics": {
+    "affine_rounding": "ceil",
+    "clip_range": "[(d+1)//2, d]",
+    "min_threshold": 1
+  },
+  "bf_max": {"budget_rule": "t", "tie_break": "smallest_global_index"},
+  "failure_taxonomy_priority": ["divergence", "period2", "stagnation", "early_misflip", "other"],
+  "taxonomy_defs": {
+    "divergence": "max(sw)>sw[0] and sw[-1]>=sw[0]",
+    "period2": "last 6 weights alternate a,b with a!=b",
+    "stagnation": ">=60% zero-change iterations",
+    "early_misflip": ">50% flips outside true support within first ceil(iters/4) iterations"
+  },
+  "statistics": {
+    "one_sided_level": 0.95,
+    "upper_bound": "Wilson (z=1.6449); k=0 -> rule of three (3/N)",
+    "heterogeneity_index": "P90-P10 over log10(DFR) among keys with k>0; CV forbidden",
+    "zero_failures_reporting": "upper bound only, never DFR=0"
+  },
+  "gates_week6": {
+    "H1_p90_p10_min": 3.0,
+    "H1_structured_gap_log10_min": 2.0,
+    "H2_worst_group_ucb_improvement_log10_min": 0.5,
+    "H2_random_group_max_relative_degradation": 0.20,
+    "H2_holdout_isolation": "improvement must hold on test keys only"
+  },
+  "data_split": {"train": 0.6, "validation": 0.2, "test": 0.2, "unit": "whole_keys"},
+  "prohibited": [
+    "post-hoc parameter/decoder/metric additions after results",
+    "claiming 2^-128 DFR or IND-CCA2",
+    "claiming randomization eliminates reaction attacks",
+    "using CV as heterogeneity index",
+    "treating the optimizer as a contribution"
+  ]
+}
