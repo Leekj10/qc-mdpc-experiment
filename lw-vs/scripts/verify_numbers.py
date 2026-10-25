@@ -19,8 +19,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "lw-vs" / "data"
-EN = ROOT / "lw-vs" / "v3" / "en" / "main.tex"
-ZH = ROOT / "lw-vs" / "v3" / "zh" / "main.tex"
+# The full manuscript package keeps the sources under v3/; the data-and-code
+# repository keeps only the two main.tex files under paper/ (gate inputs).
+_EN_PAPER = ROOT / "lw-vs" / "paper" / "en" / "main.tex"
+_EN_V3 = ROOT / "lw-vs" / "v3" / "en" / "main.tex"
+_ZH_PAPER = ROOT / "lw-vs" / "paper" / "zh" / "main.tex"
+_ZH_V3 = ROOT / "lw-vs" / "v3" / "zh" / "main.tex"
+EN = _EN_PAPER if _EN_PAPER.exists() else _EN_V3
+ZH = _ZH_PAPER if _ZH_PAPER.exists() else _ZH_V3
 
 FAILURES: list[str] = []
 CHECKS = 0
@@ -635,6 +641,9 @@ def check_pdf_output() -> None:
     inspect the build output.
     """
     print("[11] compiled PDF output")
+    if not any(p.exists() for p in (EN.parent / "main.pdf", ZH.parent / "main.pdf")):
+        print("  (compiled PDFs not present; skipping PDF-level checks)")
+        return
     import fitz
     try:
         docs = {}
