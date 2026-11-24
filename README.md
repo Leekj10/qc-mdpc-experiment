@@ -2,11 +2,10 @@
 
 Replication data and analysis code for the QC-MDPC bit-flipping study. The
 current replication package is in
-[`replication/v2.0.0/`](replication/v2.0.0/). The remaining
-folders are the development mirror and frozen results of the earlier manuscript
+[`replication/v2.0.0/`](replication/v2.0.0/). The remaining folders are the development mirror and frozen results of the earlier manuscript
 version, kept for provenance.
 
-## Replication package v2.0.0 (2026.11.24)
+## Replication package v2.0.0
 
 `replication/v2.0.0/` is the complete replication archive accompanying the
 manuscript *First-Round Post-Processing Can Reverse Threshold Effects in
