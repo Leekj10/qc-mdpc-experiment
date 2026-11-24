@@ -1,23 +1,22 @@
 # qc-mdpc-experiment — data and code
 
 Replication data and analysis code for the QC-MDPC bit-flipping study. The
-current JCEN submission package is in
-[`replication/jcen-2026.11.24/`](replication/jcen-2026.11.24/). The remaining
+current replication package is in
+[`replication/v2.0.0/`](replication/v2.0.0/). The remaining
 folders are the development mirror and frozen results of the earlier manuscript
 version, kept for provenance.
 
-## JCEN submission package (2026.11.24)
+## Replication package v2.0.0 (2026.11.24)
 
-`replication/jcen-2026.11.24/` is the complete archive submitted as Online
-Resource 2 for *First-Round Post-Processing Can Reverse Threshold Effects in
-QC-MDPC Bit-Flipping Decoding* (Journal of Cryptographic Engineering). It is
-self-contained: experimental data and configurations, analysis code, the source
-data behind every figure and table, the seven final vector figures, and the
-scripts used to render and check them. The package does **not** contain
-manuscript PDFs, publisher PDFs or executables.
+`replication/v2.0.0/` is the complete replication archive accompanying the
+manuscript *First-Round Post-Processing Can Reverse Threshold Effects in
+QC-MDPC Bit-Flipping Decoding*. It is self-contained: experimental data and
+configurations, analysis code, the source data behind every figure and table,
+the seven final vector figures, and the scripts used to render and check them.
+The package does **not** contain manuscript PDFs, publisher PDFs or executables.
 
 ```bash
-cd replication/jcen-2026.11.24
+cd replication/v2.0.0
 sha256sum -c SHA256SUMS.txt                       # 622 recorded checksums
 python -I figures_jcen/scripts/check_factor.py    # re-verifies 28 saved result rows
 python -I figures_jcen/scripts/make_figures.py    # re-renders Figs. 1-7 into a new folder
