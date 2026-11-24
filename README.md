@@ -8,8 +8,8 @@ version, kept for provenance.
 ## Replication package v2.0.0
 
 `replication/v2.0.0/` is the complete replication archive accompanying the
-manuscript *First-Round Post-Processing Can Reverse Threshold Effects in
-QC-MDPC Bit-Flipping Decoding*. It is self-contained: experimental data and
+manuscript *First-Round Post-Processing Can Reverse the Effect of a Higher
+Threshold in QC-MDPC Bit-Flipping Decoding*. It is self-contained: experimental data and
 configurations, analysis code, the source data behind every figure and table,
 the seven final vector figures, and the scripts used to render and check them.
 The package does **not** contain manuscript PDFs, publisher PDFs or executables.

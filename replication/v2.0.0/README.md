@@ -1,6 +1,6 @@
 # QC-MDPC threshold and post-processing experiments
 
-**Article:** First-Round Post-Processing Can Reverse Threshold Effects in QC-MDPC Bit-Flipping Decoding
+**Article:** First-Round Post-Processing Can Reverse the Effect of a Higher Threshold in QC-MDPC Bit-Flipping Decoding
 **Journal:** Journal of Cryptographic Engineering (manuscript submission)
 **Authors:** Guangfu Wu, Kangjun Li, and Rui Wu
 **Corresponding author:** Rui Wu, School of Industrial Software, Jiangxi University of Science and Technology, Nanchang, Jiangxi, China; wuruiset_cn@163.com
