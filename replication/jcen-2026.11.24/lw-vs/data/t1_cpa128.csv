@@ -1,0 +1,19 @@
+﻿tier,label,value,sig,source,note
+1,CPA-128 r,10163,4,cpa128_window/report.json,
+1,CPA-128 d,71,4,cpa128_window/report.json,
+1,CPA-128 t,140,4,cpa128_window/report.json,
+1,CPA-128 production weight,134,3,cpa128_window/report.json,same production weight as Level 1
+1,CPA-128 trials per arm,160000,4,cpa128_window/report.json,
+1,CPA-128 keys,32,4,cpa128_window/report.json,
+1,CPA-128 C0 failures,134,4,cpa128_window/report.json,
+1,CPA-128 C0 DFR,0.0008375,3,cpa128_window/report.json,
+1,CPA-128 FRO-2 failures,27,4,cpa128_window/report.json,
+1,CPA-128 FRO-2 RR,4.962962962962963,3,cpa128_window/report.json,
+1,CPA-128 FRO-2 RR lower,3.676450715421304,3,cpa128_window/report.json,
+1,CPA-128 FRO-2 RR upper,7.190714285714283,3,cpa128_window/report.json,
+1,CPA-128 FRONEG failures,756,4,cpa128_window/report.json,
+1,CPA-128 FRONEG RR,0.17724867724867727,3,cpa128_window/report.json,
+1,CPA-128 FRONEG RR lower,0.14819427148194272,3,cpa128_window/report.json,
+1,CPA-128 FRONEG RR upper,0.2103124604821097,3,cpa128_window/report.json,
+1,CPA-128 band open lower t,138,4,cpa128_scan/report.json,scan: first nonzero at t=138
+1,CPA-128 band open upper t,142,4,cpa128_scan/report.json,scan: 3.75e-3 at t=142

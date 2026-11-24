@@ -1,0 +1,17 @@
+{
+ "n_keys": 6,
+ "keys_zero_failures": 3,
+ "total_trials": 1800,
+ "total_failures": 3,
+ "overall_dfr": 0.0016666666666666668,
+ "log10_dfr_mean_nonzero": -2.4771212547196626,
+ "log10_dfr_std_nonzero": 0.0,
+ "decoder": "CPS_ASYM",
+ "avg_iters_run": 4.7572222222222225,
+ "failure_modes": {
+  "stagnation": 2,
+  "other": 1
+ },
+ "wall_seconds": 35.4,
+ "ms_per_decode": 19.66
+}

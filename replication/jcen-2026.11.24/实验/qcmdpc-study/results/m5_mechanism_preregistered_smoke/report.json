@@ -1,0 +1,63 @@
+{
+ "param": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "E_per_key": 5,
+ "keys_per_group": 1,
+ "arms": [
+  "C0_base",
+  "C4_first_p2"
+ ],
+ "taxonomy": {
+  "priority": [
+   "divergence",
+   "period2",
+   "stagnation",
+   "early_misflip",
+   "other"
+  ],
+  "early_misflip_window": "ceil(max_iter/4)",
+  "max_iter": 20
+ },
+ "groups": {
+  "G0": {
+   "gid": "G0",
+   "n_keys": 1,
+   "E_per_key": 5,
+   "n_samples": 5,
+   "fails": {
+    "C0_base": 0,
+    "C4_first_p2": 0
+   },
+   "failure_modes": {
+    "C0_base": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 0,
+     "early_misflip": 0,
+     "other": 0
+    },
+    "C4_first_p2": {
+     "divergence": 0,
+     "period2": 0,
+     "stagnation": 0,
+     "early_misflip": 0,
+     "other": 0
+    }
+   },
+   "transitions": {
+    "both_fail": 0,
+    "c0_only_rescued": 0,
+    "c4_only_new": 0,
+    "concordant_ok": 5,
+    "rescued_by_c0_mode": {},
+    "new_by_c4_mode": {}
+   },
+   "seconds": 1.0
+  }
+ }
+}

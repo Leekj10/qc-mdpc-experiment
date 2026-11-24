@@ -1,0 +1,64 @@
+{
+ "model": "M2",
+ "features": [
+  "n_false",
+  "n_true"
+ ],
+ "note": "features computed WITHOUT decoding; the comparison target is the archived measured risk ratio of the corresponding experiment",
+ "predictions": {
+  "tsweep_t94": {
+   "config": {
+    "r": 4801,
+    "d": 45,
+    "t": 94,
+    "n_keys": 30,
+    "errors_per_key": 1000
+   },
+   "predicted_rr": 0.2128940779122004,
+   "measured_rr": 2.819,
+   "measured_ci95": [
+    2.275,
+    3.603
+   ],
+   "prediction_inside_ci": false,
+   "ratio_pred_over_measured": 0.07552113441369294,
+   "source": "round_controls/phase2"
+  },
+  "tsweep_t96": {
+   "config": {
+    "r": 4801,
+    "d": 45,
+    "t": 96,
+    "n_keys": 30,
+    "errors_per_key": 1000
+   },
+   "predicted_rr": 0.26636982329117853,
+   "measured_rr": 1.871,
+   "measured_ci95": [
+    1.721,
+    2.039
+   ],
+   "prediction_inside_ci": false,
+   "ratio_pred_over_measured": 0.14236762335177902,
+   "source": "round_controls/phase2"
+  },
+  "bigr_6007_56_100": {
+   "config": {
+    "r": 6007,
+    "d": 56,
+    "t": 100,
+    "n_keys": 40,
+    "errors_per_key": 1000
+   },
+   "predicted_rr": 0.3342802708659939,
+   "measured_rr": 2.407,
+   "measured_ci95": [
+    2.092,
+    2.817
+   ],
+   "prediction_inside_ci": false,
+   "ratio_pred_over_measured": 0.1388783842401304,
+   "source": "round_controls/phase4"
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "m1_p2_l1_probe",
+  "note": "BIKE Level-1 probe per param.h PRESET_CCA: r=12323, d=71, t=134; official BGF affine constants (13.53, 0.0069722) apply exactly at this (d,t). Purpose: confirm direction at real L1 parameters with modest samples; G0 point estimate NOT resolvable at this sample size (expect zero failures -> rule-of-three upper bounds only, pre-registered). CLASSIC threshold used as parameter-free BF reference. Full M5 L1 sample sizes deferred to the C baseline.",
+  "parameter": {"id": "P2_L1", "r": 12323, "d": 71, "t": 134, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 200,
+  "groups": {
+    "G0": {"type": "random", "n_keys": 6},
+    "G2_d12": {"type": "type1", "n_keys": 4, "delta": 12},
+    "G3": {"type": "ncw", "n_keys": 6, "kappa": 16, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "CLASSIC": {"algo": "bf_parallel", "threshold": {"type": "classic"}, "max_iter": 25, "fixed_iters": false},
+    "BGFV": {"algo": "bgf_vasseur", "threshold": {"type": "affine_vasseur", "c0": 13.53, "c1": 0.0069722}, "max_iter": 25, "gray_delta": 3, "fixed_iters": false},
+    "BFMAX": {"algo": "bf_max", "max_iter": 134}
+  }
+}

@@ -1,0 +1,167 @@
+{
+ "source": "poststep_confirm_P2_full.npz",
+ "point": "P2",
+ "group": "CF",
+ "params": {
+  "id": "P2",
+  "r": 3001,
+  "d": 37,
+  "t": 66,
+  "n0": 2
+ },
+ "n_keys": 46,
+ "errors_per_key": 2000,
+ "trials_per_arm": 92000,
+ "gate_classic_library": {
+  "pass": true,
+  "plain_0": "600/600",
+  "plain_p2": "600/600"
+ },
+ "gate_bgf_port": {
+  "pass": true,
+  "replica_vs_library": "1200/1200"
+ },
+ "arms": {
+  "plain_0": {
+   "failures": 196,
+   "dfr": 0.002130434782608696
+  },
+  "plain_p2": {
+   "failures": 79,
+   "dfr": 0.000858695652173913
+  },
+  "post_0": {
+   "failures": 256,
+   "dfr": 0.002782608695652174
+  },
+  "post_p2": {
+   "failures": 607,
+   "dfr": 0.006597826086956522
+  }
+ },
+ "contrasts": {
+  "plain_p2_vs_plain_0": {
+   "base": "plain_0",
+   "treat": "plain_p2",
+   "failures_base": 196,
+   "failures_treat": 79,
+   "dfr_base": 0.002130434782608696,
+   "dfr_treat": 0.000858695652173913,
+   "rr": 2.4810126582278484,
+   "rr_ci95": [
+    2.044943820224719,
+    3.100036231884057
+   ]
+  },
+  "post_p2_vs_post_0": {
+   "base": "post_0",
+   "treat": "post_p2",
+   "failures_base": 256,
+   "failures_treat": 607,
+   "dfr_base": 0.002782608695652174,
+   "dfr_treat": 0.006597826086956522,
+   "rr": 0.42174629324546953,
+   "rr_ci95": [
+    0.37403339073181846,
+    0.4738677527701918
+   ]
+  },
+  "post_0_vs_plain_0": {
+   "base": "plain_0",
+   "treat": "post_0",
+   "failures_base": 196,
+   "failures_treat": 256,
+   "dfr_base": 0.002130434782608696,
+   "dfr_treat": 0.002782608695652174,
+   "rr": 0.765625,
+   "rr_ci95": [
+    0.6535707255343083,
+    0.8958374999999998
+   ]
+  },
+  "post_p2_vs_plain_p2": {
+   "base": "plain_p2",
+   "treat": "post_p2",
+   "failures_base": 79,
+   "failures_treat": 607,
+   "dfr_base": 0.000858695652173913,
+   "dfr_treat": 0.006597826086956522,
+   "rr": 0.1301482701812191,
+   "rr_ci95": [
+    0.1030298227921049,
+    0.1592061814819706
+   ]
+  }
+ },
+ "interaction": {
+  "point": 0.005086956521739131,
+  "ci95": [
+   0.004445652173913044,
+   0.005739130434782609
+  ],
+  "per_key": [
+   0.0055,
+   0.0035,
+   0.0065,
+   0.001,
+   0.0035,
+   0.0045,
+   0.0075,
+   0.0055,
+   0.001,
+   0.004,
+   0.004,
+   0.004,
+   0.006,
+   0.0065,
+   0.0005,
+   0.003,
+   0.0065,
+   0.0095,
+   0.0025,
+   0.0035,
+   0.0085,
+   0.004,
+   0.0065,
+   0.0035,
+   0.005,
+   0.004,
+   0.007,
+   0.001,
+   0.0035,
+   0.003,
+   0.0035,
+   0.007,
+   0.0025,
+   0.01,
+   0.0075,
+   0.004,
+   0.0055,
+   0.008,
+   0.008,
+   0.006,
+   0.005,
+   0.006,
+   0.009,
+   0.0075,
+   0.005,
+   0.005
+  ]
+ },
+ "verdict": {
+  "status": "CONFIRMED_ON_FRESH_KEYS",
+  "note": "fresh-key confirmation of a diagnostic pattern; not production"
+ },
+ "per_key_direction": {
+  "post_p2_vs_post_0_worse_equal_better": [
+   44,
+   1,
+   1
+  ],
+  "plain_p2_vs_plain_0_worse_equal_better": [
+   2,
+   6,
+   38
+  ]
+ }
+}

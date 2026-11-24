@@ -1,0 +1,3 @@
+source,scope,worst_group,worst_log10U_c0,worst_log10U_fro2,improvement_log10,gate_ge_0.5,rand_noninferior,gate_pass,total_keys,samples_per_arm
+results/m5_formal/report.json,full_formal,G2_d12,-2.842706603413768,-3.5219283364905847,0.6792217330768167,True,True,True,278,834000
+results/m5_formal/cluster_stats.json,pure_fresh_test_keys,G2_d12,-2.8273833923873872,-3.5144933109425147,0.6871099185551275,True,True,True,212,636000

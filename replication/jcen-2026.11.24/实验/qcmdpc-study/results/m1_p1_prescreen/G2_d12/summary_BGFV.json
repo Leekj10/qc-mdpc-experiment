@@ -1,0 +1,17 @@
+{
+ "n_keys": 6,
+ "keys_zero_failures": 0,
+ "total_trials": 1800,
+ "total_failures": 283,
+ "overall_dfr": 0.15722222222222224,
+ "log10_dfr_mean_nonzero": -0.8056929728560823,
+ "log10_dfr_std_nonzero": 0.043874212506619985,
+ "decoder": "BGFV",
+ "avg_iters_run": 7.573888888888889,
+ "failure_modes": {
+  "divergence": 224,
+  "early_misflip": 59
+ },
+ "wall_seconds": 34.6,
+ "ms_per_decode": 19.197
+}

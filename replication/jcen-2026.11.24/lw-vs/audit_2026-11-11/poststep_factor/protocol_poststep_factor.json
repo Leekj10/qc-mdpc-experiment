@@ -1,0 +1,40 @@
+{
+  "phase": "POSTSTEP_FACTOR",
+  "written_by": "Claude (session 2026-11-11)",
+  "written_before": "any post-step factor decode",
+  "status": "diagnostic experiment; not a confirmatory test of the paper's main claims",
+  "purpose": "Determine whether the sign reversal of a one-shot round-1 +2 offset between CLASSIC and GRAY_BGF persists when the BGF-style post-step module (black re-check + gray step) is switched on/off while the stopping rule, budget accounting and later-round baseline are held fixed.",
+  "work_point": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "keys": "G0 pool keys 54..99 (46 keys), 2000 errors each, same seed discipline (SEED=20260901) as decoder_transfer",
+  "arms": {
+    "plain_0": {"offset": 0, "poststep": "none", "role": "control"},
+    "plain_p2": {"offset": 2, "poststep": "none", "role": "control intervention"},
+    "post_0": {"offset": 0, "poststep": "both", "role": "post-step control"},
+    "post_p2": {"offset": 2, "poststep": "both", "role": "post-step intervention; primary cell"},
+    "recheck_0": {"offset": 0, "poststep": "recheck", "role": "black re-check only, exploratory component"},
+    "recheck_p2": {"offset": 2, "poststep": "recheck", "role": "black re-check only, exploratory component"},
+    "gray_0": {"offset": 0, "poststep": "gray", "role": "gray step only, exploratory component (not an official decoder)"},
+    "gray_p2": {"offset": 2, "poststep": "gray", "role": "gray step only, exploratory component (not an official decoder)"},
+    "postmask_p2": {"offset": 2, "poststep": "both", "maskbase": true, "role": "exploratory: gray mask computed from the un-offset baseline round-1 threshold"}
+  },
+  "factor_mode_semantics": {
+    "main_step": "classic parallel BF; threshold = clip(binomial_threshold(current syndrome) + offset in round 1 only, [(d+1)/2, d]); every main round recomputes its baseline from the current syndrome",
+    "later_rounds": "plain classic threshold; no offset",
+    "poststep": "after the round-1 main step only: black re-check flips black positions whose new UPC >= (d+1)/2+1; then gray step flips round-1 gray candidates (threshold-gray_delta <= UPC < threshold at the pre-flip state) whose new UPC >= (d+1)/2+1",
+    "stopping": "continue on a no-flip main round; stop on zero syndrome or after 20 main rounds (classic rule)",
+    "budget_accounting": "post-step UPC scans are recorded separately and do not consume the 20 main rounds; total scans are reported",
+    "mask": "unless maskbase is true, the gray mask is computed against the offset round-1 threshold, matching the BGF implementation; maskbase isolates the effect of mask recomposition"
+  },
+  "gate": {
+    "gate_1_classic": "poststep=none arms must reproduce archived decoder_transfer_full.npz fail_classic_0 and fail_classic_p2 exactly, and the round-1 black flip counts must match first_classic_0 and first_classic_p2",
+    "gate_2_bgf_port": "a bgf-compatible replica of the post-step (substeps counted, blocked-stop) must reproduce bgf_vasseur and archived fail_bgf_0 / fail_bgf_p2 exactly on a 3-key x 200-error verification sample"
+  },
+  "estimand": {
+    "primary": "interaction Delta = (p(post_p2) - p(post_0)) - (p(plain_p2) - p(plain_0)), averaged over keys on the risk-difference scale; 95% key-clustered percentile bootstrap, B=10000, seed=20260905",
+    "secondary": "per-cell DFR and RR versus the within-policy baseline; component interactions for recheck-only and gray-only; mask-base contrast (postmask_p2 - post_p2)",
+    "zero_events": "rule-of-three upper bound 3/N, with the binomial-trial assumption stated"
+  },
+  "multiplicity": "one prespecified primary interaction; all component and mask contrasts are exploratory and reported nominally",
+  "falsification": "If the primary Delta interval includes 0, the claim that the post-step changes the sign of the +2 effect under aligned rules is not supported; the observed BGF/CLASSIC difference must then be attributed to other implementation differences or sampling, and must not be assigned to the post-step module.",
+  "disclosure": "Diagnostic recombinations are not official decoders. The first-round gray mask changes when the main threshold is offset; maskbase isolates that separately. No wall-clock or production claim is made from this Python carrier."
+}

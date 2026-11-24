@@ -1,0 +1,42 @@
+{
+ "config_sha256": "14acfbe4af8345a77fe361f24fb4f396189bef65c3fb80990a55ff8fb091f91e",
+ "config_path": "configs/pilot_p1prime_bfmax.json",
+ "parameter": {
+  "id": "P1p",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 200,
+ "start_utc": "2026-10-21T12:47:55.919107+00:00",
+ "groups": {
+  "G0": {
+   "n_keys": 10,
+   "decoders": [
+    "C0",
+    "FRO-2",
+    "BFMAX"
+   ]
+  },
+  "G2_d12": {
+   "n_keys": 10,
+   "decoders": [
+    "C0",
+    "FRO-2",
+    "BFMAX"
+   ]
+  },
+  "G3": {
+   "n_keys": 10,
+   "decoders": [
+    "C0",
+    "FRO-2",
+    "BFMAX"
+   ]
+  }
+ },
+ "end_utc": "2026-10-21T13:03:48.278001+00:00",
+ "wall_seconds_total": 952.4
+}

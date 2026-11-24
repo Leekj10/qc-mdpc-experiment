@@ -1,0 +1,17 @@
+{
+  "run_id": "q2_key_families",
+  "note": "Q2-D key-family comparison under FIXED uniform errors (review round-3, Q2 priority-2). Families: random / type1(delta=12) / ncwadm (near-codeword-admissible, capture-prone, gathering-ADJACENT proxy; NOT the exact WWW2023 gathering class). Error construction held fixed (uniform weight-t); only the key family varies. Arms C0_base vs C4_first_p2 (frozen +2).",
+  "parameter": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "seed": 20260901,
+  "keys_per_group": 20,
+  "errors_per_key": 1500,
+  "families": {
+    "random": {"type": "random"},
+    "type1": {"type": "type1", "delta": 12},
+    "ncwadm": {"type": "ncw", "kappa": 12, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "C0_base": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [0]}, "max_iter": 20, "fixed_iters": false},
+    "C4_first_p2": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [2, 0]}, "max_iter": 20, "fixed_iters": false}
+  }
+}

@@ -1,0 +1,106 @@
+{
+ "E_test": 1000,
+ "candidates": [
+  "C0_base",
+  "C4_first_p2"
+ ],
+ "groups": {
+  "G0": {
+   "test_key_ids": [
+    "G0-0006",
+    "G0-0007"
+   ],
+   "C0_base": {
+    "failures": 1,
+    "trials": 2000,
+    "dfr": 0.0005,
+    "upper95": 0.0022380392486979032,
+    "log10_upper95": -2.6501323014790468,
+    "per_key_failures": [
+     0,
+     1
+    ],
+    "seconds": 16.9
+   },
+   "C4_first_p2": {
+    "failures": 1,
+    "trials": 2000,
+    "dfr": 0.0005,
+    "upper95": 0.0022380392486979032,
+    "log10_upper95": -2.6501323014790468,
+    "per_key_failures": [
+     0,
+     1
+    ],
+    "seconds": 17.5
+   }
+  },
+  "G2_d12": {
+   "test_key_ids": [
+    "G2_d12-0004",
+    "G2_d12-0005"
+   ],
+   "C0_base": {
+    "failures": 3,
+    "trials": 2000,
+    "dfr": 0.0015,
+    "upper95": 0.0037472645405082924,
+    "log10_upper95": -2.426285646530546,
+    "per_key_failures": [
+     0,
+     3
+    ],
+    "seconds": 17.0
+   },
+   "C4_first_p2": {
+    "failures": 0,
+    "trials": 2000,
+    "dfr": 0.0,
+    "upper95": 0.0015,
+    "log10_upper95": -2.8239087409443187,
+    "per_key_failures": [
+     0,
+     0
+    ],
+    "seconds": 17.9
+   }
+  },
+  "G3": {
+   "test_key_ids": [
+    "G3-0006",
+    "G3-0007"
+   ],
+   "C0_base": {
+    "failures": 4,
+    "trials": 2000,
+    "dfr": 0.002,
+    "upper95": 0.0044473418263631295,
+    "log10_upper95": -2.3518994890358846,
+    "per_key_failures": [
+     2,
+     2
+    ],
+    "seconds": 21.3
+   },
+   "C4_first_p2": {
+    "failures": 0,
+    "trials": 2000,
+    "dfr": 0.0,
+    "upper95": 0.0015,
+    "log10_upper95": -2.8239087409443187,
+    "per_key_failures": [
+     0,
+     0
+    ],
+    "seconds": 21.2
+   }
+  }
+ },
+ "worst_group_log10U": {
+  "C0_base": -2.3518994890358846,
+  "C4_first_p2": -2.6501323014790468
+ },
+ "improvement_log10": 0.29823281244316213,
+ "gate_0.5_log10_met": false,
+ "note": "small-pool probe; formal gate decision requires full M1 pools (100 keys/group)"
+}

@@ -1,0 +1,24 @@
+{
+ "phase": "BIKE_DELTA_SCAN",
+ "written_by": "Claude (session 2026-11-17)",
+ "written_before": "any delta-scan decode",
+ "purpose": "Compare total first-round margins delta=2,3,5 for BIKE-Flip at P1' on the frozen decoder-transfer instances.",
+ "work_point": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "keys": "G0 pool keys 54..99 (46 keys), identical to the decoder-transfer experiment",
+ "errors_per_key": 100,
+ "decoder": "BIKE-Flip v5.2 schedule, A.2.4 (a,b) at P1', 7-round budget, static-distance semantics; only the round-1 margin delta varies",
+ "arms": [
+  2,
+  3,
+  5
+ ],
+ "validation": "delta=3 per-key failures must equal archived bike7_0 exactly",
+ "inference": "key-cluster percentile bootstrap B=10000 seed=20260905; exact McNemar nominal",
+ "n_keys": 2
+}

@@ -1,0 +1,4 @@
+tier,source,phase,condition,kappa,n_keys,trials,c0_failures,c0_archived,c0_exact_recovery_failures,ncw_zero_syndrome,ncw_zero_syndrome_dfr,ncw_exact_recovery_failures,ncw_exact_recovery_dfr,ncw_miscorrections,ncw_triggered,ncw_trigger_rate,ncw_avg_iters
+1,lw-vs/results/ncw_aware,P1prime,RAND,12,92,276000,282,282,282,275718,0.9989782608695652,282,0.0010217391304347826,0,0,0.0,4.312420289855073
+1,lw-vs/results/ncw_aware,P1prime,TYPE-I,12,94,282000,372,372,372,281628,0.9986808510638298,372,0.0013191489361702128,0,0,0.0,4.510847517730497
+1,lw-vs/results/ncw_aware,P1prime,NCW-shallow,12,92,276000,141,141,141,275859,0.9994891304347826,141,0.0005108695652173913,0,0,0.0,4.206481884057971

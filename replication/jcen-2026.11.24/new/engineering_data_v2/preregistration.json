@@ -1,0 +1,54 @@
+{
+  "protocol": "engineering_decoder_comparison_v2",
+  "seed": 20260916,
+  "keys_per_condition": 30,
+  "errors_per_key": 500,
+  "max_iter": 20,
+  "beam_width": 4,
+  "methods": [
+    "C0",
+    "FRO-2",
+    "STLR",
+    "SR-NCW",
+    "BGF-C3"
+  ],
+  "parameters": {
+    "P2": {
+      "id": "P2_engineering_v2",
+      "r": 3001,
+      "d": 37,
+      "t": 66,
+      "n0": 2
+    },
+    "P3": {
+      "id": "P3_engineering_v2",
+      "r": 4001,
+      "d": 41,
+      "t": 82,
+      "n0": 2
+    }
+  },
+  "groups": {
+    "G0": {
+      "type": "random",
+      "n_keys": 30
+    },
+    "G2_d12": {
+      "type": "type1",
+      "n_keys": 30,
+      "delta": 12
+    },
+    "G3": {
+      "type": "ncw",
+      "n_keys": 30,
+      "kappa": 12,
+      "max_syn_weight": null,
+      "require_better_than_canonical": true
+    }
+  },
+  "same_instance_pairing": true,
+  "true_error_hidden_from_decoder": true,
+  "sr_ncw_rule": "G3 only; strictly better than canonical; post-round UPC recomputation counted",
+  "bgf": "GRAY/BGF black-gray schedule with CLASSIC static threshold and gray_delta=3",
+  "script_sha256": "ea45390b74311ab4892fc6bd70e51b40186cd96b80d4cd4afbbca712dc0b562a"
+}

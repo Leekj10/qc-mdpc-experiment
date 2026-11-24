@@ -1,0 +1,178 @@
+{
+ "source": {
+  "formal": "results/m5_formal/report.json",
+  "pure_fresh": "results/m5_formal\\fresh_only_verification.json"
+ },
+ "full_formal": {
+  "E_per_key": 3000,
+  "groups": {
+   "G0": {
+    "bb_regression": {
+     "log_or_arm": -1.422661767957393,
+     "odds_ratio_arm": 0.2410714857857305,
+     "or_ci95": [
+      0.23335728672616943,
+      0.2490406966684294
+     ],
+     "se_log_or": 0.016593271694127578,
+     "rho_intra_class": 3.762569056986432e-09,
+     "lr_rho": 0.00046685447716754425,
+     "p_rho_gt0": 0.49138079839927,
+     "or_excludes_1": true
+    },
+    "betabinom_base": {
+     "mu": 0.0010219829981713275,
+     "rho_intra_class": 8.572449616655836e-11,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    },
+    "betabinom_treat": {
+     "mu": 0.00024654534589955464,
+     "rho_intra_class": 4.35458161098409e-09,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    }
+   },
+   "G2_d12": {
+    "bb_regression": {
+     "log_or_arm": -1.7000380243046935,
+     "odds_ratio_arm": 0.1826765777708182,
+     "or_ci95": [
+      0.17523711383926435,
+      0.19043187447532933
+     ],
+     "se_log_or": 0.02121288858537516,
+     "rho_intra_class": 3.116850335815412e-09,
+     "lr_rho": 0.00047457250570914766,
+     "p_rho_gt0": 0.49130985539707883,
+     "or_excludes_1": true
+    },
+    "betabinom_base": {
+     "mu": 0.0013180756664979542,
+     "rho_intra_class": 8.742067751067646e-10,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    },
+    "betabinom_treat": {
+     "mu": 0.0002411358277741067,
+     "rho_intra_class": 7.583273281284173e-05,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    }
+   },
+   "G3": {
+    "bb_regression": {
+     "log_or_arm": -1.5121288897289138,
+     "odds_ratio_arm": 0.22044018522218412,
+     "or_ci95": [
+      0.21047966506138413,
+      0.2308720666512794
+     ],
+     "se_log_or": 0.02359048154641094,
+     "rho_intra_class": 2.1860422171165137e-09,
+     "lr_rho": 0.0007060267136012044,
+     "p_rho_gt0": 0.48940088678575844,
+     "or_excludes_1": true
+    },
+    "betabinom_base": {
+     "mu": 0.0005107132902815205,
+     "rho_intra_class": 3.5015798877606104e-12,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    },
+    "betabinom_treat": {
+     "mu": 0.00011200039641172002,
+     "rho_intra_class": 8.567027685766245e-12,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    }
+   }
+  }
+ },
+ "pure_fresh": {
+  "E_per_key": 3000,
+  "groups": {
+   "G0": {
+    "bb_regression": {
+     "log_or_arm": -1.546346412270336,
+     "odds_ratio_arm": 0.21302485876399918,
+     "or_ci95": [
+      0.20609634284517522,
+      0.22018629649101581
+     ],
+     "se_log_or": 0.016869960988632107,
+     "rho_intra_class": 2.231424479157591e-09,
+     "lr_rho": 0.0006343758084881301,
+     "p_rho_gt0": 0.4899529756075442,
+     "or_excludes_1": true
+    },
+    "betabinom_base": {
+     "mu": 0.0010341948424194346,
+     "rho_intra_class": 4.207809600491005e-09,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    },
+    "betabinom_treat": {
+     "mu": 0.00022021702286585554,
+     "rho_intra_class": 7.737422920471416e-10,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    }
+   },
+   "G2_d12": {
+    "bb_regression": {
+     "log_or_arm": -1.7078770337755893,
+     "odds_ratio_arm": 0.1812501724543392,
+     "or_ci95": [
+      0.17618777477448477,
+      0.18645802784430884
+     ],
+     "se_log_or": 0.014453018763382237,
+     "rho_intra_class": 2.189422436521842e-09,
+     "lr_rho": 0.0009080302372126425,
+     "p_rho_gt0": 0.4879802758805067,
+     "or_excludes_1": true
+    },
+    "betabinom_base": {
+     "mu": 0.0013559919540367038,
+     "rho_intra_class": 7.601485914266738e-10,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    },
+    "betabinom_treat": {
+     "mu": 0.0002456125713234469,
+     "rho_intra_class": 3.046949191150006e-05,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    }
+   },
+   "G3": {
+    "bb_regression": {
+     "log_or_arm": -1.3067961878935295,
+     "odds_ratio_arm": 0.27068589540004995,
+     "or_ci95": [
+      0.2542071191224687,
+      0.2882328953707519
+     ],
+     "se_log_or": 0.032045778947019966,
+     "rho_intra_class": 5.137754008413408e-09,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5,
+     "or_excludes_1": true
+    },
+    "betabinom_base": {
+     "mu": 0.0004702499542269588,
+     "rho_intra_class": 1.8705853667002695e-09,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    },
+    "betabinom_treat": {
+     "mu": 0.00012778025887993293,
+     "rho_intra_class": 8.64499536844453e-12,
+     "lr_rho": 0.0,
+     "p_rho_gt0": 0.5
+    }
+   }
+  }
+ }
+}

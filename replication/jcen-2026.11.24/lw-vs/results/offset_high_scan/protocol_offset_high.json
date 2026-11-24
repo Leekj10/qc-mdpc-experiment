@@ -1,0 +1,48 @@
+{
+ "phase": "OFFSET_HIGH_SCAN",
+ "written_before": "any decode of FRO-4 or FRO-5",
+ "purpose": "Measure the classic carrier at first-round +4 and +5 so that the BIKE-Flip +2 arm (total first-round margin +5 relative to ft(S0)) can be compared at equal absolute offset.",
+ "work_point": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "keys": "same formal pools, same fresh_from splits and same seeds as exp_offset_scan_p1p.py phase 1",
+ "errors_per_key": 3000,
+ "arms": {
+  "C0": {
+   "offsets": [
+    0
+   ],
+   "note": "baseline and gate"
+  },
+  "FRO-2": {
+   "offsets": [
+    2,
+    0
+   ],
+   "note": "first round +2, gate"
+  },
+  "FRO-4": {
+   "offsets": [
+    4,
+    0
+   ],
+   "note": "first round +4 (NEW 2026-11-16)"
+  },
+  "FRO-5": {
+   "offsets": [
+    5,
+    0
+   ],
+   "note": "first round +5 (NEW 2026-11-16); equals BIKE-Flip +2 in total margin"
+  }
+ },
+ "gate": "C0 and FRO-2 must reproduce the archived per-key failure counts (G0 282/68, G2_d12 372/68, G3 141/31); otherwise the run is void.",
+ "predictions": {
+  "H_high": "If the BIKE-Flip reversal is an overshoot of a single unimodal offset response, the classic carrier should stop improving and eventually reverse by +5. If the classic carrier still improves at +5, the BIKE-Flip reversal is not explained by offset magnitude alone."
+ },
+ "reporting": "Every arm is reported regardless of direction."
+}

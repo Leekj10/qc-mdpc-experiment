@@ -1,0 +1,2 @@
+tier,source,comparison,iteration_cost_ratio,wall_cost_ratio,throughput_ratio,p99_iteration_delta,semantics
+1,lw-vs/results/c_cost,FRO-2 / C0,1.0669281869201694,1.0870396529828918,1.0870307167235496,0,C reference dynamic-distance (simulation-privileged); DFR not comparable to the static main experiment

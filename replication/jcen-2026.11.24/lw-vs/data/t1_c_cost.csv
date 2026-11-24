@@ -1,0 +1,4 @@
+tier,source,build,note,r,d,t,max_iter,decodes,decodes_per_second,mean_iters,p50_iters,p95_iters,p99_iters,p99_is_at_least_budget,over_max_iter,budget_exhaustion_fraction,dfr_dynamic_semantics,best_wall_seconds
+1,lw-vs/results/c_cost,C0,"CLASSIC, dynamic-distance semantics, no offset",4801,45,92,20,500000,7134.4,4.19088,4,5,6,False,375,0.00075,0.00075,70.083
+1,lw-vs/results/c_cost,FRO-2,"CLASSIC + FIRST_ROUND_OFFSET=2 (round 1 only), dynamic semantics",4801,45,92,20,500000,6563.2,4.471368,4,5,6,False,208,0.000416,0.000416,76.183
+1,lw-vs/results/c_cost,BGF,"GRAY_BGF with published affine constants (c0=13.53, c1=0.0069722); these are BIKE Level-1 values and are mis-scaled for (4801,45) -- cost only, not a quality comparison",4801,45,92,20,500000,2085.8,13.195694,9,21,21,True,239421,0.478842,0.478842,239.721

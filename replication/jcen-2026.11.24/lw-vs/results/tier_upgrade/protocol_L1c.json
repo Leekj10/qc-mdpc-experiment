@@ -1,0 +1,30 @@
+{
+ "phase": "L1c",
+ "frozen_before": "first L1c decode (see file mtime)",
+ "purpose": "G2: is the BIKE-Flip v5.2 first-round protection term T_1 = ft(S0)+delta (spec p.14) load-bearing at production parameters, under the spec's own decoder? Ablate delta1 in {0, delta, 2*delta}, everything else spec-exact.",
+ "design": {
+  "pool": "same archived L1 RAND pool, 16 keys",
+  "errors": "error ids 0..499, uniform weight 134",
+  "arms": {
+   "spec": "d1 = delta = 3",
+   "no_first_round_delta": "d1 = 0",
+   "double_first_round_delta": "d1 = 6"
+  },
+  "implementation": "a faithful local copy of bike_flip with T_1 decoupled; the spec arm is REQUIRED to reproduce the frozen decoder bit-exactly (equivalence gate) before any ablation number is interpreted"
+ },
+ "analysis": [
+  "failures + bound",
+  "mean iterations",
+  "3-round and 7-round fractions"
+ ],
+ "written_by": "Claude (session 2026-10-07) before this phase ran",
+ "amendments": [
+  {
+   "id": "amendment-1 (fourth arm, appended after the fact)",
+   "written_at": "2026-10-07T20:12:27",
+   "disclosure": "The frozen protocol lists three arms (spec / no_first_round_delta / double_first_round_delta). A fourth arm, first_round_delta_only (d1=delta, d_rest=0), was added in the implementation and is reported in the results (two-round convergence 6.14%). It is appended here for the record; the three frozen arms and the equivalence gate are unchanged.",
+   "metric_note": "The protocol's analysis field names 3-round and 7-round fractions; what is reported is 2-round and 3-round fractions plus the mean convergence iteration, because the fixed-iteration loop makes a 7-round fraction identically 1.",
+   "source": "independent audit 2026-10-07 (agent audit:protocol)"
+  }
+ ]
+}

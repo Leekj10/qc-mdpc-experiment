@@ -1,0 +1,42 @@
+{
+ "config_sha256": "587b45666f25cf387eacb63534d1aaf62301979b023e399635a8849ac7592ef0",
+ "config_path": "configs\\m1_p2_l1_probe.json",
+ "parameter": {
+  "id": "P2_L1",
+  "r": 12323,
+  "d": 71,
+  "t": 134,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 200,
+ "start_utc": "2026-09-02T05:43:51.845571+00:00",
+ "groups": {
+  "G0": {
+   "n_keys": 6,
+   "decoders": [
+    "CLASSIC",
+    "BGFV",
+    "BFMAX"
+   ]
+  },
+  "G2_d12": {
+   "n_keys": 4,
+   "decoders": [
+    "CLASSIC",
+    "BGFV",
+    "BFMAX"
+   ]
+  },
+  "G3": {
+   "n_keys": 6,
+   "decoders": [
+    "CLASSIC",
+    "BGFV",
+    "BFMAX"
+   ]
+  }
+ },
+ "end_utc": "2026-09-02T06:54:24.274817+00:00",
+ "wall_seconds_total": 4232.5
+}

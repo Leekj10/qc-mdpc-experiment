@@ -1,0 +1,477 @@
+{
+ "config": "configs/q2_capture_deconfound.json",
+ "param": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "E_per_key": 2000,
+ "keys_per_group": 20,
+ "kappas": [
+  12,
+  46,
+  60
+ ],
+ "note": "de-confounded kappa>d capture: ONE fixed key batch, error construction varies; absolute DFR conditional on the ncw-admissible batch",
+ "constructions": {
+  "rand": {
+   "kappa": 0,
+   "n_keys": 20,
+   "n_samples": 40000,
+   "paired": {
+    "c0_only": 45,
+    "c4_only": 12,
+    "both": 1,
+    "mcnemar_exact_p": 1.3127443164284713e-05
+   },
+   "C0_base": {
+    "failures": 46,
+    "trials": 40000,
+    "dfr": 0.00115,
+    "upper95": 0.0014645024773073717,
+    "log10_upper95": -2.834309889342566,
+    "per_key_failures": [
+     2,
+     4,
+     1,
+     2,
+     3,
+     4,
+     2,
+     3,
+     2,
+     1,
+     2,
+     2,
+     2,
+     2,
+     1,
+     2,
+     3,
+     5,
+     2,
+     1
+    ]
+   },
+   "C4_first_p2": {
+    "failures": 13,
+    "trials": 40000,
+    "dfr": 0.000325,
+    "upper95": 0.0005108345382541702,
+    "log10_upper95": -3.291719747144505,
+    "per_key_failures": [
+     2,
+     0,
+     0,
+     0,
+     1,
+     2,
+     0,
+     0,
+     1,
+     1,
+     0,
+     1,
+     1,
+     0,
+     0,
+     1,
+     1,
+     1,
+     0,
+     1
+    ]
+   },
+   "sign_test": {
+    "improved": 17,
+    "worse": 0,
+    "tied": 3,
+    "n_discordant": 17,
+    "p_two_sided": 1.52587890625e-05
+   },
+   "cluster_bootstrap": {
+    "n_keys": 20,
+    "E_per_key": 2000,
+    "B": 10000,
+    "seed": 20260905,
+    "ci_level": 0.95,
+    "point": {
+     "dfr_base": 0.00115,
+     "dfr_treat": 0.000325,
+     "risk_ratio": 3.5384615384615388,
+     "dfr_diff": 0.000825,
+     "log10_risk_ratio": 0.5488144793747374
+    },
+    "ci": {
+     "risk_ratio": [
+      2.4117647058823533,
+      6.000000000000001
+     ],
+     "dfr_diff": [
+      0.0006,
+      0.001075
+     ],
+     "log10_risk_ratio": [
+      0.3823349353414616,
+      0.7781512503836437
+     ]
+    },
+    "n_nonfinite_rr": 0,
+    "rr_excludes_1": true,
+    "diff_excludes_0": true,
+    "log10rr_excludes_0": true
+   }
+  },
+  "k12": {
+   "kappa": 12,
+   "n_keys": 20,
+   "n_samples": 40000,
+   "paired": {
+    "c0_only": 19,
+    "c4_only": 4,
+    "both": 0,
+    "mcnemar_exact_p": 0.002599477767944336
+   },
+   "C0_base": {
+    "failures": 19,
+    "trials": 40000,
+    "dfr": 0.000475,
+    "upper95": 0.0006911370491856333,
+    "log10_upper95": -3.1604358255585905,
+    "per_key_failures": [
+     2,
+     0,
+     1,
+     1,
+     1,
+     1,
+     0,
+     1,
+     3,
+     0,
+     2,
+     2,
+     0,
+     3,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0
+    ]
+   },
+   "C4_first_p2": {
+    "failures": 4,
+    "trials": 40000,
+    "dfr": 0.0001,
+    "upper95": 0.0002227251305196429,
+    "log10_upper95": -3.652230777890711,
+    "per_key_failures": [
+     0,
+     1,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "sign_test": {
+    "improved": 10,
+    "worse": 1,
+    "tied": 9,
+    "n_discordant": 11,
+    "p_two_sided": 0.01171875
+   },
+   "cluster_bootstrap": {
+    "n_keys": 20,
+    "E_per_key": 2000,
+    "B": 10000,
+    "seed": 20260905,
+    "ci_level": 0.95,
+    "point": {
+     "dfr_base": 0.000475,
+     "dfr_treat": 0.0001,
+     "risk_ratio": 4.75,
+     "dfr_diff": 0.000375,
+     "log10_risk_ratio": 0.6766936096248666
+    },
+    "ci": {
+     "risk_ratio": [
+      2.0,
+      19.0
+     ],
+     "dfr_diff": [
+      0.00015000000000000001,
+      0.0006249999999999999
+     ],
+     "log10_risk_ratio": [
+      0.3010299956639812,
+      1.2787536009528289
+     ]
+    },
+    "n_nonfinite_rr": 107,
+    "rr_excludes_1": true,
+    "diff_excludes_0": true,
+    "log10rr_excludes_0": true
+   }
+  },
+  "k46": {
+   "kappa": 46,
+   "n_keys": 20,
+   "n_samples": 40000,
+   "paired": {
+    "c0_only": 2977,
+    "c4_only": 3453,
+    "both": 31148,
+    "mcnemar_exact_p": 3.099212864447022e-09
+   },
+   "C0_base": {
+    "failures": 34125,
+    "trials": 40000,
+    "dfr": 0.853125,
+    "upper95": 0.8560123530767864,
+    "log10_upper95": -0.06751996799297232,
+    "per_key_failures": [
+     1693,
+     1678,
+     1735,
+     1672,
+     1675,
+     1700,
+     1706,
+     1714,
+     1724,
+     1721,
+     1705,
+     1720,
+     1690,
+     1727,
+     1670,
+     1709,
+     1728,
+     1702,
+     1743,
+     1713
+    ]
+   },
+   "C4_first_p2": {
+    "failures": 34601,
+    "trials": 40000,
+    "dfr": 0.865025,
+    "upper95": 0.8678105319670298,
+    "log10_upper95": -0.06157508346768604,
+    "per_key_failures": [
+     1710,
+     1703,
+     1727,
+     1718,
+     1738,
+     1710,
+     1758,
+     1720,
+     1737,
+     1709,
+     1728,
+     1754,
+     1710,
+     1751,
+     1710,
+     1741,
+     1759,
+     1732,
+     1736,
+     1750
+    ]
+   },
+   "sign_test": {
+    "improved": 3,
+    "worse": 17,
+    "tied": 0,
+    "n_discordant": 20,
+    "p_two_sided": 0.0025768280029296875
+   },
+   "cluster_bootstrap": {
+    "n_keys": 20,
+    "E_per_key": 2000,
+    "B": 10000,
+    "seed": 20260905,
+    "ci_level": 0.95,
+    "point": {
+     "dfr_base": 0.853125,
+     "dfr_treat": 0.865025,
+     "risk_ratio": 0.9862431721626542,
+     "dfr_diff": -0.011900000000000022,
+     "log10_risk_ratio": -0.006015990426221178
+    },
+    "ci": {
+     "risk_ratio": [
+      0.9814170626680304,
+      0.9911706953522134
+     ],
+     "dfr_diff": [
+      -0.016100000000000003,
+      -0.007624999999999993
+     ],
+     "log10_risk_ratio": [
+      -0.00814639575583352,
+      -0.0038515466591991965
+     ]
+    },
+    "n_nonfinite_rr": 0,
+    "rr_excludes_1": false,
+    "diff_excludes_0": false,
+    "log10rr_excludes_0": false
+   }
+  },
+  "k60": {
+   "kappa": 60,
+   "n_keys": 20,
+   "n_samples": 40000,
+   "paired": {
+    "c0_only": 0,
+    "c4_only": 0,
+    "both": 40000,
+    "mcnemar_exact_p": 1.0
+   },
+   "C0_base": {
+    "failures": 40000,
+    "trials": 40000,
+    "dfr": 1.0,
+    "upper95": 1.0,
+    "log10_upper95": 0.0,
+    "per_key_failures": [
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000
+    ]
+   },
+   "C4_first_p2": {
+    "failures": 40000,
+    "trials": 40000,
+    "dfr": 1.0,
+    "upper95": 1.0,
+    "log10_upper95": 0.0,
+    "per_key_failures": [
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000,
+     2000
+    ]
+   },
+   "sign_test": {
+    "improved": 0,
+    "worse": 0,
+    "tied": 20,
+    "n_discordant": 0,
+    "p_two_sided": 1.0
+   },
+   "cluster_bootstrap": {
+    "n_keys": 20,
+    "E_per_key": 2000,
+    "B": 10000,
+    "seed": 20260905,
+    "ci_level": 0.95,
+    "point": {
+     "dfr_base": 1.0,
+     "dfr_treat": 1.0,
+     "risk_ratio": 1.0,
+     "dfr_diff": 0.0,
+     "log10_risk_ratio": 0.0
+    },
+    "ci": {
+     "risk_ratio": [
+      1.0,
+      1.0
+     ],
+     "dfr_diff": [
+      0.0,
+      0.0
+     ],
+     "log10_risk_ratio": [
+      0.0,
+      0.0
+     ]
+    },
+    "n_nonfinite_rr": 0,
+    "rr_excludes_1": false,
+    "diff_excludes_0": false,
+    "log10rr_excludes_0": false
+   }
+  }
+ },
+ "c0_capture_gradient": {
+  "rand": {
+   "c0_dfr": 0.00115,
+   "ratio_vs_rand": 1.0
+  },
+  "k12": {
+   "c0_dfr": 0.000475,
+   "ratio_vs_rand": 0.41304347826086957
+  },
+  "k46": {
+   "c0_dfr": 0.853125,
+   "ratio_vs_rand": 741.8478260869565
+  },
+  "k60": {
+   "c0_dfr": 1.0,
+   "ratio_vs_rand": 869.5652173913044
+  }
+ },
+ "holm_sign": {
+  "rand": 6.103515625e-05,
+  "k12": 0.0234375,
+  "k46": 0.0077304840087890625,
+  "k60": 1.0
+ },
+ "seconds": 5212.8
+}

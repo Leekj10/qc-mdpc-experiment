@@ -1,0 +1,142 @@
+{
+ "param": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 3000,
+ "max_iter": 20,
+ "algorithm": "Baldelli et al. 2026 (ISIT), Algorithm 2, transcribed; threshold = CLASSIC, matched to C0 and BGF-C3",
+ "near_codeword_table": "key.canonical_syndromes() shifts; 2r entries",
+ "note": "reports zero-syndrome success AND exact-recovery failures separately, because near-codeword acceptance need not recover e",
+ "groups": {
+  "G0": {
+   "condition": "RAND",
+   "n_keys": 92,
+   "trials": 276000,
+   "c0_failures": 282,
+   "c0_archived": 282,
+   "c0_exact_recovery_failures": 282,
+   "ncw_zero_syndrome": 275718,
+   "ncw_zero_syndrome_dfr": 0.9989782608695652,
+   "ncw_exact_recovery_failures": 282,
+   "ncw_exact_recovery_dfr": 0.0010217391304347826,
+   "ncw_miscorrections": 0,
+   "ncw_triggered": 0,
+   "ncw_trigger_rate": 0.0,
+   "ncw_avg_iters": 4.312420289855073,
+   "ncw_upper95_zero_syndrome": 0.9990735164224178,
+   "ncw_upper95_exact_recovery": 0.001126777249474768
+  },
+  "G2_d12": {
+   "condition": "TYPE-I",
+   "n_keys": 94,
+   "trials": 282000,
+   "c0_failures": 372,
+   "c0_archived": 372,
+   "c0_exact_recovery_failures": 372,
+   "ncw_zero_syndrome": 281628,
+   "ncw_zero_syndrome_dfr": 0.9986808510638298,
+   "ncw_exact_recovery_failures": 372,
+   "ncw_exact_recovery_dfr": 0.0013191489361702128,
+   "ncw_miscorrections": 0,
+   "ncw_triggered": 0,
+   "ncw_trigger_rate": 0.0,
+   "ncw_avg_iters": 4.510847517730497,
+   "ncw_upper95_zero_syndrome": 0.9987885929413699,
+   "ncw_upper95_exact_recovery": 0.0014364595354690972
+  },
+  "G3": {
+   "condition": "NCW-shallow",
+   "n_keys": 92,
+   "trials": 276000,
+   "c0_failures": 141,
+   "c0_archived": 141,
+   "c0_exact_recovery_failures": 141,
+   "ncw_zero_syndrome": 275859,
+   "ncw_zero_syndrome_dfr": 0.9994891304347826,
+   "ncw_exact_recovery_failures": 141,
+   "ncw_exact_recovery_dfr": 0.0005108695652173913,
+   "ncw_miscorrections": 0,
+   "ncw_triggered": 0,
+   "ncw_trigger_rate": 0.0,
+   "ncw_avg_iters": 4.206481884057971,
+   "ncw_upper95_zero_syndrome": 0.9995551514483039,
+   "ncw_upper95_exact_recovery": 0.0005866831606234902
+  }
+ },
+ "capture": {
+  "batch": "ONE fixed ncw-admissible key batch; only the error construction varies",
+  "kappas": [
+   12,
+   46,
+   60
+  ],
+  "n_keys": 20,
+  "errors_per_key": 2000,
+  "note": "kappa>d is a genuine capture condition; absolute DFR is conditional on this ncw-admissible batch, within-batch contrasts are de-confounded",
+  "cells": {
+   "rand": {
+    "kappa": 0,
+    "trials": 40000,
+    "c0_failures": 46,
+    "c0_dfr": 0.00115,
+    "c0_exact_recovery_failures": 46,
+    "ncw_zero_syndrome": 39954,
+    "ncw_zero_syndrome_dfr": 0.99885,
+    "ncw_exact_recovery_failures": 46,
+    "ncw_exact_recovery_dfr": 0.00115,
+    "ncw_triggered": 0,
+    "ncw_trigger_rate": 0.0,
+    "ncw_upper95_zero_syndrome": 0.9990970240238509
+   },
+   "k12": {
+    "kappa": 12,
+    "trials": 40000,
+    "c0_failures": 19,
+    "c0_dfr": 0.000475,
+    "c0_exact_recovery_failures": 19,
+    "ncw_zero_syndrome": 39981,
+    "ncw_zero_syndrome_dfr": 0.999525,
+    "ncw_exact_recovery_failures": 19,
+    "ncw_exact_recovery_dfr": 0.000475,
+    "ncw_triggered": 0,
+    "ncw_trigger_rate": 0.0,
+    "ncw_upper95_zero_syndrome": 0.9996735672898134
+   },
+   "k46": {
+    "kappa": 46,
+    "trials": 40000,
+    "c0_failures": 34125,
+    "c0_dfr": 0.853125,
+    "c0_exact_recovery_failures": 34125,
+    "ncw_zero_syndrome": 35574,
+    "ncw_zero_syndrome_dfr": 0.88935,
+    "ncw_exact_recovery_failures": 4426,
+    "ncw_exact_recovery_dfr": 0.11065,
+    "ncw_triggered": 29699,
+    "ncw_trigger_rate": 0.742475,
+    "ncw_upper95_zero_syndrome": 0.8919036521733205
+   },
+   "k60": {
+    "kappa": 60,
+    "trials": 40000,
+    "c0_failures": 40000,
+    "c0_dfr": 1.0,
+    "c0_exact_recovery_failures": 40000,
+    "ncw_zero_syndrome": 303,
+    "ncw_zero_syndrome_dfr": 0.007575,
+    "ncw_exact_recovery_failures": 39697,
+    "ncw_exact_recovery_dfr": 0.992425,
+    "ncw_triggered": 303,
+    "ncw_trigger_rate": 0.007575,
+    "ncw_upper95_zero_syndrome": 0.008322136561934026
+   }
+  }
+ },
+ "gate_passed": true,
+ "wall_seconds": 3914.9
+}

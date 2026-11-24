@@ -1,0 +1,34 @@
+{
+  "protocol": "exact_recovery_audit_v1",
+  "parameter": {
+    "id": "P1prime",
+    "r": 4801,
+    "d": 45,
+    "t": 92,
+    "n0": 2
+  },
+  "seed": 20260901,
+  "formal_fresh_from": {
+    "G0": 8,
+    "G2_d12": 6,
+    "G3": 8
+  },
+  "arms": [
+    "C0_base",
+    "FRO-2"
+  ],
+  "selection": {
+    "groups": [
+      "G0"
+    ],
+    "keys_per_group": null,
+    "errors_per_key": 3000
+  },
+  "success_definitions": {
+    "zero_syndrome": "decoder trajectory ended with syndrome weight zero",
+    "exact_recovery": "tracked flip parity equals generated error vector",
+    "zero_syndrome_miscorrection": "zero_syndrome and not exact_recovery"
+  },
+  "script_sha256": "52edbacdc4b32f7cdcbafc0b4a0e5c90c0de335ea713dc674c30c78994a55eab",
+  "created_unix": 1790183443.6777275
+}

@@ -1,0 +1,22 @@
+{
+  "phase": "POSTSTEP_CENSUS",
+  "written_by": "Claude (session 2026-11-11)",
+  "written_before": "any post-step census decode",
+  "status": "descriptive mechanism census; not a confirmatory test",
+  "purpose": "Quantify the round-1 black and gray sets, their true/false composition, the overlap between the +2 gray band and the baseline black set, and the positions re-admitted by the gray step.",
+  "work_point": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "keys": "G0 pool keys 54..99 (46 keys), 2000 errors each, same seed discipline as decoder_transfer",
+  "definitions": {
+    "tau0": "classic binomial threshold at the initial syndrome, clipped to [(d+1)/2, d]",
+    "tau2": "clip(tau0 + 2, [(d+1)/2, d])",
+    "black0": "positions with initial UPC >= tau0",
+    "black2": "positions with initial UPC >= tau2",
+    "gray0": "positions with tau0 - 3 <= UPC < tau0",
+    "gray2": "positions with tau2 - 3 <= UPC < tau2",
+    "recheck": "after the black step, flip back black positions whose post-black UPC >= (d+1)/2 + 1",
+    "gray_readmit": "after the black and recheck steps, flip gray positions whose current UPC >= (d+1)/2 + 1",
+    "effective": "positions flipped in round one after black, recheck and gray, counted with parity (a position flipped twice is not in the effective set)"
+  },
+  "disclosure": "The true error support is used only for offline diagnostics; it is not a deployable statistic. Counts are descriptive; no formal test is attached to this census.",
+  "outputs": "per-instance arrays in npz, aggregate means in JSON, Chinese report"
+}

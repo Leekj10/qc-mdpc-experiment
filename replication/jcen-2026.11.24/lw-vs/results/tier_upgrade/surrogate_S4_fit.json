@@ -1,0 +1,106 @@
+{
+ "model_candidates": {
+  "M1": {
+   "cols": [
+    "n_false"
+   ],
+   "heldout_logloss": 0.006435346121722892,
+   "heldout_auc": 0.8938235068928139,
+   "heldout_brier": 0.0009699403643243293
+  },
+  "M2": {
+   "cols": [
+    "n_false",
+    "n_true"
+   ],
+   "heldout_logloss": 0.0034629023770782435,
+   "heldout_auc": 0.9948207787811749,
+   "heldout_brier": 0.0008109307399106888
+  },
+  "M3": {
+   "cols": [
+    "n_false",
+    "n_true",
+    "w1"
+   ],
+   "heldout_logloss": 0.0034936486541165203,
+   "heldout_auc": 0.9944771790976411,
+   "heldout_brier": 0.0008104436856525562
+  }
+ },
+ "selection": "held-out C0 log-loss",
+ "predictions": {
+  "C0": {
+   "predicted_dfr": 0.0010884272007402986,
+   "predicted_rr_vs_C0": 1.0,
+   "measured_failures_heldout": 135,
+   "measured_dfr": 0.0009782608695652175,
+   "measured_rr": 1.0,
+   "measured_rr_ci95": [
+    1.0,
+    1.0
+   ],
+   "measured_failures_full_pool": 282,
+   "iters_mean": 4.312420289855073
+  },
+  "FROp1": {
+   "predicted_dfr": 0.0013733521327522753,
+   "predicted_rr_vs_C0": 0.7925332293029821,
+   "measured_failures_heldout": 39,
+   "measured_dfr": 0.0002826086956521739,
+   "measured_rr": 3.461538461538462,
+   "measured_rr_ci95": [
+    2.4782608695652177,
+    5.0344827586206895
+   ],
+   "measured_failures_full_pool": 83,
+   "iters_mean": 4.357978260869565
+  },
+  "FRO-2": {
+   "predicted_dfr": 0.006674837300417436,
+   "predicted_rr_vs_C0": 0.1630642293966071,
+   "measured_failures_heldout": 35,
+   "measured_dfr": 0.0002536231884057971,
+   "measured_rr": 3.857142857142857,
+   "measured_rr_ci95": [
+    2.8292682926829267,
+    5.555555555555555
+   ],
+   "measured_failures_full_pool": 68,
+   "iters_mean": 4.585677536231884
+  },
+  "FROp3": {
+   "predicted_dfr": 0.02745999027968992,
+   "predicted_rr_vs_C0": 0.03963683852959431,
+   "measured_failures_heldout": 34,
+   "measured_dfr": 0.0002463768115942029,
+   "measured_rr": 3.970588235294118,
+   "measured_rr_ci95": [
+    2.842075358851675,
+    6.038461538461539
+   ],
+   "measured_failures_full_pool": 73,
+   "iters_mean": 4.864579710144928
+  },
+  "FRONEG": {
+   "predicted_dfr": 0.030559511568547457,
+   "predicted_rr_vs_C0": 0.035616642572930804,
+   "measured_failures_heldout": 1063,
+   "measured_dfr": 0.0077028985507246375,
+   "measured_rr": 0.12699905926622768,
+   "measured_rr_ci95": [
+    0.10507246376811594,
+    0.14990512333965844
+   ],
+   "measured_failures_full_pool": 2235,
+   "iters_mean": 4.751663043478261
+  }
+ },
+ "selected": "M2",
+ "fitted_coefficients_standardised": {
+  "intercept": -11.741267212793987,
+  "fitted_on": "keys 8..53 only",
+  "n_false": 2.5034979385999927,
+  "n_true": -3.306579761352408
+ }
+}

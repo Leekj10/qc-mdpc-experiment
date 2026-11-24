@@ -1,0 +1,6 @@
+{"key_id": "G3-0000", "error_id": 168, "decoder": "C0", "mode": "stagnation", "iters": 20, "sw_first": 1717, "sw_last": 1531}
+{"key_id": "G3-0001", "error_id": 172, "decoder": "C0", "mode": "stagnation", "iters": 20, "sw_first": 1734, "sw_last": 1523}
+{"key_id": "G3-0002", "error_id": 171, "decoder": "C0", "mode": "stagnation", "iters": 20, "sw_first": 1711, "sw_last": 1448}
+{"key_id": "G3-0006", "error_id": 0, "decoder": "C0", "mode": "stagnation", "iters": 20, "sw_first": 1730, "sw_last": 1515}
+{"key_id": "G3-0006", "error_id": 62, "decoder": "C0", "mode": "stagnation", "iters": 20, "sw_first": 1713, "sw_last": 1631}
+{"key_id": "G3-0007", "error_id": 101, "decoder": "C0", "mode": "stagnation", "iters": 20, "sw_first": 1662, "sw_last": 1533}

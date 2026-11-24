@@ -1,0 +1,73 @@
+{
+ "E_per_key": 400,
+ "groups": {
+  "G0": {
+   "n_keys": 6,
+   "modes": {
+    "C0_base": {
+     "success": 2398,
+     "early_misflip": 1,
+     "stagnation": 1
+    },
+    "C4_first_p2": {
+     "success": 2400
+    }
+   },
+   "transitions": {
+    "early_misflip->success": 1,
+    "stagnation->success": 1
+   },
+   "iters": {
+    "C0_base": 4.32625,
+    "C4_first_p2": 4.583333333333333
+   },
+   "seconds": 42.7
+  },
+  "G2_d12": {
+   "n_keys": 4,
+   "modes": {
+    "C0_base": {
+     "success": 1598,
+     "early_misflip": 1,
+     "stagnation": 1
+    },
+    "C4_first_p2": {
+     "success": 1599,
+     "stagnation": 1
+    }
+   },
+   "transitions": {
+    "early_misflip->success": 1,
+    "success->stagnation": 1,
+    "stagnation->success": 1
+   },
+   "iters": {
+    "C0_base": 4.515625,
+    "C4_first_p2": 4.768125
+   },
+   "seconds": 29.9
+  },
+  "G3": {
+   "n_keys": 6,
+   "modes": {
+    "C0_base": {
+     "success": 2397,
+     "stagnation": 3
+    },
+    "C4_first_p2": {
+     "success": 2399,
+     "stagnation": 1
+    }
+   },
+   "transitions": {
+    "stagnation->success": 3,
+    "success->stagnation": 1
+   },
+   "iters": {
+    "C0_base": 4.195833333333334,
+    "C4_first_p2": 4.465833333333333
+   },
+   "seconds": 47.9
+  }
+ }
+}

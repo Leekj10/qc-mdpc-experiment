@@ -1,0 +1,16 @@
+{
+  "run_id": "pilot_p0",
+  "parameter": {"id": "P0", "r": 2003, "d": 9, "t": 18, "n0": 2},
+  "seed": 20260901,
+  "errors_per_key": 1000,
+  "groups": {
+    "G0": {"type": "random", "n_keys": 24},
+    "G2": {"type": "type1", "n_keys": 8, "delta": 4},
+    "G3": {"type": "ncw", "n_keys": 8, "kappa": 6, "max_syn_weight": null, "require_better_than_canonical": true}
+  },
+  "decoders": {
+    "BF": {"algo": "bf_parallel", "threshold": {"type": "fixed", "b": 5}, "max_iter": 20, "fixed_iters": false},
+    "BGF": {"algo": "bgf_lite", "threshold": {"type": "fixed", "b": 5}, "max_iter": 15, "fixed_iters": false},
+    "BFMAX": {"algo": "bf_max", "max_iter": 18}
+  }
+}

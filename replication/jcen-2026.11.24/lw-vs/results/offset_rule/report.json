@@ -1,0 +1,363 @@
+{
+ "protocol": {
+  "name": "prespecified_first_round_offset_rule",
+  "frozen_before_run": true,
+  "point": {
+   "r": 3607,
+   "d": 39,
+   "t": 76,
+   "id": "P4",
+   "note": "new (r,d); project has used 4801/45, 3001/37, 4001/41, 12323/71"
+  },
+  "rule": {
+   "definition": "delta* = argmax_{delta in {1,2,3,4}} rho(delta), rho = incorrect flips avoided per correct flip deferred",
+   "A_c": "A_c(delta) = q_c(tau1+delta)/q_c(tau1), q_c = tail mass of first-round UPC in class c",
+   "free_parameters": "none",
+   "rho": "rho(delta) = [(n-t)*(q0(tau1)-q0(tau1+delta))] / [t*(q1(tau1)-q1(tau1+delta))]",
+   "tie_break": "smaller delta"
+  },
+  "development_sample": {
+   "keys": 12,
+   "errors_per_key": 200,
+   "seed_context": "dev"
+  },
+  "validation_sample": {
+   "keys": 48,
+   "errors_per_key": 1000,
+   "seed_context": "val",
+   "fresh_keys": true
+  },
+  "inference": {
+   "cluster_bootstrap": {
+    "B": 10000,
+    "seed": 20260905,
+    "unit": "key"
+   },
+   "sign_test": "exact two-sided, paired per-key"
+  },
+  "master_seed": 20260901
+ },
+ "calibration_sweep": [
+  {
+   "t": 70,
+   "failures": 0,
+   "trials": 1800,
+   "dfr": 0.0,
+   "upper95": 0.0016666666666666668
+  },
+  {
+   "t": 72,
+   "failures": 0,
+   "trials": 1800,
+   "dfr": 0.0,
+   "upper95": 0.0016666666666666668
+  },
+  {
+   "t": 74,
+   "failures": 0,
+   "trials": 1800,
+   "dfr": 0.0,
+   "upper95": 0.0016666666666666668
+  },
+  {
+   "t": 76,
+   "failures": 2,
+   "trials": 1800,
+   "dfr": 0.0011111111111111111,
+   "upper95": 0.0033519503707711965
+  },
+  {
+   "t": 78,
+   "failures": 11,
+   "trials": 1800,
+   "dfr": 0.006111111111111111,
+   "upper95": 0.009961223956702897
+  },
+  {
+   "t": 80,
+   "failures": 85,
+   "trials": 1800,
+   "dfr": 0.04722222222222222,
+   "upper95": 0.05614720103800344
+  }
+ ],
+ "rule": {
+  "n_error_positions": 182400,
+  "n_nonerror_positions": 17131200,
+  "q1_pooled": {
+   "0": 44627,
+   "1": 27957,
+   "2": 15846,
+   "3": 7971,
+   "4": 3645
+  },
+  "q0_pooled": {
+   "0": 15343,
+   "1": 4873,
+   "2": 1369,
+   "3": 350,
+   "4": 63
+  },
+  "p1_tail_prob": {
+   "0": 0.2446655701754386,
+   "1": 0.15327302631578948,
+   "2": 0.086875,
+   "3": 0.043700657894736844,
+   "4": 0.019983552631578947
+  },
+  "p0_tail_prob": {
+   "0": 0.0008956173531334641,
+   "1": 0.00028445176053049407,
+   "2": 7.991267395162044e-05,
+   "3": 2.043055944709069e-05,
+   "4": 3.677500700476324e-06
+  },
+  "instances": 2400,
+  "table": [
+   {
+    "delta": 1,
+    "A1": 0.6264593183498779,
+    "A0": 0.3176041191422799,
+    "expected_incorrect_avoided": 4.3625,
+    "expected_correct_deferred": 6.945833333333333,
+    "rho": 0.6280743851229754
+   },
+   {
+    "delta": 2,
+    "A1": 0.3550765231810339,
+    "A0": 0.089226357296487,
+    "expected_incorrect_avoided": 5.8225,
+    "expected_correct_deferred": 11.992083333333335,
+    "rho": 0.48552864737152973
+   },
+   {
+    "delta": 3,
+    "A1": 0.17861384363725996,
+    "A0": 0.022811705663820635,
+    "expected_incorrect_avoided": 6.247083333333334,
+    "expected_correct_deferred": 15.273333333333333,
+    "rho": 0.4090189873417722
+   },
+   {
+    "delta": 4,
+    "A1": 0.0816770116745468,
+    "A0": 0.004106107019487714,
+    "expected_incorrect_avoided": 6.366666666666667,
+    "expected_correct_deferred": 17.075833333333335,
+    "rho": 0.372846615587331
+   }
+  ],
+  "delta_star": 1,
+  "rho": {
+   "1": 0.6280743851229754,
+   "2": 0.48552864737152973,
+   "3": 0.4090189873417722,
+   "4": 0.372846615587331
+  }
+ },
+ "validation": {
+  "n_keys": 48,
+  "errors_per_key": 1000,
+  "wall_seconds": 142.0,
+  "arms": {
+   "C0": {
+    "label": "C0",
+    "failures": 40,
+    "trials": 48000,
+    "dfr": 0.0008333333333333334,
+    "upper95": 0.0010799188541234328,
+    "per_key_failures": [
+     2,
+     1,
+     2,
+     3,
+     2,
+     1,
+     1,
+     0,
+     1,
+     1,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     2,
+     2,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     0,
+     0,
+     0,
+     1,
+     2,
+     0,
+     2,
+     1,
+     1,
+     0,
+     0,
+     2,
+     2,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "FRO-1": {
+    "label": "FRO-1",
+    "failures": 8,
+    "trials": 48000,
+    "dfr": 0.00016666666666666666,
+    "upper95": 0.00029576315911547925,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     2,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "rr_vs_C0": 5.000000000000001,
+    "rr_ci95": [
+     2.642857142857143,
+     16.666666666666668
+    ],
+    "rr_excludes_1": true,
+    "sign_test": {
+     "improved": 25,
+     "worse": 2,
+     "tied": 21,
+     "n_discordant": 27,
+     "p_two_sided": 5.647540092468262e-06
+    }
+   },
+   "FRO-2": {
+    "label": "FRO-2",
+    "failures": 8,
+    "trials": 48000,
+    "dfr": 0.00016666666666666666,
+    "upper95": 0.00029576315911547925,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "rr_vs_C0": 5.000000000000001,
+    "rr_ci95": [
+     2.909090909090909,
+     12.0
+    ],
+    "rr_excludes_1": true,
+    "sign_test": {
+     "improved": 26,
+     "worse": 2,
+     "tied": 20,
+     "n_discordant": 28,
+     "p_two_sided": 3.032386302947998e-06
+    }
+   }
+  }
+ },
+ "wall_seconds_total": 160.5
+}

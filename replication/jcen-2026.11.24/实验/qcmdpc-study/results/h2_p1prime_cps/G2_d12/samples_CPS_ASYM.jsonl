@@ -1,0 +1,3 @@
+{"key_id": "G2_d12-0002", "error_id": 266, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1729, "sw_last": 1621}
+{"key_id": "G2_d12-0003", "error_id": 257, "decoder": "CPS_ASYM", "mode": "stagnation", "iters": 20, "sw_first": 1835, "sw_last": 1646}
+{"key_id": "G2_d12-0005", "error_id": 10, "decoder": "CPS_ASYM", "mode": "other", "iters": 20, "sw_first": 1762, "sw_last": 1385}

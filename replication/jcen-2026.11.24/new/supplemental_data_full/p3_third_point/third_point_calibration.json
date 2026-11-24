@@ -1,0 +1,85 @@
+{
+  "parameter_rd": {
+    "r": 4001,
+    "d": 41
+  },
+  "t_list": [
+    70,
+    72,
+    74,
+    76,
+    78,
+    80,
+    82
+  ],
+  "n_keys": 4,
+  "n_err": 300,
+  "seed": 20260911,
+  "sweep": [
+    {
+      "t": 70,
+      "failures": 0,
+      "trials": 1200,
+      "dfr": 0.0,
+      "upper95": 0.0025,
+      "seconds": 5.68
+    },
+    {
+      "t": 72,
+      "failures": 0,
+      "trials": 1200,
+      "dfr": 0.0,
+      "upper95": 0.0025,
+      "seconds": 5.87
+    },
+    {
+      "t": 74,
+      "failures": 0,
+      "trials": 1200,
+      "dfr": 0.0,
+      "upper95": 0.0025,
+      "seconds": 5.9
+    },
+    {
+      "t": 76,
+      "failures": 0,
+      "trials": 1200,
+      "dfr": 0.0,
+      "upper95": 0.0025,
+      "seconds": 6.2
+    },
+    {
+      "t": 78,
+      "failures": 0,
+      "trials": 1200,
+      "dfr": 0.0,
+      "upper95": 0.0025,
+      "seconds": 6.81
+    },
+    {
+      "t": 80,
+      "failures": 0,
+      "trials": 1200,
+      "dfr": 0.0,
+      "upper95": 0.0025,
+      "seconds": 6.98
+    },
+    {
+      "t": 82,
+      "failures": 3,
+      "trials": 1200,
+      "dfr": 0.0025,
+      "upper95": 0.006238750346391913,
+      "seconds": 7.5
+    }
+  ],
+  "selected": {
+    "t": 82,
+    "failures": 3,
+    "trials": 1200,
+    "dfr": 0.0025,
+    "upper95": 0.006238750346391913,
+    "seconds": 7.5
+  },
+  "selection_rule": "nearest observed C0 DFR to 1e-3 within [1e-4,1e-2]"
+}

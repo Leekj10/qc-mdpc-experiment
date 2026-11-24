@@ -1,0 +1,53 @@
+{
+  "protocol": "expanded_confirmation_v1",
+  "seed": 20260912,
+  "n_keys_per_condition": 50,
+  "errors_per_key": 1000,
+  "groups": {
+    "G0": {
+      "type": "random",
+      "n_keys": 50
+    },
+    "G2_d12": {
+      "type": "type1",
+      "n_keys": 50,
+      "delta": 12
+    },
+    "G3": {
+      "type": "ncw",
+      "n_keys": 50,
+      "kappa": 12,
+      "max_syn_weight": null,
+      "require_better_than_canonical": true
+    }
+  },
+  "parameters": {
+    "P2": {
+      "id": "P2_expanded",
+      "r": 3001,
+      "d": 37,
+      "t": 66,
+      "n0": 2
+    },
+    "P3": {
+      "id": "P3_expanded",
+      "r": 4001,
+      "d": 41,
+      "t": 82,
+      "n0": 2
+    }
+  },
+  "decoders": [
+    "C0",
+    "FRO-1",
+    "FRO-2",
+    "FRO-3",
+    "R2-2",
+    "UNIFORM-2"
+  ],
+  "pairing": "identical deterministic (H,e,s) within each cell",
+  "cluster_unit": "key",
+  "seed_rule": "SHA256(master|context|index)",
+  "script_sha256": "186a72ef3512d0348278294b2fd1a071ddd8ef6620cd6f45dad72217bd3c0c22",
+  "created": "2026-09-11T16:41:45+0800"
+}

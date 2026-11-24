@@ -1,0 +1,52 @@
+{
+  "phase": "DECODER_TRANSFER",
+  "written_by": "Claude (session 2026-11-08)",
+  "written_before": "any decoder-transfer decode",
+  "purpose": "Test whether the one-shot first-round threshold window, measured on the CLASSIC BF carrier, transfers to other threshold-based BF decoder families. This is a scope/transfer test, not an efficiency benchmark.",
+  "work_point": {"id": "P1prime", "r": 4801, "d": 45, "t": 92},
+  "keys": "G0 pool keys 54..99 (the S1 held-out split), 46 keys, no overlap with the S1 fit keys 8..53",
+  "errors_per_key": 2000,
+  "trials_per_arm": 92000,
+  "instances": "identical (H,e,s) across all arms, regenerated from the frozen seed discipline (SEED=20260901, group G0, key_id, error_id)",
+  "families": {
+    "CLASSIC": {
+      "role": "gate and reference",
+      "decoder": "parallel BF with the frozen CLASSIC threshold, 20-round budget",
+      "arms": [0, 2],
+      "intervention": "round-1 threshold +2 only; later rounds unchanged (FRO-2)"
+    },
+    "BIKE-Flip": {
+      "role": "production-family transfer",
+      "decoder": "BIKE-Flip v5.2 schedule, (a,b) derived by the spec A.2.4 tangent rule at P1', delta=3, static-distance semantics",
+      "arms": [-2, 0, 2],
+      "budgets": [7, 20],
+      "primary_budget": 7,
+      "intervention": "round-1 threshold offset only; the T_2..T_n floors are unchanged. Note the baseline already carries the spec's delta=3, so +2 means a total first-round margin of +5 relative to ft(S0)."
+    },
+    "BGF": {
+      "role": "gray-step-family transfer",
+      "decoder": "GRAY_BGF structure (bgf_vasseur), CLASSIC base threshold, gray_delta=3, 20-round budget",
+      "arms": [-2, 0, 2],
+      "intervention": "main-step round-1 threshold offset only; the black re-check and gray step keep their frozen semantics"
+    },
+    "BF-Max": {
+      "role": "definitional out-of-scope control",
+      "decoder": "BF-Max flips exactly one maximum-UPC position per iteration; it has no threshold",
+      "arms": [],
+      "intervention": "undefined: there is no threshold to offset. Reported as an out-of-scope boundary, not as a failed transfer."
+    }
+  },
+  "predictions": {
+    "G0_gate": "CLASSIC C0 vs FRO-2 reproduces the archived direction (RR>1 with the key-clustered 95% CI excluding 1), and the per-instance failure vectors match surrogate_S1.npz on the first 2000 errors of keys 54..99 exactly.",
+    "H1_BIKE7": "The sign of the marginal +2 effect is NOT assumed positive. Because the spec already applies delta=3 in round one, the baseline sits at the conservative edge; predicted RR(+2) is smaller than the CLASSIC 4.15x and may be below 1 (overshoot). A +2 benefit would mean the spec is under-protected at P1'.",
+    "H2_BGF": "The +2 effect transfers with RR>1 but is attenuated relative to CLASSIC, because the gray step re-admits positions just below the threshold. Predicted 1 < RR < 4.",
+    "H3_BFMax": "No threshold exists, so no transfer test is defined; this is a boundary of the regularity, not evidence against it.",
+    "H4_negative_direction": "If the baseline sits inside the window, the -2 arm should be harmful (RR<1 relative to baseline) in both families. If -2 helps, the baseline was over-protected. The joint pattern (+2 harmful and -2 harmful) is an interior-optimum signature."
+  },
+  "decision_rule": "Transfer is supported for a family if the +2 arm has RR>1 with the key-clustered 95% CI excluding 1. RR<1 with the CI excluding 1 is a boundary/overshoot result, not a failed experiment. Every arm is reported regardless of direction.",
+  "multiplicity": "two primary transfer tests (BIKE-Flip at +2, BGF at +2); Holm adjustment across the two. The -2 arms and the 20-round BIKE-Flip arms are secondary and reported nominally.",
+  "inference": "key-clustered percentile bootstrap over keys, B=10000, seed=20260905; exact McNemar as a nominal instance-level check; no instance-level test is treated as confirmatory.",
+  "cost_metrics": "mean n_iters_run per arm (BGF), mean iters_to_success (BIKE-Flip), and the mean size and true/false composition of the round-1 flip set. No wall-clock claim is made from this Python carrier.",
+  "falsification": "If neither BIKE-Flip nor BGF shows a +2 effect in the predicted direction, the transfer claim is reported as not supported; the CLASSIC gate still stands.",
+  "disclosure": "The first-round flip census uses the true error support and is a diagnostic quantity, not a deployable statistic. This matches the paper's existing disclosure for the mechanism analysis."
+}

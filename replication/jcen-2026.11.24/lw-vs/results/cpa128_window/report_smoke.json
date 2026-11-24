@@ -1,0 +1,62 @@
+{
+ "point": {
+  "r": 10163,
+  "d": 71,
+  "t": 140,
+  "t_over_r": 0.013775460001967922
+ },
+ "preset": "CPA-128 (BIKE preset without CCA margin); production weight of this preset is t=134 (raised +4.5% here)",
+ "protocol": {
+  "keys": 2,
+  "errors_per_key": 60,
+  "arms": {
+   "C0": "[0]",
+   "FRO-2": "[2, 0]",
+   "FRONEG": "[-1, 0]"
+  },
+  "budget": 20,
+  "success": "zero residual syndrome"
+ },
+ "scan_crosscheck": {
+  "t140_scan_dfr": 0.000625,
+  "trials": 8000,
+  "failures": 5,
+  "z": 3.084
+ },
+ "arms": {
+  "C0": {
+   "failures": 1,
+   "trials": 120,
+   "dfr": 0.008333333333333333,
+   "upper95": 0.0364869522762566,
+   "mean_iters": 4.575,
+   "per_key_failures": [
+    0,
+    1
+   ]
+  },
+  "FRO-2": {
+   "failures": 0,
+   "trials": 120,
+   "dfr": 0.0,
+   "upper95": 0.025,
+   "mean_iters": 4.808333333333334,
+   "per_key_failures": [
+    0,
+    0
+   ]
+  },
+  "FRONEG": {
+   "failures": 0,
+   "trials": 120,
+   "dfr": 0.0,
+   "upper95": 0.025,
+   "mean_iters": 4.841666666666667,
+   "per_key_failures": [
+    0,
+    0
+   ]
+  }
+ },
+ "wall_seconds": 5.9
+}

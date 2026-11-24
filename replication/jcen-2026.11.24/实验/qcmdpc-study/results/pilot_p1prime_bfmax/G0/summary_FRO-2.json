@@ -1,0 +1,14 @@
+{
+ "n_keys": 10,
+ "keys_zero_failures": 10,
+ "total_trials": 2000,
+ "total_failures": 0,
+ "overall_dfr": 0.0,
+ "log10_dfr_mean_nonzero": null,
+ "log10_dfr_std_nonzero": null,
+ "decoder": "FRO-2",
+ "avg_iters_run": 4.597,
+ "failure_modes": {},
+ "wall_seconds": 21.6,
+ "ms_per_decode": 10.809
+}

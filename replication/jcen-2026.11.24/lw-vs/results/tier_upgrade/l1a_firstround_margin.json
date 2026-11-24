@@ -1,0 +1,79 @@
+{
+ "r": 12323,
+ "d": 71,
+ "t": 134,
+ "n_keys": 32,
+ "errors_per_key": 300,
+ "trials": 9600,
+ "true_flag_positions": 1286400,
+ "false_positions": 235315200,
+ "marginal_true_p": {
+  "-3": 0.8668524564676617,
+  "-2": 0.8085043532338309,
+  "-1": 0.7365275186567164,
+  "0": 0.6527588619402985,
+  "1": 0.5596058768656716,
+  "2": 0.4626438121890547,
+  "3": 0.36773631840796017
+ },
+ "marginal_false_p": {
+  "-3": 0.005529213582463012,
+  "-2": 0.0027208867085509137,
+  "-1": 0.0012723487475522193,
+  "0": 0.0005618251604656223,
+  "1": 0.00023590061330504788,
+  "2": 9.392508431244561e-05,
+  "3": 3.506785791993038e-05
+ },
+ "per_delta": {
+  "0": {
+   "true": 839709,
+   "false": 132206,
+   "tau_sum": 403617
+  },
+  "1": {
+   "true": 719877,
+   "false": 55511,
+   "tau_sum": 413217
+  },
+  "2": {
+   "true": 595145,
+   "false": 22102,
+   "tau_sum": 422817
+  },
+  "3": {
+   "true": 473056,
+   "false": 8252,
+   "tau_sum": 432417
+  },
+  "-1": {
+   "true": 947469,
+   "false": 299403,
+   "tau_sum": 394017
+  }
+ },
+ "model_rho": {
+  "1": {
+   "deferred_true_per_instance": 12.4825,
+   "avoided_false_per_instance": 7.9890625,
+   "rho": 0.6400210294412177
+  },
+  "2": {
+   "deferred_true_per_instance": 25.475416666666668,
+   "avoided_false_per_instance": 11.469166666666666,
+   "rho": 0.450205263243977
+  },
+  "3": {
+   "deferred_true_per_instance": 38.193020833333335,
+   "avoided_false_per_instance": 12.911875,
+   "rho": 0.3380689643886727
+  },
+  "-1": {
+   "deferred_true_per_instance": -11.225,
+   "avoided_false_per_instance": -17.416354166666668,
+   "rho": Infinity
+  }
+ },
+ "note": "p1/p0 are tail probabilities P(UPC >= tau1+k) at true-error and non-error positions; rho = avoided false flips per deferred true flip, the same exchange ratio as P1'.",
+ "wall_seconds": 89.5
+}

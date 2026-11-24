@@ -1,0 +1,136 @@
+{
+ "parameter": {
+  "r": 3001,
+  "d": 37
+ },
+ "n_keys": 4,
+ "n_err": 400,
+ "note": "second-point calibration; only t is calibrated, FRO-2 (+2) frozen",
+ "sweep": [
+  {
+   "t": 60,
+   "C0_base": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0056
+   },
+   "C4_first_p2": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0057
+   }
+  },
+  {
+   "t": 62,
+   "C0_base": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0058
+   },
+   "C4_first_p2": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0059
+   }
+  },
+  {
+   "t": 64,
+   "C0_base": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0054
+   },
+   "C4_first_p2": {
+    "dfr": 0.0,
+    "upper95": 0.001875,
+    "per_key_failures": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "sec_per_decode": 0.0056
+   }
+  },
+  {
+   "t": 66,
+   "C0_base": {
+    "dfr": 0.0025,
+    "upper95": 0.005556825335167791,
+    "per_key_failures": [
+     1,
+     1,
+     0,
+     2
+    ],
+    "sec_per_decode": 0.0058
+   },
+   "C4_first_p2": {
+    "dfr": 0.00125,
+    "upper95": 0.0037701496912014403,
+    "per_key_failures": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "sec_per_decode": 0.0059
+   }
+  },
+  {
+   "t": 68,
+   "C0_base": {
+    "dfr": 0.024375,
+    "upper95": 0.031564562976176665,
+    "per_key_failures": [
+     10,
+     10,
+     13,
+     6
+    ],
+    "sec_per_decode": 0.0069
+   },
+   "C4_first_p2": {
+    "dfr": 0.010625,
+    "upper95": 0.015743911769303946,
+    "per_key_failures": [
+     4,
+     5,
+     5,
+     3
+    ],
+    "sec_per_decode": 0.0086
+   }
+  }
+ ]
+}

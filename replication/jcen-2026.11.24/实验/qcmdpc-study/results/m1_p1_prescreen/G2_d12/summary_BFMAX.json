@@ -1,0 +1,16 @@
+{
+ "n_keys": 6,
+ "keys_zero_failures": 0,
+ "total_trials": 1800,
+ "total_failures": 253,
+ "overall_dfr": 0.14055555555555554,
+ "log10_dfr_mean_nonzero": -0.8597209442474351,
+ "log10_dfr_std_nonzero": 0.0813493769382309,
+ "decoder": "BFMAX",
+ "avg_iters_run": 84.0,
+ "failure_modes": {
+  "other": 253
+ },
+ "wall_seconds": 142.7,
+ "ms_per_decode": 79.274
+}

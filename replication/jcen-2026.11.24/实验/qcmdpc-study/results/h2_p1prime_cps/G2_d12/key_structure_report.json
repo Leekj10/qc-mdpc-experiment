@@ -1,0 +1,50 @@
+[
+ {
+  "r": 4801,
+  "d": 45,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 88,
+  "key_id": "G2_d12-0000"
+ },
+ {
+  "r": 4801,
+  "d": 45,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 88,
+  "key_id": "G2_d12-0001"
+ },
+ {
+  "r": 4801,
+  "d": 45,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 90,
+  "key_id": "G2_d12-0002"
+ },
+ {
+  "r": 4801,
+  "d": 45,
+  "max_run_h0": 12,
+  "max_run_h1": 2,
+  "syn_weight_canonical": 90,
+  "key_id": "G2_d12-0003"
+ },
+ {
+  "r": 4801,
+  "d": 45,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 90,
+  "key_id": "G2_d12-0004"
+ },
+ {
+  "r": 4801,
+  "d": 45,
+  "max_run_h0": 12,
+  "max_run_h1": 1,
+  "syn_weight_canonical": 88,
+  "key_id": "G2_d12-0005"
+ }
+]

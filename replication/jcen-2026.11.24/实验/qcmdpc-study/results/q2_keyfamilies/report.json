@@ -1,0 +1,356 @@
+{
+ "config": "configs/q2_key_families.json",
+ "param": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "E_per_key": 1500,
+ "keys_per_group": 20,
+ "note": "key-family comparison under FIXED uniform errors; ncwadm = near-codeword-admissible (capture-prone, gathering-ADJACENT), NOT the exact WWW2023 gathering class",
+ "families": {
+  "random": {
+   "n_keys": 20,
+   "n_samples": 30000,
+   "paired": {
+    "c0_only": 25,
+    "c4_only": 6,
+    "both": 0,
+    "mcnemar_exact_p": 0.0008779102936387062
+   },
+   "C0_base": {
+    "failures": 25,
+    "trials": 30000,
+    "dfr": 0.0008333333333333334,
+    "upper95": 0.0011560347733166013,
+    "log10_upper95": -2.9370291022196553,
+    "per_key_failures": [
+     2,
+     1,
+     0,
+     1,
+     2,
+     2,
+     0,
+     1,
+     0,
+     1,
+     2,
+     2,
+     0,
+     1,
+     3,
+     0,
+     2,
+     2,
+     2,
+     1
+    ]
+   },
+   "C4_first_p2": {
+    "failures": 6,
+    "trials": 30000,
+    "dfr": 0.0002,
+    "upper95": 0.0003867143988019949,
+    "log10_upper95": -3.4126096572420783,
+    "per_key_failures": [
+     0,
+     1,
+     1,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0
+    ]
+   },
+   "sign_test": {
+    "improved": 14,
+    "worse": 2,
+    "tied": 4,
+    "n_discordant": 16,
+    "p_two_sided": 0.004180908203125
+   },
+   "cluster_bootstrap": {
+    "n_keys": 20,
+    "E_per_key": 1500,
+    "B": 10000,
+    "seed": 20260905,
+    "ci_level": 0.95,
+    "point": {
+     "dfr_base": 0.0008333333333333334,
+     "dfr_treat": 0.0002,
+     "risk_ratio": 4.166666666666667,
+     "dfr_diff": 0.0006333333333333334,
+     "log10_risk_ratio": 0.619788758288394
+    },
+    "ci": {
+     "risk_ratio": [
+      2.111111111111111,
+      12.0
+     ],
+     "dfr_diff": [
+      0.0003333333333333333,
+      0.0009333333333333333
+     ],
+     "log10_risk_ratio": [
+      0.3245110915135041,
+      1.0791812460476249
+     ]
+    },
+    "n_nonfinite_rr": 7,
+    "rr_excludes_1": true,
+    "diff_excludes_0": true,
+    "log10rr_excludes_0": true
+   }
+  },
+  "type1": {
+   "n_keys": 20,
+   "n_samples": 30000,
+   "paired": {
+    "c0_only": 39,
+    "c4_only": 8,
+    "both": 1,
+    "mcnemar_exact_p": 5.539621596994948e-06
+   },
+   "C0_base": {
+    "failures": 40,
+    "trials": 30000,
+    "dfr": 0.0013333333333333333,
+    "upper95": 0.0017277257308429001,
+    "log10_upper95": -2.7625251987988926,
+    "per_key_failures": [
+     0,
+     3,
+     2,
+     3,
+     1,
+     1,
+     2,
+     2,
+     3,
+     2,
+     2,
+     2,
+     2,
+     3,
+     2,
+     2,
+     4,
+     1,
+     1,
+     2
+    ]
+   },
+   "C4_first_p2": {
+    "failures": 9,
+    "trials": 30000,
+    "dfr": 0.0003,
+    "upper95": 0.0005155763650185995,
+    "log10_upper95": -3.2877069997307204,
+    "per_key_failures": [
+     0,
+     2,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     2,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "sign_test": {
+    "improved": 18,
+    "worse": 0,
+    "tied": 2,
+    "n_discordant": 18,
+    "p_two_sided": 7.62939453125e-06
+   },
+   "cluster_bootstrap": {
+    "n_keys": 20,
+    "E_per_key": 1500,
+    "B": 10000,
+    "seed": 20260905,
+    "ci_level": 0.95,
+    "point": {
+     "dfr_base": 0.0013333333333333333,
+     "dfr_treat": 0.0003,
+     "risk_ratio": 4.444444444444445,
+     "dfr_diff": 0.0010333333333333334,
+     "log10_risk_ratio": 0.6478174818886375
+    },
+    "ci": {
+     "risk_ratio": [
+      2.625,
+      11.0
+     ],
+     "dfr_diff": [
+      0.0007333333333333334,
+      0.0013333333333333333
+     ],
+     "log10_risk_ratio": [
+      0.4191293077419757,
+      1.0413926851582251
+     ]
+    },
+    "n_nonfinite_rr": 2,
+    "rr_excludes_1": true,
+    "diff_excludes_0": true,
+    "log10rr_excludes_0": true
+   }
+  },
+  "ncwadm": {
+   "n_keys": 20,
+   "n_samples": 30000,
+   "paired": {
+    "c0_only": 25,
+    "c4_only": 5,
+    "both": 1,
+    "mcnemar_exact_p": 0.00032491423189640045
+   },
+   "C0_base": {
+    "failures": 26,
+    "trials": 30000,
+    "dfr": 0.0008666666666666666,
+    "upper95": 0.001194716197410352,
+    "log10_upper95": -2.9227352483031583,
+    "per_key_failures": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     2,
+     3,
+     1,
+     2,
+     0,
+     1,
+     2,
+     2,
+     1,
+     1,
+     1,
+     1,
+     3,
+     0,
+     4
+    ]
+   },
+   "C4_first_p2": {
+    "failures": 6,
+    "trials": 30000,
+    "dfr": 0.0002,
+    "upper95": 0.0003867143988019949,
+    "log10_upper95": -3.4126096572420783,
+    "per_key_failures": [
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "sign_test": {
+    "improved": 11,
+    "worse": 1,
+    "tied": 8,
+    "n_discordant": 12,
+    "p_two_sided": 0.00634765625
+   },
+   "cluster_bootstrap": {
+    "n_keys": 20,
+    "E_per_key": 1500,
+    "B": 10000,
+    "seed": 20260905,
+    "ci_level": 0.95,
+    "point": {
+     "dfr_base": 0.0008666666666666666,
+     "dfr_treat": 0.0002,
+     "risk_ratio": 4.333333333333333,
+     "dfr_diff": 0.0006666666666666666,
+     "log10_risk_ratio": 0.6368220975871743
+    },
+    "ci": {
+     "risk_ratio": [
+      2.1,
+      12.999999999999998
+     ],
+     "dfr_diff": [
+      0.00033333333333333327,
+      0.0010333333333333334
+     ],
+     "log10_risk_ratio": [
+      0.3222192947339193,
+      1.1139433523068367
+     ]
+    },
+    "n_nonfinite_rr": 13,
+    "rr_excludes_1": true,
+    "diff_excludes_0": true,
+    "log10rr_excludes_0": true
+   }
+  }
+ },
+ "c0_family_gradient": {
+  "random": {
+   "c0_dfr": 0.0008333333333333334,
+   "ratio_vs_random": 1.0
+  },
+  "type1": {
+   "c0_dfr": 0.0013333333333333333,
+   "ratio_vs_random": 1.5999999999999999
+  },
+  "ncwadm": {
+   "c0_dfr": 0.0008666666666666666,
+   "ratio_vs_random": 1.0399999999999998
+  }
+ },
+ "holm_sign": {
+  "random": 0.00836181640625,
+  "type1": 2.288818359375e-05,
+  "ncwadm": 0.00836181640625
+ },
+ "seconds": 1500.1
+}

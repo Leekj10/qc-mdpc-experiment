@@ -1,0 +1,82 @@
+{
+ "candidates": [
+  {
+   "t": 150,
+   "t_over_r": 0.012172360626470827,
+   "trials": 1200,
+   "c0_failures": 0,
+   "c0_dfr": 0.0,
+   "seconds": 58.4
+  },
+  {
+   "t": 160,
+   "t_over_r": 0.012983851334902215,
+   "trials": 1200,
+   "c0_failures": 0,
+   "c0_dfr": 0.0,
+   "seconds": 50.4
+  },
+  {
+   "t": 170,
+   "t_over_r": 0.013795342043333604,
+   "trials": 1200,
+   "c0_failures": 0,
+   "c0_dfr": 0.0,
+   "seconds": 60.8
+  },
+  {
+   "t": 180,
+   "t_over_r": 0.014606832751764992,
+   "trials": 1200,
+   "c0_failures": 162,
+   "c0_dfr": 0.135,
+   "seconds": 100.2
+  },
+  {
+   "t": 195,
+   "t_over_r": 0.015824068814412076,
+   "trials": 1200,
+   "c0_failures": 1199,
+   "c0_dfr": 0.9991666666666666,
+   "seconds": 176.9
+  },
+  {
+   "t": 210,
+   "t_over_r": 0.017041304877059158,
+   "trials": 1200,
+   "c0_failures": 1200,
+   "c0_dfr": 1.0,
+   "seconds": 187.9
+  },
+  {
+   "t": 230,
+   "t_over_r": 0.018664286293921934,
+   "trials": 1200,
+   "c0_failures": 1200,
+   "c0_dfr": 1.0,
+   "seconds": 206.5
+  }
+ ],
+ "rule": "DFR in [1e-4,1e-2] closest to 1e-3",
+ "chosen_t": 172,
+ "in_band": true,
+ "bisection": [
+  {
+   "t": 175,
+   "trials": 1200,
+   "c0_failures": 17,
+   "c0_dfr": 0.014166666666666666,
+   "note": "amendment-3 bisection point 1, above the band"
+  },
+  {
+   "t": 172,
+   "trials": 1200,
+   "c0_failures": 2,
+   "c0_dfr": 0.0016666666666666668,
+   "note": "amendment-3 bisection point 2, IN BAND"
+  }
+ ],
+ "chosen_t_by_flawed_rule": 150,
+ "chosen_reason": "amendment-3: the raw-DFR comparison cannot handle zero-failure candidates (0 evaluates closer to 1e-3 than 0.135), so the literal rule selected t=150. The scan nevertheless brackets the band (DFR(170) <= 2.5e-3, DFR(180) = 0.135), and the bisection locates t*=172 with C0 DFR 1.67e-3.",
+ "waterfall_profile": "At BIKE-L1 code parameters the static-classic carrier goes from zero failures at t=170 to 99.9% at t=195 (a 15% window in t), with the 1e-3 band at t*=172 (28% above the production error weight t=134). This sharpness is itself a finding about the production code and is reported as such."
+}

@@ -1,0 +1,4 @@
+tier,source,point,r,d,t,group,n_keys,errors_per_key,n_samples,c0_failures,c0_trials,c0_upper95,c0_mean_conv_iters,fro2_failures,fro2_trials,fro2_upper95,fro2_mean_conv_iters,bikeflip_failures,bikeflip_trials,bikeflip_upper95,bikeflip_mean_conv_iters
+1,results/cmp_bf_l1,BIKE Level-1,12323,71,134,RAND,16,500,8000,0,8000,0.000375,2.05325,0,8000,0.000375,2.4465,0,8000,0.000375,2.999375
+1,results/cmp_bf_l1,BIKE Level-1,12323,71,134,WEAK12,16,500,8000,0,8000,0.000375,2.118625,0,8000,0.000375,2.555625,0,8000,0.000375,3.00025
+1,results/cmp_bf_l1,BIKE Level-1,12323,71,134,NCW16,16,500,8000,0,8000,0.000375,2.04925,0,8000,0.000375,2.40375,0,8000,0.000375,2.9995

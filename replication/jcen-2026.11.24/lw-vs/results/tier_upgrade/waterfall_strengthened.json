@@ -1,0 +1,49 @@
+{
+ "what": "strengthened waterfall profile at the production block parameters",
+ "keys": 12,
+ "errors_per_key": 500,
+ "trials_per_point": 6000,
+ "note": "supersedes the 6x200 calibration scan (a strict subset of these instances)",
+ "cells": {
+  "168": {
+   "t": 168,
+   "t_over_r": 0.013633043901647325,
+   "trials": 6000,
+   "c0_failures": 0,
+   "c0_dfr": 0.0,
+   "seconds": 61.6
+  },
+  "170": {
+   "t": 170,
+   "t_over_r": 0.013795342043333604,
+   "trials": 6000,
+   "c0_failures": 1,
+   "c0_dfr": 0.00016666666666666666,
+   "seconds": 69.1
+  },
+  "172": {
+   "t": 172,
+   "t_over_r": 0.013957640185019882,
+   "trials": 6000,
+   "c0_failures": 13,
+   "c0_dfr": 0.0021666666666666666,
+   "seconds": 66.2
+  },
+  "175": {
+   "t": 175,
+   "t_over_r": 0.014201087397549298,
+   "trials": 6000,
+   "c0_failures": 90,
+   "c0_dfr": 0.015,
+   "seconds": 68.5
+  },
+  "180": {
+   "t": 180,
+   "t_over_r": 0.014606832751764992,
+   "trials": 6000,
+   "c0_failures": 835,
+   "c0_dfr": 0.13916666666666666,
+   "seconds": 88.8
+  }
+ }
+}

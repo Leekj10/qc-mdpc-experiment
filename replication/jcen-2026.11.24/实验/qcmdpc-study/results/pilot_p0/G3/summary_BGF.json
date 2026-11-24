@@ -1,0 +1,16 @@
+{
+ "n_keys": 8,
+ "keys_zero_failures": 0,
+ "total_trials": 8000,
+ "total_failures": 128,
+ "overall_dfr": 0.016,
+ "log10_dfr_mean_nonzero": -1.819274409211638,
+ "log10_dfr_std_nonzero": 0.137395248674964,
+ "decoder": "BGF",
+ "avg_iters_run": 2.197125,
+ "failure_modes": {
+  "stagnation": 128
+ },
+ "wall_seconds": 15.1,
+ "ms_per_decode": 1.881
+}

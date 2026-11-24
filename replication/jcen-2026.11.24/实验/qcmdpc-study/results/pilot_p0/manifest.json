@@ -1,0 +1,42 @@
+{
+ "config_sha256": "6f823e8b66f546cbe5d5895e65a10e3704291adac1cb5f0f4e80b98c434f5712",
+ "config_path": "configs\\pilot_p0.json",
+ "parameter": {
+  "id": "P0",
+  "r": 2003,
+  "d": 9,
+  "t": 18,
+  "n0": 2
+ },
+ "seed": 20260901,
+ "errors_per_key": 1000,
+ "start_utc": "2026-09-01T14:56:33.544555+00:00",
+ "groups": {
+  "G0": {
+   "n_keys": 24,
+   "decoders": [
+    "BF",
+    "BGF",
+    "BFMAX"
+   ]
+  },
+  "G2": {
+   "n_keys": 8,
+   "decoders": [
+    "BF",
+    "BGF",
+    "BFMAX"
+   ]
+  },
+  "G3": {
+   "n_keys": 8,
+   "decoders": [
+    "BF",
+    "BGF",
+    "BFMAX"
+   ]
+  }
+ },
+ "end_utc": "2026-09-01T15:01:54.555280+00:00",
+ "wall_seconds_total": 321.0
+}

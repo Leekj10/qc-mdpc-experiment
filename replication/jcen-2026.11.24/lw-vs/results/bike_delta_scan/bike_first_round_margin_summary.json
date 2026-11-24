@@ -1,0 +1,45 @@
+{
+ "framing": "first-round-only margin, delta=3 for all rounds, 7-round budget",
+ "trials_per_arm": 92000,
+ "validation": "offset 0 and +2 come from the archived decoder-transfer npz",
+ "margins": {
+  "2 (offset -1)": {
+   "failures": 1169,
+   "dfr": 0.012706521739130434,
+   "per_key_min": 18,
+   "per_key_max": 38
+  },
+  "3 (offset 0)": {
+   "failures": 1144,
+   "dfr": 0.012434782608695653,
+   "per_key_min": 12,
+   "per_key_max": 38
+  },
+  "5 (offset +2)": {
+   "failures": 1699,
+   "dfr": 0.018467391304347824,
+   "per_key_min": 26,
+   "per_key_max": 51
+  }
+ },
+ "margin3_vs_margin2": {
+  "rr": 0.9786142001710865,
+  "rr_ci95": [
+   0.9138631261583883,
+   1.047451669595782
+  ],
+  "mcnemar_p": 0.5348026774077466,
+  "keys_better": 20,
+  "keys_worse": 23
+ },
+ "margin3_vs_margin5": {
+  "rr": 0.6733372572101237,
+  "rr_ci95": [
+   0.6293149757620989,
+   0.7206775621517792
+  ],
+  "mcnemar_p": 1.0995662122930492e-39,
+  "keys_better": 2,
+  "keys_worse": 44
+ }
+}

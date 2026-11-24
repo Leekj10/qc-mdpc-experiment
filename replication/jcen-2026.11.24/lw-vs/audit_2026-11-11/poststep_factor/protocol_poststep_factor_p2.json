@@ -1,0 +1,22 @@
+{
+  "phase": "POSTSTEP_FACTOR_P2_CONFIRMATION",
+  "written_by": "Claude (session 2026-11-11)",
+  "written_before": "any P2 post-step factor decode",
+  "status": "confirmation of a diagnostic pattern at a second work point; not a confirmatory test of the paper's original claims",
+  "purpose": "Check whether the P1 post-step interaction reproduces at P2: does the BGF-style post-step reverse the sign of a one-shot round-1 +2 when stopping, budget accounting and later-round baseline are held fixed?",
+  "work_point": {"id": "P2", "r": 3001, "d": 37, "t": 66, "n0": 2},
+  "keys": "G0 pool keys 54..99 (46 keys), 2000 errors each, same seed discipline (SEED=20260901) as the P1 factor experiment",
+  "arms": "same nine factor arms as the P1 experiment; the primary confirmation uses plain_0, plain_p2, post_0, post_p2",
+  "factor_mode_semantics": "identical to the P1 protocol: classic carrier, 20 main rounds, no blocked-stop, post-step after round one only, later rounds plain, post-step scans recorded separately",
+  "estimand": {
+    "primary": "interaction Delta = (p(post_p2) - p(post_0)) - (p(plain_p2) - p(plain_0)), averaged over keys on the risk-difference scale; 95% key-clustered percentile bootstrap, B=10000, seed=20260905",
+    "secondary": "per-cell DFR and RR versus the within-policy baseline; component interactions; descriptive only",
+    "zero_events": "rule-of-three upper bound 3/N, with the binomial-trial assumption stated"
+  },
+  "decision_rule": "The P1 pattern is confirmed at P2 if Delta > 0 and its 95% CI excludes 0. If the CI includes 0, the interaction is not confirmed at P2 and the mechanism must be reported as work-point-dependent or unresolved. Every arm is reported regardless of direction.",
+  "gates": {
+    "bgf_port": "the bgf-compatible replica must reproduce bgf_vasseur exactly on a 3-key x 200-error verification sample at P2; no archived CLASSIC/BGF array exists at P2, so the P1 archive gate is not applicable"
+  },
+  "multiplicity": "one prespecified primary interaction; component and mask contrasts are exploratory and reported nominally",
+  "disclosure": "Diagnostic recombinations are not official decoders. This P2 run tests whether the P1 pattern transfers to a second work point; it does not establish a universal law, and it does not replace a fresh-key confirmatory study at the production parameters."
+}

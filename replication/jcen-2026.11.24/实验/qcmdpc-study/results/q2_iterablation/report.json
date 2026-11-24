@@ -1,0 +1,558 @@
+{
+ "config": "configs/q2_iter_ablation.json",
+ "param": {
+  "id": "P1prime",
+  "r": 4801,
+  "d": 45,
+  "t": 92,
+  "n0": 2
+ },
+ "E_per_key": 1000,
+ "keys_per_group": 15,
+ "budgets": [
+  7,
+  10,
+  20
+ ],
+ "groups": {
+  "G0": {
+   "gid": "G0",
+   "budgets": {
+    "7": {
+     "n_samples": 15000,
+     "C0_base": {
+      "failures": 98,
+      "trials": 15000,
+      "dfr": 0.006533333333333334,
+      "upper95": 0.007707875887137811,
+      "per_key_failures": [
+       8,
+       6,
+       4,
+       4,
+       5,
+       7,
+       5,
+       3,
+       7,
+       8,
+       7,
+       11,
+       10,
+       9,
+       4
+      ]
+     },
+     "C4_first_p2": {
+      "failures": 57,
+      "trials": 15000,
+      "dfr": 0.0038,
+      "upper95": 0.004720557193738776,
+      "per_key_failures": [
+       9,
+       4,
+       3,
+       3,
+       2,
+       3,
+       2,
+       2,
+       4,
+       2,
+       6,
+       5,
+       8,
+       2,
+       2
+      ]
+     },
+     "sign_test": {
+      "improved": 14,
+      "worse": 1,
+      "tied": 0,
+      "n_discordant": 15,
+      "p_two_sided": 0.0009765625
+     },
+     "cluster_bootstrap": {
+      "n_keys": 15,
+      "E_per_key": 1000,
+      "B": 10000,
+      "seed": 20260905,
+      "ci_level": 0.95,
+      "point": {
+       "dfr_base": 0.006533333333333334,
+       "dfr_treat": 0.0038,
+       "risk_ratio": 1.719298245614035,
+       "dfr_diff": 0.0027333333333333337,
+       "log10_risk_ratio": 0.23535122002000347
+      },
+      "ci": {
+       "risk_ratio": [
+        1.375,
+        2.238095238095238
+       ],
+       "dfr_diff": [
+        0.001666666666666667,
+        0.0038000000000000004
+       ],
+       "log10_risk_ratio": [
+        0.13830269816628146,
+        0.3498785632017982
+       ]
+      },
+      "n_nonfinite_rr": 0,
+      "rr_excludes_1": true,
+      "diff_excludes_0": true,
+      "log10rr_excludes_0": true
+     }
+    },
+    "10": {
+     "n_samples": 15000,
+     "C0_base": {
+      "failures": 28,
+      "trials": 15000,
+      "dfr": 0.0018666666666666666,
+      "upper95": 0.0025430738094313534,
+      "per_key_failures": [
+       2,
+       2,
+       3,
+       1,
+       1,
+       2,
+       0,
+       2,
+       2,
+       1,
+       2,
+       2,
+       3,
+       5,
+       0
+      ]
+     },
+     "C4_first_p2": {
+      "failures": 13,
+      "trials": 15000,
+      "dfr": 0.0008666666666666666,
+      "upper95": 0.0013619674884196363,
+      "per_key_failures": [
+       2,
+       0,
+       2,
+       0,
+       1,
+       1,
+       0,
+       0,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       0
+      ]
+     },
+     "sign_test": {
+      "improved": 10,
+      "worse": 1,
+      "tied": 4,
+      "n_discordant": 11,
+      "p_two_sided": 0.01171875
+     },
+     "cluster_bootstrap": {
+      "n_keys": 15,
+      "E_per_key": 1000,
+      "B": 10000,
+      "seed": 20260905,
+      "ci_level": 0.95,
+      "point": {
+       "dfr_base": 0.0018666666666666666,
+       "dfr_treat": 0.0008666666666666666,
+       "risk_ratio": 2.1538461538461537,
+       "dfr_diff": 0.001,
+       "log10_risk_ratio": 0.33321467903538243
+      },
+      "ci": {
+       "risk_ratio": [
+        1.4375,
+        3.5
+       ],
+       "dfr_diff": [
+        0.00046666666666666666,
+        0.0016000000000000003
+       ],
+       "log10_risk_ratio": [
+        0.1576078533616681,
+        0.5440680443502757
+       ]
+      },
+      "n_nonfinite_rr": 0,
+      "rr_excludes_1": true,
+      "diff_excludes_0": true,
+      "log10rr_excludes_0": true
+     }
+    },
+    "20": {
+     "n_samples": 15000,
+     "C0_base": {
+      "failures": 18,
+      "trials": 15000,
+      "dfr": 0.0012,
+      "upper95": 0.0017634879000807196,
+      "per_key_failures": [
+       1,
+       0,
+       2,
+       0,
+       1,
+       2,
+       0,
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       4,
+       0
+      ]
+     },
+     "C4_first_p2": {
+      "failures": 6,
+      "trials": 15000,
+      "dfr": 0.0004,
+      "upper95": 0.0007733335964264708,
+      "per_key_failures": [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       2,
+       1,
+       0,
+       1,
+       0,
+       0
+      ]
+     },
+     "sign_test": {
+      "improved": 8,
+      "worse": 1,
+      "tied": 6,
+      "n_discordant": 9,
+      "p_two_sided": 0.0390625
+     },
+     "cluster_bootstrap": {
+      "n_keys": 15,
+      "E_per_key": 1000,
+      "B": 10000,
+      "seed": 20260905,
+      "ci_level": 0.95,
+      "point": {
+       "dfr_base": 0.0012,
+       "dfr_treat": 0.0004,
+       "risk_ratio": 2.9999999999999996,
+       "dfr_diff": 0.0007999999999999999,
+       "log10_risk_ratio": 0.4771212547196624
+      },
+      "ci": {
+       "risk_ratio": [
+        1.4166666666666667,
+        10.0
+       ],
+       "dfr_diff": [
+        0.0002666666666666667,
+        0.0014000000000000002
+       ],
+       "log10_risk_ratio": [
+        0.15126767533064914,
+        1.0
+       ]
+      },
+      "n_nonfinite_rr": 25,
+      "rr_excludes_1": true,
+      "diff_excludes_0": true,
+      "log10rr_excludes_0": true
+     }
+    }
+   }
+  },
+  "G2_d12": {
+   "gid": "G2_d12",
+   "budgets": {
+    "7": {
+     "n_samples": 15000,
+     "C0_base": {
+      "failures": 112,
+      "trials": 15000,
+      "dfr": 0.007466666666666667,
+      "upper95": 0.008714950567383665,
+      "per_key_failures": [
+       20,
+       4,
+       1,
+       5,
+       7,
+       11,
+       6,
+       6,
+       5,
+       12,
+       2,
+       9,
+       7,
+       6,
+       11
+      ]
+     },
+     "C4_first_p2": {
+      "failures": 53,
+      "trials": 15000,
+      "dfr": 0.003533333333333333,
+      "upper95": 0.004424709603501082,
+      "per_key_failures": [
+       3,
+       4,
+       3,
+       1,
+       1,
+       6,
+       5,
+       3,
+       2,
+       4,
+       1,
+       7,
+       4,
+       3,
+       6
+      ]
+     },
+     "sign_test": {
+      "improved": 13,
+      "worse": 1,
+      "tied": 1,
+      "n_discordant": 14,
+      "p_two_sided": 0.0018310546875
+     },
+     "cluster_bootstrap": {
+      "n_keys": 15,
+      "E_per_key": 1000,
+      "B": 10000,
+      "seed": 20260905,
+      "ci_level": 0.95,
+      "point": {
+       "dfr_base": 0.007466666666666667,
+       "dfr_treat": 0.003533333333333333,
+       "risk_ratio": 2.1132075471698113,
+       "dfr_diff": 0.003933333333333334,
+       "log10_risk_ratio": 0.32494215306939256
+      },
+      "ci": {
+       "risk_ratio": [
+        1.5538157894736846,
+        2.9767700258397927
+       ],
+       "dfr_diff": [
+        0.0020666666666666663,
+        0.006266666666666668
+       ],
+       "log10_risk_ratio": [
+        0.19139952708692576,
+        0.47374528333131133
+       ]
+      },
+      "n_nonfinite_rr": 0,
+      "rr_excludes_1": true,
+      "diff_excludes_0": true,
+      "log10rr_excludes_0": true
+     }
+    },
+    "10": {
+     "n_samples": 15000,
+     "C0_base": {
+      "failures": 30,
+      "trials": 15000,
+      "dfr": 0.002,
+      "upper95": 0.0026964528583122613,
+      "per_key_failures": [
+       3,
+       2,
+       0,
+       0,
+       2,
+       5,
+       1,
+       3,
+       2,
+       5,
+       0,
+       5,
+       0,
+       0,
+       2
+      ]
+     },
+     "C4_first_p2": {
+      "failures": 12,
+      "trials": 15000,
+      "dfr": 0.0008,
+      "upper95": 0.001280227501519486,
+      "per_key_failures": [
+       0,
+       1,
+       0,
+       1,
+       0,
+       4,
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ]
+     },
+     "sign_test": {
+      "improved": 9,
+      "worse": 3,
+      "tied": 3,
+      "n_discordant": 12,
+      "p_two_sided": 0.14599609375
+     },
+     "cluster_bootstrap": {
+      "n_keys": 15,
+      "E_per_key": 1000,
+      "B": 10000,
+      "seed": 20260905,
+      "ci_level": 0.95,
+      "point": {
+       "dfr_base": 0.002,
+       "dfr_treat": 0.0008,
+       "risk_ratio": 2.5,
+       "dfr_diff": 0.0012000000000000001,
+       "log10_risk_ratio": 0.3979400086720376
+      },
+      "ci": {
+       "risk_ratio": [
+        1.357142857142857,
+        5.5
+       ],
+       "dfr_diff": [
+        0.0003333333333333334,
+        0.0021333333333333334
+       ],
+       "log10_risk_ratio": [
+        0.13262556527459088,
+        0.7403626894942439
+       ]
+      },
+      "n_nonfinite_rr": 0,
+      "rr_excludes_1": true,
+      "diff_excludes_0": true,
+      "log10rr_excludes_0": true
+     }
+    },
+    "20": {
+     "n_samples": 15000,
+     "C0_base": {
+      "failures": 19,
+      "trials": 15000,
+      "dfr": 0.0012666666666666666,
+      "upper95": 0.0018426384357719,
+      "per_key_failures": [
+       2,
+       1,
+       0,
+       0,
+       2,
+       3,
+       1,
+       2,
+       0,
+       3,
+       0,
+       3,
+       0,
+       0,
+       2
+      ]
+     },
+     "C4_first_p2": {
+      "failures": 6,
+      "trials": 15000,
+      "dfr": 0.0004,
+      "upper95": 0.0007733335964264708,
+      "per_key_failures": [
+       0,
+       1,
+       0,
+       0,
+       0,
+       3,
+       1,
+       0,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0
+      ]
+     },
+     "sign_test": {
+      "improved": 6,
+      "worse": 0,
+      "tied": 9,
+      "n_discordant": 6,
+      "p_two_sided": 0.03125
+     },
+     "cluster_bootstrap": {
+      "n_keys": 15,
+      "E_per_key": 1000,
+      "B": 10000,
+      "seed": 20260905,
+      "ci_level": 0.95,
+      "point": {
+       "dfr_base": 0.0012666666666666666,
+       "dfr_treat": 0.0004,
+       "risk_ratio": 3.1666666666666665,
+       "dfr_diff": 0.0008666666666666666,
+       "log10_risk_ratio": 0.5006023505691853
+      },
+      "ci": {
+       "risk_ratio": [
+        1.5714285714285714,
+        14.0
+       ],
+       "dfr_diff": [
+        0.0003333333333333334,
+        0.0014000000000000002
+       ],
+       "log10_risk_ratio": [
+        0.1962946451439682,
+        1.146128035678238
+       ]
+      },
+      "n_nonfinite_rr": 95,
+      "rr_excludes_1": true,
+      "diff_excludes_0": true,
+      "log10rr_excludes_0": true
+     }
+    }
+   }
+  }
+ },
+ "seconds": 1541.0
+}

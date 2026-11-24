@@ -1,0 +1,4 @@
+tier,source,note,condition,n_keys,errors_per_key,failures,trials,dfr,avg_iters
+1,lw-vs/results/bgf_baseline,"spec-exact affine BGF with published BIKE Level-1 constants; mis-scaled for d=45, documented boundary not a comparator",RAND,24,500,5727,12000,0.47725,12.691833333333333
+1,lw-vs/results/bgf_baseline,"spec-exact affine BGF with published BIKE Level-1 constants; mis-scaled for d=45, documented boundary not a comparator",TYPE-I,24,500,7256,12000,0.6046666666666667,14.634666666666666
+1,lw-vs/results/bgf_baseline,"spec-exact affine BGF with published BIKE Level-1 constants; mis-scaled for d=45, documented boundary not a comparator",NCW-shallow,24,500,4579,12000,0.38158333333333333,11.261583333333334

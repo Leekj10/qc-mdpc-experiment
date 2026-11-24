@@ -1,0 +1,14 @@
+{
+  "run_id": "q2_capture_deconfound",
+  "note": "Q2-A de-confounded kappa>d TRUE capture (review round-3, Q2 priority-1). ONE fixed ncw-admissible key batch (require_better_than_canonical=true so kappa>d is a genuine capture); ONLY the error construction varies: rand / kappa=12 (shallow control) / kappa=46 / kappa=60 (kappa>d true capture). Within-batch contrasts are de-confounded from key selection; absolute DFR is conditional on this batch. Arms C0_base vs C4_first_p2 (frozen +2), identical (H,e,s).",
+  "parameter": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+  "seed": 20260901,
+  "keys_per_group": 20,
+  "errors_per_key": 2000,
+  "kappas": [12, 46, 60],
+  "require_better_than_canonical": true,
+  "decoders": {
+    "C0_base": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [0]}, "max_iter": 20, "fixed_iters": false},
+    "C4_first_p2": {"algo": "bf_parallel", "threshold": {"type": "offset", "base": {"type": "classic"}, "offsets": [2, 0]}, "max_iter": 20, "fixed_iters": false}
+  }
+}

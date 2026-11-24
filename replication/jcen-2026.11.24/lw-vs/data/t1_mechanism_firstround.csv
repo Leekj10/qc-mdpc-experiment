@@ -1,0 +1,7 @@
+tier,source,group,condition,arm,n_keys,errors_per_key,n_samples,failures,mean_total_first,mean_correct_first,mean_incorrect_first,mean_residual_r1,mean_iters
+1,results/firstround_mech,G0,RAND,C0,20,1000,20000,21,28.99625,20.9887,8.00755,79.01885,4.3116
+1,results/firstround_mech,G0,RAND,FRO-2,20,1000,20000,7,8.7357,7.89555,0.84015,84.9446,4.5902
+1,results/firstround_mech,G2_d12,TYPE-I,C0,20,1000,20000,25,30.1468,21.1956,8.9512,79.7556,4.504
+1,results/firstround_mech,G2_d12,TYPE-I,FRO-2,20,1000,20000,6,9.0641,8.07215,0.99195,84.9198,4.7536
+1,results/firstround_mech,G3,NCW-shallow,C0,20,1000,20000,10,30.34345,22.0248,8.31865,78.29385,4.21515
+1,results/firstround_mech,G3,NCW-shallow,FRO-2,20,1000,20000,1,9.3931,8.5038,0.8893,84.3855,4.48095

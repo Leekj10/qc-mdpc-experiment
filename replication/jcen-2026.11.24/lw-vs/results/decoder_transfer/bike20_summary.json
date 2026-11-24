@@ -1,0 +1,28 @@
+{
+ "source": "decoder_transfer_bike20.npz",
+ "n_keys": 46,
+ "errors_per_key": 2000,
+ "pair": {
+  "base": "bike20_0",
+  "treat": "bike20_p2",
+  "failures_base": 34,
+  "failures_treat": 46,
+  "trials": 92000,
+  "dfr_base": 0.00036956521739130437,
+  "dfr_treat": 0.0005,
+  "rr_base_over_treat": 0.7391304347826088,
+  "rr_ci95": [
+   0.5,
+   1.048780487804878
+  ],
+  "mcnemar_base_only": 27,
+  "mcnemar_treat_only": 39,
+  "mcnemar_p": 0.1752857944430353,
+  "mean_iters_base": 20.0,
+  "mean_iters_treat": 20.0,
+  "mean_conv_base": 5.668953743774873,
+  "mean_first_flip_base": 4.489271739130435,
+  "mean_conv_treat": 5.768666942166735,
+  "mean_first_flip_treat": 0.9313369565217391
+ }
+}

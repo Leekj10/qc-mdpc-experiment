@@ -1,0 +1,475 @@
+{
+  "label": "P3",
+  "seed": 20260911,
+  "parameter": {
+    "r": 4001,
+    "d": 41,
+    "t": 82,
+    "n0": 2
+  },
+  "errors_per_key": 400,
+  "groups": {
+    "G0": {
+      "type": "random",
+      "n_keys": 12
+    },
+    "G2_d12": {
+      "type": "type1",
+      "n_keys": 12,
+      "delta": 12
+    },
+    "G3": {
+      "type": "ncw",
+      "n_keys": 12,
+      "kappa": 12,
+      "max_syn_weight": null,
+      "require_better_than_canonical": true
+    }
+  },
+  "decoders": [
+    "C0",
+    "FRO-1",
+    "FRO-2",
+    "FRO-3",
+    "R2-2",
+    "UNIFORM-2"
+  ],
+  "matrix": {
+    "G0": {
+      "n_keys": 12,
+      "decoders": {
+        "C0": {
+          "failures": 8,
+          "trials": 4800,
+          "dfr": 0.0016666666666666668,
+          "upper95": 0.0029554341394378283,
+          "per_key_failures": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            3,
+            0
+          ],
+          "avg_iters": 4.376875,
+          "seconds": 30.06,
+          "ms_per_decode": 6.262898792823155
+        },
+        "FRO-1": {
+          "failures": 3,
+          "trials": 4800,
+          "dfr": 0.000625,
+          "upper95": 0.0015628261675863652,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "avg_iters": 4.3933333333333335,
+          "seconds": 29.24,
+          "ms_per_decode": 6.0919711490472155
+        },
+        "FRO-2": {
+          "failures": 2,
+          "trials": 4800,
+          "dfr": 0.0004166666666666667,
+          "upper95": 0.0012583069847693703,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "avg_iters": 4.625625,
+          "seconds": 29.98,
+          "ms_per_decode": 6.246778716643651
+        },
+        "FRO-3": {
+          "failures": 3,
+          "trials": 4800,
+          "dfr": 0.000625,
+          "upper95": 0.0015628261675863652,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "avg_iters": 4.904583333333333,
+          "seconds": 31.0,
+          "ms_per_decode": 6.458709537982941
+        },
+        "R2-2": {
+          "failures": 6,
+          "trials": 4800,
+          "dfr": 0.00125,
+          "upper95": 0.002415403616706223,
+          "per_key_failures": [
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "avg_iters": 4.8525,
+          "seconds": 31.55,
+          "ms_per_decode": 6.573410878578822
+        },
+        "UNIFORM-2": {
+          "failures": 550,
+          "trials": 4800,
+          "dfr": 0.11458333333333333,
+          "upper95": 0.12236351881143409,
+          "per_key_failures": [
+            47,
+            39,
+            46,
+            43,
+            44,
+            42,
+            33,
+            61,
+            47,
+            50,
+            49,
+            49
+          ],
+          "avg_iters": 8.209166666666667,
+          "seconds": 43.45,
+          "ms_per_decode": 9.051072597503662
+        }
+      }
+    },
+    "G2_d12": {
+      "n_keys": 12,
+      "decoders": {
+        "C0": {
+          "failures": 8,
+          "trials": 4800,
+          "dfr": 0.0016666666666666668,
+          "upper95": 0.0029554341394378283,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            2,
+            2,
+            1
+          ],
+          "avg_iters": 4.617708333333334,
+          "seconds": 30.05,
+          "ms_per_decode": 6.260320097208023
+        },
+        "FRO-1": {
+          "failures": 3,
+          "trials": 4800,
+          "dfr": 0.000625,
+          "upper95": 0.0015628261675863652,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "avg_iters": 4.588541666666667,
+          "seconds": 33.26,
+          "ms_per_decode": 6.929637889067332
+        },
+        "FRO-2": {
+          "failures": 4,
+          "trials": 4800,
+          "dfr": 0.0008333333333333334,
+          "upper95": 0.0018548903160526462,
+          "per_key_failures": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "avg_iters": 4.839375,
+          "seconds": 36.34,
+          "ms_per_decode": 7.570847123861313
+        },
+        "FRO-3": {
+          "failures": 1,
+          "trials": 4800,
+          "dfr": 0.00020833333333333335,
+          "upper95": 0.0009332903829778859,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "avg_iters": 5.1241666666666665,
+          "seconds": 33.66,
+          "ms_per_decode": 7.013200918833415
+        },
+        "R2-2": {
+          "failures": 6,
+          "trials": 4800,
+          "dfr": 0.00125,
+          "upper95": 0.002415403616706223,
+          "per_key_failures": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "avg_iters": 5.0877083333333335,
+          "seconds": 34.28,
+          "ms_per_decode": 7.1422794461250305
+        },
+        "UNIFORM-2": {
+          "failures": 478,
+          "trials": 4800,
+          "dfr": 0.09958333333333333,
+          "upper95": 0.10691969529197252,
+          "per_key_failures": [
+            33,
+            47,
+            35,
+            37,
+            37,
+            36,
+            44,
+            52,
+            28,
+            46,
+            46,
+            37
+          ],
+          "avg_iters": 8.128333333333334,
+          "seconds": 39.94,
+          "ms_per_decode": 8.320858925580978
+        }
+      }
+    },
+    "G3": {
+      "n_keys": 12,
+      "decoders": {
+        "C0": {
+          "failures": 0,
+          "trials": 4800,
+          "dfr": 0.0,
+          "upper95": 0.000625,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "avg_iters": 4.199166666666667,
+          "seconds": 32.64,
+          "ms_per_decode": 6.800094346205394
+        },
+        "FRO-1": {
+          "failures": 1,
+          "trials": 4800,
+          "dfr": 0.00020833333333333335,
+          "upper95": 0.0009332903829778859,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "avg_iters": 4.265416666666667,
+          "seconds": 32.11,
+          "ms_per_decode": 6.689958026011785
+        },
+        "FRO-2": {
+          "failures": 2,
+          "trials": 4800,
+          "dfr": 0.0004166666666666667,
+          "upper95": 0.0012583069847693703,
+          "per_key_failures": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "avg_iters": 4.524583333333333,
+          "seconds": 33.29,
+          "ms_per_decode": 6.936074495315552
+        },
+        "FRO-3": {
+          "failures": 1,
+          "trials": 4800,
+          "dfr": 0.00020833333333333335,
+          "upper95": 0.0009332903829778859,
+          "per_key_failures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "avg_iters": 4.784791666666667,
+          "seconds": 34.04,
+          "ms_per_decode": 7.0916847884655
+        },
+        "R2-2": {
+          "failures": 5,
+          "trials": 4800,
+          "dfr": 0.0010416666666666667,
+          "upper95": 0.00213834985143464,
+          "per_key_failures": [
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "avg_iters": 4.677708333333333,
+          "seconds": 34.37,
+          "ms_per_decode": 7.1609196563561754
+        },
+        "UNIFORM-2": {
+          "failures": 378,
+          "trials": 4800,
+          "dfr": 0.07875,
+          "upper95": 0.08538461460971748,
+          "per_key_failures": [
+            39,
+            47,
+            29,
+            30,
+            31,
+            20,
+            25,
+            38,
+            33,
+            22,
+            35,
+            29
+          ],
+          "avg_iters": 7.5875,
+          "seconds": 45.99,
+          "ms_per_decode": 9.581786741813024
+        }
+      }
+    }
+  },
+  "protocol": {
+    "same_instance_pairing": true,
+    "key_cluster_unit": true,
+    "supplemental": true,
+    "seed_rule": "SHA256(master|context|index)",
+    "offset_semantics": "offsets indexed by zero-based iteration; later entries repeat"
+  }
+}

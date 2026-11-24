@@ -1,0 +1,95 @@
+{
+ "point": {
+  "r": 10163,
+  "d": 71
+ },
+ "preset": "CPA-128 (param.h PRESET_CPA)",
+ "hypothesis": "the static-C0 band [1e-4,1e-2] follows the density t/r; at r=10163 it should sit near t~140-144",
+ "l1_reference": {
+  "edge_lo": {
+   "t": 168,
+   "t_over_r": 0.013633043901647325
+  },
+  "band_dfr_1e4": {
+   "t": 170,
+   "t_over_r": 0.013795342043333604
+  },
+  "band_dfr_1e2": {
+   "t": 175,
+   "t_over_r": 0.014201087397549298
+  }
+ },
+ "cells": {
+  "134": {
+   "t": 134,
+   "t_over_r": 0.013185083144740727,
+   "trials": 8000,
+   "c0_failures": 0,
+   "c0_dfr": 0.0,
+   "upper95": 0.000375,
+   "mean_iters": 3.577625,
+   "seconds": 67.5
+  },
+  "136": {
+   "t": 136,
+   "t_over_r": 0.013381875430483125,
+   "trials": 8000,
+   "c0_failures": 0,
+   "c0_dfr": 0.0,
+   "upper95": 0.000375,
+   "mean_iters": 3.857125,
+   "seconds": 68.8
+  },
+  "138": {
+   "t": 138,
+   "t_over_r": 0.013578667716225524,
+   "trials": 8000,
+   "c0_failures": 1,
+   "c0_dfr": 0.000125,
+   "upper95": 0.0005601070547427979,
+   "mean_iters": 4.148375,
+   "seconds": 71.6
+  },
+  "140": {
+   "t": 140,
+   "t_over_r": 0.013775460001967922,
+   "trials": 8000,
+   "c0_failures": 5,
+   "c0_dfr": 0.000625,
+   "upper95": 0.0012833889794666936,
+   "mean_iters": 4.513375,
+   "seconds": 70.8
+  },
+  "142": {
+   "t": 142,
+   "t_over_r": 0.013972252287710322,
+   "trials": 8000,
+   "c0_failures": 30,
+   "c0_dfr": 0.00375,
+   "upper95": 0.005054075943942146,
+   "mean_iters": 5.09175,
+   "seconds": 78.2
+  },
+  "144": {
+   "t": 144,
+   "t_over_r": 0.014169044573452722,
+   "trials": 8000,
+   "c0_failures": 167,
+   "c0_dfr": 0.020875,
+   "upper95": 0.023670668638570536,
+   "mean_iters": 6.095625,
+   "seconds": 89.3
+  },
+  "146": {
+   "t": 146,
+   "t_over_r": 0.01436583685919512,
+   "trials": 8000,
+   "c0_failures": 501,
+   "c0_dfr": 0.062625,
+   "upper95": 0.06723023512547484,
+   "mean_iters": 7.521875,
+   "seconds": 98.0
+  }
+ },
+ "wall_seconds": 544.2
+}

@@ -1,12 +1,39 @@
 # qc-mdpc-experiment — data and code
 
-Data and analysis code for the manuscript *The First Round Is a Two-Sided Window:
-Threshold Timing and Conditional Decoding Failure in QC-MDPC Bit-Flipping*.
+Replication data and analysis code for the QC-MDPC bit-flipping study. The
+current JCEN submission package is in
+[`replication/jcen-2026.11.24/`](replication/jcen-2026.11.24/). The remaining
+folders are the development mirror and frozen results of the earlier manuscript
+version, kept for provenance.
 
-This repository is the development mirror of the citable archive. It contains the
-implementation, the frozen experiment archives, the exported tables, the figure
-source data and the numeric gate. It intentionally does **not** contain manuscript
-PDFs, LaTeX templates or figure build artifacts.
+## JCEN submission package (2026.11.24)
+
+`replication/jcen-2026.11.24/` is the complete archive submitted as Online
+Resource 2 for *First-Round Post-Processing Can Reverse Threshold Effects in
+QC-MDPC Bit-Flipping Decoding* (Journal of Cryptographic Engineering). It is
+self-contained: experimental data and configurations, analysis code, the source
+data behind every figure and table, the seven final vector figures, and the
+scripts used to render and check them. The package does **not** contain
+manuscript PDFs, publisher PDFs or executables.
+
+```bash
+cd replication/jcen-2026.11.24
+sha256sum -c SHA256SUMS.txt                       # 622 recorded checksums
+python -I figures_jcen/scripts/check_factor.py    # re-verifies 28 saved result rows
+python -I figures_jcen/scripts/make_figures.py    # re-renders Figs. 1-7 into a new folder
+```
+
+`make_figures.py` writes to a separate output directory and does not overwrite
+the supplied vector files.
+
+## Earlier development mirror
+
+The sections below describe the earlier manuscript version *The First Round Is a
+Two-Sided Window: Threshold Timing and Conditional Decoding Failure in QC-MDPC
+Bit-Flipping*. That mirror contains the implementation, the frozen experiment
+archives, the exported tables, the figure source data and the numeric gate. It
+intentionally does **not** contain manuscript PDFs, LaTeX templates or figure
+build artifacts.
 
 ## Layout
 

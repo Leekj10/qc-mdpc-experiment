@@ -1,0 +1,26 @@
+{
+  "phase": "POSTSTEP_FRESH_KEY_CONFIRMATION",
+  "written_by": "Claude (session 2026-11-11)",
+  "written_before": "any fresh-key confirmation decode",
+  "status": "fresh-key confirmation of a diagnostic pattern; not a production or official-decoder confirmation",
+  "purpose": "Check whether the P1/P2 post-step interaction survives a new key and error stream. The original factor experiments used G0 keys 54..99; this confirmation uses group CF, which has not been used in any earlier analysis, at the same two work points.",
+  "work_points": {
+    "P1": {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2},
+    "P2": {"id": "P2", "r": 3001, "d": 37, "t": 66, "n0": 2}
+  },
+  "keys": "fresh group CF, keys 54..99 (46 keys), 2000 errors each, SEED=20260901; no overlap with G0 keys used in the original factor experiment",
+  "arms": ["plain_0", "plain_p2", "post_0", "post_p2"],
+  "factor_mode_semantics": "identical to the P1/P2 factor protocols: classic carrier, 20 main rounds, no blocked-stop, post-step after round one only, later rounds plain, post-step scans recorded separately",
+  "estimand": {
+    "primary": "interaction Delta = (p(post_p2) - p(post_0)) - (p(plain_p2) - p(plain_0)), averaged over keys on the risk-difference scale; 95% key-clustered percentile bootstrap, B=10000, seed=20260905",
+    "secondary": "per-cell DFR and RR versus the within-policy baseline",
+    "zero_events": "rule-of-three upper bound 3/N, with the binomial-trial assumption stated"
+  },
+  "gates": {
+    "classic_library": "factor-mode plain_0 and plain_p2 must reproduce build_decoder(c0/c2) per-instance on a 3-key x 200-error sample at each point",
+    "bgf_port": "the bgf-compatible replica must reproduce bgf_vasseur per-instance on a 3-key x 200-error sample at each point"
+  },
+  "decision_rule": "The interaction is confirmed on fresh keys if Delta > 0 and its 95% key-cluster CI excludes 0 at the point being tested. If the CI includes 0, it is not confirmed and must be reported as such. Every cell is reported regardless of direction.",
+  "multiplicity": "one prespecified primary interaction per work point; no component arms are run in this confirmation",
+  "disclosure": "Fresh keys reduce key-pool artifact risk; they do not establish production DFR, official BGF behavior, or a universal law. The confirmation remains diagnostic."
+}

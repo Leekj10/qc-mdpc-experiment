@@ -1,0 +1,2 @@
+tier,source,r,d,t,t_over_r,n_keys,errors_per_key,trials,c0_failures,c0_dfr,fro2_failures,fro2_dfr,rr,rr_lo,rr_hi,rr_excludes_1,note
+1,lw-vs/results/round_controls/phase4,6007,56,100,0.0166472448809722,40,,40000,325,0.008125,135,0.003375,2.4074074074074074,2.0921985815602837,2.817393029675638,True,largest r in the study; density d/r matches P1' but t/r is lower

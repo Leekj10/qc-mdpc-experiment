@@ -1,0 +1,318 @@
+{
+  "label": "P2",
+  "parameter": {
+    "id": "P2_supp",
+    "r": 3001,
+    "d": 37,
+    "t": 66,
+    "n0": 2
+  },
+  "errors_per_key": 400,
+  "groups": {
+    "G0": {
+      "pooled": {
+        "C0": {
+          "failures": 10,
+          "trials": 4800,
+          "dfr": 0.0020833333333333333,
+          "upper95": 0.0034817961629742956,
+          "avg_iters": 4.30375,
+          "ms_per_decode": 4.614868859450023
+        },
+        "FRO-1": {
+          "failures": 6,
+          "trials": 4800,
+          "dfr": 0.00125,
+          "upper95": 0.002415403616706223,
+          "avg_iters": 4.402291666666667,
+          "ms_per_decode": 4.450627466042836
+        },
+        "FRO-2": {
+          "failures": 6,
+          "trials": 4800,
+          "dfr": 0.00125,
+          "upper95": 0.002415403616706223,
+          "avg_iters": 4.6622916666666665,
+          "ms_per_decode": 4.502242207527161
+        },
+        "FRO-3": {
+          "failures": 7,
+          "trials": 4800,
+          "dfr": 0.0014583333333333334,
+          "upper95": 0.0026874476864645453,
+          "avg_iters": 4.954166666666667,
+          "ms_per_decode": 4.796778659025828
+        },
+        "R2-2": {
+          "failures": 10,
+          "trials": 4800,
+          "dfr": 0.0020833333333333333,
+          "upper95": 0.0034817961629742956,
+          "avg_iters": 4.817291666666667,
+          "ms_per_decode": 4.667865335941315
+        },
+        "UNIFORM-2": {
+          "failures": 906,
+          "trials": 4800,
+          "dfr": 0.18875,
+          "upper95": 0.19821462809435159,
+          "avg_iters": 9.314166666666667,
+          "ms_per_decode": 6.587623655796051
+        }
+      },
+      "risk_ratios_vs_C0": {
+        "FRO-1": {
+          "point_rr": 1.6666666666666667,
+          "ci95": [
+            0.42857142857142855,
+            5.0
+          ],
+          "finite_bootstrap": 9988,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "FRO-2": {
+          "point_rr": 1.6666666666666667,
+          "ci95": [
+            0.4444444444444444,
+            4.5
+          ],
+          "finite_bootstrap": 9995,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "FRO-3": {
+          "point_rr": 1.4285714285714286,
+          "ci95": [
+            0.4,
+            4.5
+          ],
+          "finite_bootstrap": 9985,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "R2-2": {
+          "point_rr": 1.0,
+          "ci95": [
+            0.5,
+            1.5
+          ],
+          "finite_bootstrap": 9995,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "UNIFORM-2": {
+          "point_rr": 0.011037527593818985,
+          "ci95": [
+            0.003253707964456185,
+            0.020000526870389876
+          ],
+          "finite_bootstrap": 10000,
+          "note": "key-cluster percentile bootstrap"
+        }
+      },
+      "best_nonuniform": "FRO-1"
+    },
+    "G2_d12": {
+      "pooled": {
+        "C0": {
+          "failures": 13,
+          "trials": 4800,
+          "dfr": 0.0027083333333333334,
+          "upper95": 0.004253408444848208,
+          "avg_iters": 4.642291666666667,
+          "ms_per_decode": 4.62361067533493
+        },
+        "FRO-1": {
+          "failures": 8,
+          "trials": 4800,
+          "dfr": 0.0016666666666666668,
+          "upper95": 0.0029554341394378283,
+          "avg_iters": 4.67625,
+          "ms_per_decode": 4.6070268253485365
+        },
+        "FRO-2": {
+          "failures": 6,
+          "trials": 4800,
+          "dfr": 0.00125,
+          "upper95": 0.002415403616706223,
+          "avg_iters": 4.962083333333333,
+          "ms_per_decode": 4.8435720801353455
+        },
+        "FRO-3": {
+          "failures": 6,
+          "trials": 4800,
+          "dfr": 0.00125,
+          "upper95": 0.002415403616706223,
+          "avg_iters": 5.237916666666667,
+          "ms_per_decode": 5.066422373056412
+        },
+        "R2-2": {
+          "failures": 13,
+          "trials": 4800,
+          "dfr": 0.0027083333333333334,
+          "upper95": 0.004253408444848208,
+          "avg_iters": 5.134375,
+          "ms_per_decode": 4.905976702769597
+        },
+        "UNIFORM-2": {
+          "failures": 754,
+          "trials": 4800,
+          "dfr": 0.15708333333333332,
+          "upper95": 0.1659152483123504,
+          "avg_iters": 9.005208333333334,
+          "ms_per_decode": 6.469476968050003
+        }
+      },
+      "risk_ratios_vs_C0": {
+        "FRO-1": {
+          "point_rr": 1.625,
+          "ci95": [
+            0.6666666666666666,
+            5.25
+          ],
+          "finite_bootstrap": 9986,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "FRO-2": {
+          "point_rr": 2.1666666666666665,
+          "ci95": [
+            0.9821428571428572,
+            5.333333333333333
+          ],
+          "finite_bootstrap": 9991,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "FRO-3": {
+          "point_rr": 2.1666666666666665,
+          "ci95": [
+            0.6666666666666666,
+            8.5
+          ],
+          "finite_bootstrap": 9993,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "R2-2": {
+          "point_rr": 1.0,
+          "ci95": [
+            0.5384615384615384,
+            1.625
+          ],
+          "finite_bootstrap": 10000,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "UNIFORM-2": {
+          "point_rr": 0.017241379310344827,
+          "ci95": [
+            0.00804289544235925,
+            0.026737967914438502
+          ],
+          "finite_bootstrap": 10000,
+          "note": "key-cluster percentile bootstrap"
+        }
+      },
+      "best_nonuniform": "FRO-2"
+    },
+    "G3": {
+      "pooled": {
+        "C0": {
+          "failures": 4,
+          "trials": 4800,
+          "dfr": 0.0008333333333333334,
+          "upper95": 0.0018548903160526462,
+          "avg_iters": 4.12375,
+          "ms_per_decode": 5.522739440202713
+        },
+        "FRO-1": {
+          "failures": 1,
+          "trials": 4800,
+          "dfr": 0.00020833333333333335,
+          "upper95": 0.0009332903829778859,
+          "avg_iters": 4.2316666666666665,
+          "ms_per_decode": 5.290454626083374
+        },
+        "FRO-2": {
+          "failures": 2,
+          "trials": 4800,
+          "dfr": 0.0004166666666666667,
+          "upper95": 0.0012583069847693703,
+          "avg_iters": 4.464791666666667,
+          "ms_per_decode": 5.394825836022695
+        },
+        "FRO-3": {
+          "failures": 3,
+          "trials": 4800,
+          "dfr": 0.000625,
+          "upper95": 0.0015628261675863652,
+          "avg_iters": 4.760833333333333,
+          "ms_per_decode": 5.493616461753845
+        },
+        "R2-2": {
+          "failures": 3,
+          "trials": 4800,
+          "dfr": 0.000625,
+          "upper95": 0.0015628261675863652,
+          "avg_iters": 4.585416666666666,
+          "ms_per_decode": 5.498696267604828
+        },
+        "UNIFORM-2": {
+          "failures": 628,
+          "trials": 4800,
+          "dfr": 0.13083333333333333,
+          "upper95": 0.13904777764700793,
+          "avg_iters": 8.289166666666667,
+          "ms_per_decode": 7.179390688737233
+        }
+      },
+      "risk_ratios_vs_C0": {
+        "FRO-1": {
+          "point_rr": 4.0,
+          "ci95": [
+            0.0,
+            8.0
+          ],
+          "finite_bootstrap": 6519,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "FRO-2": {
+          "point_rr": 2.0,
+          "ci95": [
+            0.0,
+            6.0
+          ],
+          "finite_bootstrap": 8933,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "FRO-3": {
+          "point_rr": 1.3333333333333333,
+          "ci95": [
+            0.2,
+            3.5
+          ],
+          "finite_bootstrap": 9688,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "R2-2": {
+          "point_rr": 1.3333333333333333,
+          "ci95": [
+            0.0,
+            5.0
+          ],
+          "finite_bootstrap": 9675,
+          "note": "key-cluster percentile bootstrap"
+        },
+        "UNIFORM-2": {
+          "point_rr": 0.006369426751592357,
+          "ci95": [
+            0.0,
+            0.014084507042253521
+          ],
+          "finite_bootstrap": 10000,
+          "note": "key-cluster percentile bootstrap"
+        }
+      },
+      "best_nonuniform": "FRO-1"
+    }
+  },
+  "method": {
+    "bootstrap": 10000,
+    "unit": "key",
+    "seed": 20260911
+  }
+}

@@ -1,0 +1,147 @@
+{
+ "param": {
+  "id": "L1",
+  "r": 12323,
+  "d": 71,
+  "t": 134,
+  "n0": 2
+ },
+ "bikeflip_official": {
+  "nb_iter": 7,
+  "delta": 3,
+  "a": 0.006254868353074983,
+  "b": 11.101432337243956
+ },
+ "E_per_key": 500,
+ "keys_per_group": 16,
+ "groups": {
+  "RAND": {
+   "gid": "RAND",
+   "n_keys": 16,
+   "E_per_key": 500,
+   "n_samples": 8000,
+   "seconds": 362.4,
+   "iters_hist": {
+    "C0_base": {
+     "2": 7574,
+     "3": 426
+    },
+    "C4_first_p2": {
+     "2": 4428,
+     "3": 3572
+    },
+    "BIKE_Flip": {
+     "2": 7,
+     "3": 7991,
+     "4": 2
+    }
+   },
+   "C0_base": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.05325
+   },
+   "C4_first_p2": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.4465
+   },
+   "BIKE_Flip": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.999375
+   }
+  },
+  "WEAK12": {
+   "gid": "WEAK12",
+   "n_keys": 16,
+   "E_per_key": 500,
+   "n_samples": 8000,
+   "seconds": 371.1,
+   "iters_hist": {
+    "C0_base": {
+     "2": 7051,
+     "3": 949
+    },
+    "C4_first_p2": {
+     "2": 3555,
+     "3": 4445
+    },
+    "BIKE_Flip": {
+     "2": 6,
+     "3": 7986,
+     "4": 8
+    }
+   },
+   "C0_base": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.118625
+   },
+   "C4_first_p2": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.555625
+   },
+   "BIKE_Flip": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 3.00025
+   }
+  },
+  "NCW16": {
+   "gid": "NCW16",
+   "n_keys": 16,
+   "E_per_key": 500,
+   "n_samples": 8000,
+   "seconds": 421.7,
+   "iters_hist": {
+    "C0_base": {
+     "2": 7606,
+     "3": 394
+    },
+    "C4_first_p2": {
+     "2": 4770,
+     "3": 3230
+    },
+    "BIKE_Flip": {
+     "2": 4,
+     "3": 7996
+    }
+   },
+   "C0_base": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.04925
+   },
+   "C4_first_p2": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.40375
+   },
+   "BIKE_Flip": {
+    "failures": 0,
+    "trials": 8000,
+    "dfr": 0.0,
+    "upper95": 0.000375,
+    "mean_conv_iters": 2.9995
+   }
+  }
+ }
+}
