@@ -483,13 +483,13 @@ def prototypes() -> None:
 # --------------------------------------------------------------------------
 def recovery() -> None:
     print("[7] exact-recovery audit")
-    base = EXP / "exact_recovery_audit_20260923" / "formal_current"
+    base = EXP / "exact_recovery_audit" / "formal_current"
     rep = load(base / "report.json")
     rows = []
     for gid, g in rep["groups"].items():
         for arm, a in g["arms"].items():
             rows.append({
-                "tier": 1, "source": "results/exact_recovery_audit_20260923/formal_current",
+                "tier": 1, "source": "results/exact_recovery_audit/formal_current",
                 "group": gid, "condition": GROUP_LABEL.get(gid, gid),
                 "arm": "C0" if "c0" in arm.lower() or "base" in arm.lower() else "FRO-2",
                 "trials": a["trials"],

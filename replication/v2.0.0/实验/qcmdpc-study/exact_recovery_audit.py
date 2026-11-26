@@ -3,7 +3,7 @@
 The historical formal run counted ``syndrome == 0`` as success.  This script
 replays the same deterministic fresh-key pool and error streams while tracking
 the decoder's flip parity, then reports both the historical outcome and exact
-recovery.  It writes only to ``results/exact_recovery_audit_20260923`` by
+recovery.  It writes only to ``results/exact_recovery_audit`` by
 default and can be resumed group by group.
 
 Examples (from this directory)::
@@ -34,7 +34,7 @@ from qcmdpc.stats import wilson_upper
 from search_m4 import CANDIDATES
 
 
-OUT = Path(__file__).resolve().parent / "results" / "exact_recovery_audit_20260923"
+OUT = Path(__file__).resolve().parent / "results" / "exact_recovery_audit"
 PARAM = {"id": "P1prime", "r": 4801, "d": 45, "t": 92, "n0": 2}
 SEED = 20260901
 FULL_ERRORS = 3000

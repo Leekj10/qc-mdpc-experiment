@@ -36,7 +36,7 @@ The formal exact-recovery audit uses the same fresh-key pools as the P1'
 decision run and records zero-syndrome misc corrections separately:
 
 ```powershell
-python exact_recovery_audit.py --full --out results\exact_recovery_audit_20260923\formal_full
+python exact_recovery_audit.py --full --out results\exact_recovery_audit\formal_full
 ```
 
 The corrected generic local-recovery prototype is maintained in the package

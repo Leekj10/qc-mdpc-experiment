@@ -15,10 +15,10 @@ official-decoder confirmation.
 
 Run
 ---
-  python -I lw-vs/audit_2026-11-11/exp_poststep_confirm.py --phase smoke --point P1 --nkeys 2 --nerr 100
-  python -I lw-vs/audit_2026-11-11/exp_poststep_confirm.py --phase run --point P1 --nkeys 46 --nerr 2000
-  python -I lw-vs/audit_2026-11-11/exp_poststep_confirm.py --phase run --point P2 --nkeys 46 --nerr 2000
-  python -I lw-vs/audit_2026-11-11/exp_poststep_confirm.py --phase analyze --path <npz>
+  python -I lw-vs/audit_poststep/exp_poststep_confirm.py --phase smoke --point P1 --nkeys 2 --nerr 100
+  python -I lw-vs/audit_poststep/exp_poststep_confirm.py --phase run --point P1 --nkeys 46 --nerr 2000
+  python -I lw-vs/audit_poststep/exp_poststep_confirm.py --phase run --point P2 --nkeys 46 --nerr 2000
+  python -I lw-vs/audit_poststep/exp_poststep_confirm.py --phase analyze --path <npz>
 """
 from __future__ import annotations
 

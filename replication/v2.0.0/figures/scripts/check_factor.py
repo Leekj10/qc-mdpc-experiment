@@ -20,7 +20,7 @@ BOOTSTRAP_DRAWS = 10_000
 def summarize():
     counts_out, contrasts_out, inter_out = [], [], []
     for point, sample, filename, advertised_counts, advertised_interval in POOLS:
-        with np.load(ARCHIVE / 'lw-vs' / 'audit_2026-11-11' / 'poststep_factor' / filename, allow_pickle=False) as a:
+        with np.load(ARCHIVE / 'lw-vs' / 'audit_poststep' / 'poststep_factor' / filename, allow_pickle=False) as a:
             fail = np.array([a["fail_"+s] for s in ARM], dtype=np.int64)
             main = np.array([a["main_"+s] for s in ARM], dtype=np.int64)
             scan = np.array([a["scans_"+s] for s in ARM], dtype=np.int64)

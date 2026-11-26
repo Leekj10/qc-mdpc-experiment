@@ -17,8 +17,8 @@ The package does **not** contain manuscript PDFs, publisher PDFs or executables.
 ```bash
 cd replication/v2.0.0
 sha256sum -c SHA256SUMS.txt                       # 622 recorded checksums
-python -I figures_jcen/scripts/check_factor.py    # re-verifies 28 saved result rows
-python -I figures_jcen/scripts/make_figures.py    # re-renders Figs. 1-7 into a new folder
+python -I figures/scripts/check_factor.py    # re-verifies 28 saved result rows
+python -I figures/scripts/make_figures.py    # re-renders Figs. 1-7 into a new folder
 ```
 
 `make_figures.py` writes to a separate output directory and does not overwrite

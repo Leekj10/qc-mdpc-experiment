@@ -31,9 +31,9 @@ Gates
 
 Run
 ---
-  python -I lw-vs/audit_2026-11-11/exp_poststep_factor.py --phase smoke --nkeys 2 --nerr 100
-  python -I lw-vs/audit_2026-11-11/exp_poststep_factor.py --phase run --nkeys 46 --nerr 2000
-  python -I lw-vs/audit_2026-11-11/exp_poststep_factor.py --phase analyze
+  python -I lw-vs/audit_poststep/exp_poststep_factor.py --phase smoke --nkeys 2 --nerr 100
+  python -I lw-vs/audit_poststep/exp_poststep_factor.py --phase run --nkeys 46 --nerr 2000
+  python -I lw-vs/audit_poststep/exp_poststep_factor.py --phase analyze
 """
 from __future__ import annotations
 
